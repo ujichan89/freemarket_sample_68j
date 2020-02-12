@@ -1,3 +1,168 @@
-// Place all the styles related to the goods controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.GoodDetealContents{
+  background-color: #f8f8f8;
+  padding: 40px;
+  font-family: "Source Sans Pro", Helvetica, Arial, "游ゴシック体", "YuGothic", "メイリオ", "Meiryo", sans-serif;
+
+  .__main{
+    text-align: center;
+    background-color: #fff;
+    width: 620px;
+    height: 100%;
+    margin: 0 auto;
+    padding: 24px 40px 40px;
+
+    .--goodName{
+      font-weight: bold;
+      font-size: 24px;
+    }
+
+    .--images{
+      .__mainImage{
+        width: 560px;
+        height: 346px;
+        object-fit: cover;
+        margin-top: 15px;
+      }
+
+      .__subImage{
+        width: 140px;
+        height: 87px;
+        object-fit: cover;
+        margin: 5px 5px;
+      }
+    }
+
+    .--priceingInformation{
+      .__price{
+        font-size: 46px;
+        font-weight: bold;
+        margin: 15px 10px 0 0;
+      }
+      .__priceSupplement{
+      }
+    }
+
+    .--goodDescription{
+      .__goodName{
+        margin: 25px 0px 35px 0px;
+        text-align: left;
+        font-size: 18px;
+      }
+    }
+
+    .--options{
+      display: flex;
+      justify-content: space-between;
+      margin-top: 30px;
+
+      .__favorite{
+        margin-right: auto;
+        padding: 6px 10px;
+        border-radius: 40px;
+        color: #3CCACE;
+        border: 1px solid #ffb340;
+        font-size: 16px;
+      }
+      .__favorite:hover{
+        color: rgb(185, 230, 233);
+        border: 1px solid #fddcab;
+      }
+    }
+      .__report{
+        padding: 6px 10px;
+        display: inline-block;
+        border-radius: 4px;
+        color: #333;
+        border: 1px solid #333;
+        text-decoration: none;
+        font-size: 14px;
+        line-height: 25px;
+      }
+      .__report:hover{
+        color: rgb(163, 163, 163);
+        border: 1px solid rgb(163, 163, 163);
+      }
+    }
+
+    .__comments{
+    text-align: center;
+    background-color: #fff;
+    width: 652px;
+    margin: 0 auto;
+    margin-top: 10px;
+    padding: 24px;
+    text-align: center;
+      .--commentform{
+        margin: 0px;
+        width: 626px;
+        height: 104px;
+        padding: 10px;
+      }
+      .--commentSupplement{
+        padding: 8px;
+        font-size: 14px;
+        background-color: #f8f8f8;
+        margin: 10px 0;
+        text-align: left;
+      }
+      .--commentButtan{
+        font: 400 11px system-ui;
+        line-height: 48px;
+        background: #3CCACE;
+        border: 1px solid #3CCACE;
+        color: #fff;
+        width: 60%;
+        font-size: 18px;
+        border-radius: 100px;
+        margin: 0 auto;
+    }
+  }
+
+  .__paginate{
+    width: 700px;
+    text-decoration: none;
+    display: flex;
+    margin: 0 auto;
+    margin-top: 10px;
+    justify-content: space-between;
+  }
+
+  .__more{
+    width: 700px;
+    text-decoration: none;
+    margin: 0 auto;
+    text-align: left;
+    display: block;
+    margin-top: 24px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 22px;
+    position: relative;
+  }
+}
+
+
+table{
+  border: 1px solid #dedede;
+  font-size: 14px;
+  width: 100%;
+}
+
+th{
+  width: 20%;
+  background-color: #eee;
+  font-weight: 400;
+  padding: 8px;
+  text-align: center;
+}
+
+td{
+  width: 61%;
+  padding: 15px 15px;
+  text-align: left;
+}
+
+a{
+  text-decoration: none;
+  color: #3CCACE;
+}
