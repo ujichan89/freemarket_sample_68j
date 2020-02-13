@@ -1,8 +1,8 @@
-## goodsテーブル
+## itemsテーブル
 
 |Column|Type|Options|
 |------|----|-------|
-|good_name|string|null: false|
+|item_name|string|null: false|
 |price|integer|null: false|
 |status|string|null: false|
 |description|string|null: false|
@@ -37,7 +37,7 @@
 - belongs_to :street_address
 - has_many :credit_cards
 - has_many :purchase_histories
-- has_many :goods
+- has_many :items
 
 
 ## street_addressesテーブル
@@ -78,23 +78,22 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|good_image|text|null: false|
-|good_id|references|null: false, foreign_key: true|
+|item_image|text|null: false|
+|item_id|references|null: false, foreign_key: true|
 
 ### Association
-- belongs_to :good
+- belongs_to :item
 
 
 ## categoriesテーブル
 
 |Column|Type|Options|
 |------|----|-------|
-|genre1|string|
-|genre2|string|
-|genre3|string|
+|genre|string|
 
 ### Association
-- has_many :goods
+- has_many :items
+- has_ancestry
 
 
 ## brandsテーブル
@@ -104,7 +103,7 @@
 |brand_name|string|
 
 ### Association
-- has_many :goods
+- has_many :items
 
 
 ## purchase_historiesテーブル
@@ -113,8 +112,8 @@
 |------|----|-------|
 |purchase_date|datetime|null: false|
 |user_id|references|null: false, foreign_key: true|
-|good_id|integer|
+|item_id|integer|
 
 ### Association
 - belongs_to :user
-- has_many :goods
+- has_many :items
