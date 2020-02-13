@@ -56,7 +56,7 @@ Things you may want to cover:
 |family_name|string|null: false|
 |first_name|string|null: false|
 |furigana|string|null: false|
-|brithday|integer|null: false|
+|birthday|integer|null: false|
 |street_address_id|integer|
 
 ### Association
