@@ -19,7 +19,7 @@
 - belongs_to :category
 - belongs_to :brand
 - has_many :images
-- has_many :purchases
+- has_one :purchase
 
 
 ## usersテーブル
@@ -35,7 +35,7 @@
 |birthday|integer|null: false|
 
 ### Association
-- belongs_to :addresses
+- has_one :addresses
 - has_many :credit_cards
 - has_many :purchases
 - has_many :items
