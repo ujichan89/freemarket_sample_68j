@@ -91,6 +91,7 @@
 |Column|Type|Options|
 |------|----|-------|
 |genre|string|null: false|
+|ancestry|
 
 ### Association
 - has_many :items
