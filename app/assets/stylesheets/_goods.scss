@@ -1,0 +1,76 @@
+a {
+  text-decoration: none;
+}
+.Box{
+  background-color: rgb(227, 255, 227);
+
+  .Header{
+    background-color: rgb(207, 207, 255);
+    height: 55px;
+    width: 100%;
+  }
+  .Main{
+    background-color: rgb(255, 194, 194);
+    height: 310px;
+    width: 700px;
+    .CreateUser{
+      background-color: rgb(242, 231, 255);
+      height: 60px;
+      line-height: 60px;
+      text-align: center;
+      font-size: 18px;
+      font-weight: bold;
+    }
+    .Contents{
+      height: 100%;
+      width: 350px;
+      margin: 0 auto;
+      
+      .EmailCreate{
+        background-color: rgb(255, 0, 0);
+        margin-top: 26px;
+        color: white;
+        height: 50px;
+        text-align: center;
+        line-height: 50px;
+        border-radius: 5px;
+
+        &--font{
+          color: white;
+          font-size: 13px;
+        }
+      }
+      .FacebookCreate{
+        background-color: rgb(34, 55, 99);
+        margin: 16px 0;
+        height: 50px;
+        text-align: center;
+        line-height: 50px;
+        border-radius: 5px;
+
+        &--font{
+          color: white;
+          font-size: 13px;
+        }
+      }
+      .GoogleCreate{
+        background-color: rgb(255, 255, 255);
+        height: 50px;
+        text-align: center;
+        line-height: 50px;
+        border-radius: 5px;
+        border: solid 1px black;
+
+        &--font{
+          color: black;
+          font-size: 13px;
+        }
+      }
+    }
+  }
+  .Footer{
+    background-color: rgb(207, 207, 255);
+    height: calc(100vh - 365px);
+    width: 100%;
+  }
+}
