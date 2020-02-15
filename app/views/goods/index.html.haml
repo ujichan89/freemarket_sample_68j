@@ -1,21 +1,35 @@
 .Box
   .Header
-    furima
+    ここはヘッダーです
   .Main
-    .CreateUser
-      新規会員登録
-    %ul.Contents
-      %li.EmailCreate
-        =link_to "#" do
-          .EmailCreate--font
-            メールアドレスで登録する
-      %li.FacebookCreate
-        =link_to "#" do
-          .FacebookCreate--font
-            Facebookで登録する
-      %li.GoogleCreate
-        =link_to "#"  do
-          .GoogleCreate--font
-            Googleで登録する
+    .UserInputTitle
+      会員情報入力
+    %form.Input
+      .Input__nickname
+        .Input__nickname__text.SideType
+          %p
+            ニックネーム
+          %p.Input__nickname__text.red
+            必須
+      %input{type: "text", placeholder: "例）フリマ太郎", class: "Input__nickname__form"}
+
+      .Input__email
+        .Input__email__text.SideType
+          %p
+            メールアドレス
+          %p.Input__email__text.red
+            必須
+      %input{type: "text", placeholder: "PC・携帯どちらでも可", class: "Input__email__form"}
+
+      .Input__password
+        .Input__password__text.SideType
+          %p
+            パスワード
+          %p.Input__password__text.red
+            必須
+      %input{type: "text", placeholder: "7文字以上の半角英数字", class: "Input__password__form"}
+      .Note
+        ※英字と数字の両方
+
+
   .Footer
-    ここはfooterの位置
