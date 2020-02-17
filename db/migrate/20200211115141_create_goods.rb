@@ -1,6 +1,6 @@
 class CreateGoods < ActiveRecord::Migration[5.2]
   def change
-    create_table :goods do |t|
+    create_table :items do |t|
 
       t.timestamps
     end
