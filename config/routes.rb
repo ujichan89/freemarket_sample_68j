@@ -1,3 +1,3 @@
 Rails.application.routes.draw do
-  root to: 'goods#index1'
+  root to: 'purchases#edit'
 end
