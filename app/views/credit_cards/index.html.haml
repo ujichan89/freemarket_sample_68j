@@ -10,15 +10,13 @@
           必須
       %input.Contents__card--input{ name: :card, placeholder: :"半角英数字のみ", type: :card, value: :"" }/
       .Contents__card__picture
-        %img{:src => "/assets/visa.svg", class: "Contents__card__picture__phot"}
-        %img{:src => "/assets/master-card.svg", class: "Contents__card__picture__phot"}
-        %img{:src => "/assets/saison-card.svg", class: "Contents__card__picture__phot"}
-        %img{:src => "/assets/jcb.svg", class: "Contents__card__picture__phot"}
-        %img{:src => "/assets/american_express.svg", class: "Contents__card__picture__phot"}
-        %img{:src => "/assets/dinersclub.svg", class: "Contents__card__picture__phot"}
-        %img{:src => "/assets/discover.svg", class: "Contents__card__picture__phot"}
-
-
+        =image_tag "/assets/visa.svg", class: "Contents__card__picture__phot"
+        =image_tag "/assets/master-card.svg", class: "Contents__card__picture__phot"
+        =image_tag "/assets/saison-card.svg", class: "Contents__card__picture__phot"
+        =image_tag "/assets/jcb.svg", class: "Contents__card__picture__phot"
+        =image_tag "/assets/american_express.svg", class: "Contents__card__picture__phot"
+        =image_tag "/assets/dinersclub.svg", class: "Contents__card__picture__phot"
+        =image_tag "/assets/discover.svg", class: "Contents__card__picture__phot"
 
       .Contents__date__name
         .Contents__date__name--text
