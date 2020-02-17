@@ -80,15 +80,6 @@
       &__text {
         text-align: center;
         margin-top: 55px;
-        &--one {
-          // text-align: center;
-        }
-        &--two {
-          text-align: center;
-        }
-        &--three {
-
-        }
       }
     }
 
@@ -526,8 +517,6 @@
       background-color: rgb(148, 145, 145);
       text-align: center;
       line-height: 50px;
-      margin-left: 250px;
-      margin-top: 30px;
       margin: 30px auto 0;
       transition: all 0.3s ease 0s;
 
@@ -549,7 +538,7 @@
   height: 300px;
   width: 600px;
   margin: 0 auto;
-  // background-color: skyblue;
+
 
   &__list {
     height: 70px;
