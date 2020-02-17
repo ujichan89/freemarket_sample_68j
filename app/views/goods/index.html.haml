@@ -5,9 +5,6 @@
   .Logo
     = image_tag "logo.png", class: :"Logo__png"
 
-
-  
-
   .Contents 
 
     .Contents__title
@@ -29,14 +26,7 @@
           .Contents__image__up__text--two
             ドラッグアンドドロップ 
           .Contents__image__up__text--three
-            またはクリックしてファイルをアップロード
-            -# = f.label :image 'image'
-            -# = f.file_field :image
-          
-    
-          
-        
-        
+            またはクリックしてファイルをアップロード 
 
     .Contents__form
       .Contents__form__name
@@ -53,10 +43,6 @@
           必須
         
       %input.Contents__form--input-big{ name: :email, placeholder: :"商品の説明(必須1,000文字以内) (色、素材、重さ、定価、注意点など) 例)", type: :email, value: :"", class: :"Contents__form--input-big--text" }/
-      -# .Contents__form--input-big
-      -#   商品の説明(必須1,000文字以内) (色、素材、重さ、定価、注意点など) 例)
-      -#   2010年頃に1万円で購入したジャケットです。ライトグレーではありません。
-      -#   合わせやすいのでおすすめです。
     
     .Contents__detail
       .Contents__detail__title
@@ -84,10 +70,6 @@
             %option{label: :"チケット", value: :"" }
             %option{label: :"自動車・オートバイ", value: :"" }
             %option{label: :"その他", value: :"" }
-          
-        
-
-        
 
         .Contents__detail__list__brand
           .Contents__detail__list__brand--text
@@ -117,8 +99,6 @@
           配送について
         = link_to "#" do
           = icon('fa', 'question-circle', class: 'Contents__delivery__title--icon')
-          -# = icon('fa', 'caret-right', class: 'Contents__delivery__title--icon')
-    
 
       .Contents__delivery__category 
 
@@ -131,10 +111,7 @@
           %option{label: :"選択してください",  value: :"" }
           %option{label: :"送料込み(出品者負担)",  value: :"" }
           %option{label: :"着払い(購入者負担)",  value: :"" }
-          
-          
-        
-
+      
         .Contents__delivery__category__area
           .Contents__delivery__category__area--text
             配送元の地域
@@ -155,9 +132,6 @@
           %option{label: :"埼玉県", value: :"" }
           %option{label: :"千葉県", value: :"" }
           %option{label: :"東京都", value: :"" }
-        
-          
-        
 
         .Contents__delivery__category__date
           .Contents__delivery__category__date--text
@@ -167,8 +141,6 @@
         %select{name: :'date'}
           %option{label: :"選択してください", value: :"" }
         
-
-    
     .Contents__price
       .Contents__price__title
         .Contents__price__title--text
