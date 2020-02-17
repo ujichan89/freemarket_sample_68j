@@ -48,7 +48,7 @@
           }
           &:hover{
             &::after{
-              right: 15px;
+              right: 14px;
             }
         }
       }
@@ -59,9 +59,6 @@
           border-bottom: solid 1px lightgray;
           position: relative;
 
-          &:hover {
-            background-color: whitesmoke;
-          }
           a {
             text-decoration: none;
             color: black;
@@ -78,15 +75,16 @@
             top: 45%;
             transition: 0.3s;
           }
-          &:hover{
+          &:hover {
             &::after{
               right: 14px;
               border-top: 2px solid black;
               border-right: 2px solid black;
             }
           }
-
-
+        }
+        &__item:hover {
+          background-color: whitesmoke;
         }
       }
     }
