@@ -1,17 +1,60 @@
+select::-ms-expand {
+	display: none;
+}
+select {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	margin-bottom: 20px;
+	padding: 0 0 0 10px;
+	font-size: 93%;
+	line-height: 1.1em;
+	border-radius: 5px;
+	border: solid 1px rgb(220, 220, 220);
+	background-image: url(./images/icon_arrow.svg);
+	background-repeat: no-repeat;
+	background-size: 12px 10px;
+	background-position: right 10px center;
+	background-color: #ffffff;
+}
+
+.select__form{
+  height: 45px;
+  width: 100px;
+}
+
 a {
   text-decoration: none;
 }
 
 .SideType{
   display: flex;
+  align-items: center;
 }
 
 .red{
+  height: 100%;
   background-color: red;
   color: white;
   font-size: 12px;
   padding: 2px 5px;
   margin-left: 20px;
+  border-radius: 3px;
+}
+
+.bold{
+  font-weight: bold;
+}
+
+.Note{
+  color: rgb(181, 181, 181);
+}
+
+.Btn{
+  background-color: red;
+  color: white;
+  height: 50px;
+  width: 100%;
 }
 
 .Box{
@@ -28,6 +71,7 @@ a {
   }
   
   .Main{
+    background-color: #fff;
     width: 700px;
     margin: 0 auto;
 
@@ -39,13 +83,147 @@ a {
       font-size: 24px;
       font-weight: bold;
       text-align: center;
+      border-bottom: solid 1px rgb(239, 239, 239);
     }
     .Input{
         height: 100%;
         width: 400px;
         margin: 0 auto;
 
+      &__nickname{
+        margin: 20px 0;
 
+        &__text{
+          margin-bottom: 5px;
+        }
+        &__form{
+          height: 45px;
+          width: 100%;
+          border-radius: 5px;
+          border: solid 1px rgb(220, 220, 220);
+        }
+        &__error{
+
+        }
+      }
+
+      &__email{
+        margin: 20px 0;
+
+       &__text{
+         margin-bottom: 5px;
+
+       } 
+       &__form{
+        height: 45px;
+        width: 100%;
+        border-radius: 5px;
+        border: solid 1px rgb(220, 220, 220);
+       }
+       &__error{
+
+       }
+      }
+      
+      &__password{
+        margin: 20px 0;
+        &__text{
+          margin-bottom: 5px;
+        }
+        &__form{
+          height: 45px;
+          width: 100%;
+          border-radius: 5px;
+          border: solid 1px rgb(220, 220, 220);
+        }
+        &__error{
+
+        }
+        &__checkbox{
+
+        }
+      }
+
+      &__name{
+        &__title{
+          margin-bottom: 10px;
+        }
+
+        &__description{
+          margin-bottom: 20px;
+        }
+
+        &__text{
+          margin-bottom: 5px;
+
+        }
+        &__fullname{
+          display: flex;
+          margin-bottom: 20px;
+          
+
+          &__familyname{
+            height: 45px;
+            width: 100%;
+            border-radius: 5px;
+            border: solid 1px rgb(220, 220, 220);
+          }
+          &__firstname{
+            height: 45px;
+            width: 100%;
+            border-radius: 5px;
+            border: solid 1px rgb(220, 220, 220);
+          }
+
+        }
+        &__furigana{
+          display: flex;
+          margin-bottom: 20px;
+
+          &__familyname{
+            height: 45px;
+            width: 100%;
+            border-radius: 5px;
+            border: solid 1px rgb(220, 220, 220);
+          }
+          &__firstname{
+            height: 45px;
+            width: 100%;
+            border-radius: 5px;
+            border: solid 1px rgb(220, 220, 220);
+          }
+        }
+      }
+      &__birthday{
+        &__text{
+
+        }
+        &__select{
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          &__year{
+
+          }
+          &__month{
+
+          }
+          &__day{
+
+          }
+        }
+      }
+      &__submit{
+        &__text{
+          margin-bottom: 40px;
+        }
+        &__description{
+          margin-bottom: 20px;
+        }
+        &__btn{
+
+        }
+      }
 
     }
 
