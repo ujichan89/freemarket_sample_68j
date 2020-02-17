@@ -102,17 +102,13 @@ a {
           border-radius: 5px;
           border: solid 1px rgb(220, 220, 220);
         }
-        &__error{
-
-        }
       }
 
       &__email{
         margin: 20px 0;
 
-       &__text{
+        &__text{
          margin-bottom: 5px;
-
        } 
        &__form{
         height: 45px;
@@ -120,13 +116,11 @@ a {
         border-radius: 5px;
         border: solid 1px rgb(220, 220, 220);
        }
-       &__error{
-
-       }
       }
       
       &__password{
         margin: 20px 0;
+
         &__text{
           margin-bottom: 5px;
         }
@@ -136,31 +130,22 @@ a {
           border-radius: 5px;
           border: solid 1px rgb(220, 220, 220);
         }
-        &__error{
-
-        }
-        &__checkbox{
-
-        }
       }
 
       &__name{
+
         &__title{
           margin-bottom: 10px;
         }
-
         &__description{
           margin-bottom: 20px;
         }
-
         &__text{
           margin-bottom: 5px;
-
         }
         &__fullname{
           display: flex;
           margin-bottom: 20px;
-          
 
           &__familyname{
             height: 45px;
@@ -174,7 +159,6 @@ a {
             border-radius: 5px;
             border: solid 1px rgb(220, 220, 220);
           }
-
         }
         &__furigana{
           display: flex;
@@ -195,38 +179,24 @@ a {
         }
       }
       &__birthday{
-        &__text{
 
-        }
         &__select{
           width: 100%;
           display: flex;
           justify-content: space-between;
-          &__year{
-
-          }
-          &__month{
-
-          }
-          &__day{
-
-          }
         }
       }
+
       &__submit{
+
         &__text{
           margin-bottom: 40px;
         }
         &__description{
           margin-bottom: 20px;
         }
-        &__btn{
-
-        }
       }
-
     }
-
   }
 
   .Footer{
