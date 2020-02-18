@@ -12,7 +12,12 @@
 @import "items/index";
 @import "items/show";
 
+@import "addresses/new";
+
 @import "users/registrations/new";
 @import "users/sessions/new";
+@import "users/show";
+
+@import "purchases/show";
 
 @import "credit_cards";
