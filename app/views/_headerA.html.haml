@@ -1,0 +1,28 @@
+.Header
+  .__mainMenu
+    =image_tag 'logo/logo.png', class: '--logo'
+    .--keywordSeach
+      %input{type: 'text', placeholder: 'キーワードから探す', class: '__inputbox'}
+      =image_tag 'icon/icon-search 1.png', class: '__btn'
+
+  .__subMenu
+    .--otherSarches
+      .__categorySeach
+        カテゴリー
+        %ul.--parents
+          %li.__parent
+            レディース
+            %ul.--children
+              %li.__child
+                トップス
+                %ul.--grand-children
+                  %li.__grand-child
+                  Tシャツ/カットソー(半袖/袖なし)
+
+      =link_to 'ブランド', '#', class: '__brandSeach'
+
+    .--loguinMenu
+      .__login
+        = link_to 'ログイン', '#', class:'--login'
+      .__signUp
+        = link_to '新規会員登録', '#', class:'--signUp'
