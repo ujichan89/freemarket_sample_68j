@@ -1,4 +1,4 @@
-.wrapper{
+.Wrapper{
   background-color: #f8f8f8;
 
   .Header{
@@ -10,7 +10,7 @@
   .Main{
     font-family: "Source Sans Pro", Helvetica, Arial, "游ゴシック体", "YuGothic", "メイリオ", "Meiryo", sans-serif;
     width: 100%;
-    .mainMainVisual{
+    .MainMainVisual{
       height: 560px;
       background-image:url('bg-mainVisual-pict_pc.jpg');
       background-size: cover;
@@ -20,19 +20,19 @@
       padding: 0 60px;
       display: flex;
       align-items: center;
-      .contennt{
+      .Contennt{
         max-width: 1280px;
         width: 100%;
         margin: 0 auto;
         padding: 35px 0 0 0;
       
-        .contentSubtitle{
+        .ContentSubTitle{
           text-shadow: 0 0 5px rgba(0,0,0,0.4);
           font-size: 60px;
           line-height: 1.2;
           color: #fff;
         }
-        .contentText{
+        .ContentText{
           text-shadow: 0 0 5px rgba(0,0,0,0.4);
           font-size: 18px;
           color: #fff;
@@ -40,31 +40,31 @@
           margin: 16px 0 0 0;
 
         }
-        .contentBtn{
+        .ContentBtn{
           display: flex;
           margin: 24px 0 0 0;
           box-sizing: border-box;
-          .aBtn{
+          .BtnA{
             margin-right: 10px;
             width: 180px;
           }
-          .aBtn:hover{
+          .BtnA:hover{
             opacity: 0.6;
           }
 
-          .gBtn{
+          .BtnG{
             width: 180px;
             margin-right: 10px;
           }
-          .gBtn:hover{
+          .BtnG:hover{
             opacity: 0.6;
           }
         }
       }
     }
-    .mainReason{
+    .MainReason{
       padding: 60px 20px;
-      .subtitle{
+      .SubTitle{
         text-align: center;
         font-size: 26px;
         line-height: 1.4;
@@ -72,7 +72,7 @@
         margin-bottom: 25px;
         padding-bottom: 15px;
         position: relative;
-        .subtitleLine{
+        .SubTitleLine{
           content: "";
           width: 70px;
           height: 4px;
@@ -83,23 +83,23 @@
           transform: translateX(-50%);
         }
       }
-      .lists{
+      .Lists{
         text-align: center;
         display: flex;
         max-width: 1020px;
         width: 100%;
         margin: 0 auto;
-        .list{
+        .List{
           width: 30%;
           margin: 16px 5% 0 0;
           text-align: left;
           display: flex;
           flex-direction: column;
           align-items: center;
-          .listPict{
+          .ListPict{
             position: relative;
             margin-bottom: 20px;
-            .number{
+            .Number{
               display: inline-block;
               position: absolute;
               top: 0;
@@ -112,12 +112,12 @@
               background-color: #3CCACE;
               color: #fff;
             }
-            .img{
+            .Img{
               width: 100%;
               vertical-align: bottom;
             }
           }
-          .listText{
+          .ListText{
             font-weight: bold;
             font-size: 24px;
             line-height: 50px;
@@ -126,7 +126,7 @@
               color: #3CCACE;
             }
           }
-          .listDescription{
+          .ListDescription{
             font-size: 18px;
             line-height: 1.5;
             margin: 16px 0 0;
@@ -134,56 +134,56 @@
         }
       }
     }
-    .mainMiddleDl{
+    .MainMiddleDl{
       background-image: url('bg-topMiddleDl-pict.jpg');
       background-position: bottom right;
       height: 400px;
       background-size: cover;
       display: flex;
       align-items: center;
-      .mainMiddleDlInner{
+      .MainMiddleDlInner{
         color: #fff;
         text-shadow: 0 0 5px rgba(0,0,0,0.4);
         text-align: left;
         max-width: 1040px;
         width: 100%;
         margin: 0 auto;
-        .subtitle{
+        .SubTitle{
           font-size: 27px;
           font-weight: bold;
           line-height: 1.4;
         }
-        .text{
+        .Text{
           font-size: 18px;
           margin: 20px 0 30px;
           line-height: 1.5;    
         }
-        .btn{
+        .Btn{
           display: flex;
 
-          .aBtn{
+          .ABtn{
             width: 180px;
             margin-right: 10px;
           }
-          .aBtn:hover{
+          .BtnA:hover{
             opacity: 0.6;
           }
 
 
-          .gBtn{
+          .BtnG{
             margin-right: 10px;
             width: 180px;
           }
-          .gBtn:hover{
+          .BtnG:hover{
             opacity: 0.6;
           }
         }
       }
     }
-    .mainCharateristic{
+    .MainCharateristic{
       padding: 60px 100px;
       background-color: #fff;
-      .head{
+      .Head{
         font-size: 27px;
         text-align: center;
         margin: 0 0 40px;
@@ -191,7 +191,7 @@
         margin-bottom: 25px;
         padding-bottom: 15px;
         position: relative;
-        .headLine{
+        .HeadLine{
           content: "";
           width: 70px;
           height: 4px;
@@ -202,32 +202,32 @@
           transform: translateX(-50%);
         }
       }
-      .lists{
+      .Lists{
         max-width: 1020px + 20px;
         width: 100%;
         margin: 0 auto;
         display: flex;
-        .list{
+        .List{
           display: flex;
           flex-direction: column;
           width: calc(1 / 3 * 100%);
           text-align: center;
           padding: 0 20px;
-          .listImg{
+          .ListImg{
             width: 70%;
             margin: 0 auto;
             line-height: 120px;
-            .img{
+            .Img{
               width: 100%;
               vertical-align: bottom;
             }
           }
-          .listSubtitle{
+          .ListSubtitle{
             margin: 38px 0 10px;
             font-size: 19px;
             font-weight: bold;
           }
-          .listDetail{
+          .ListDetail{
             margin: 0 0 40px;
             font-size: 17px;
             font-weight: 200;
@@ -239,31 +239,31 @@
 
 
 
-    .mainPicupCategory{
+    .MainPicupCategory{
       padding: 80px 0 0;
       background-color: #f8f8f8;
       height: 100%;
-      .head{
+      .Head{
         text-align: center;
         font-size: 28px;
         line-height: 1.4;
         font-weight: bold;
       }
-      .productBox{
-        .productHead{
+      .ProductBox{
+        .ProductHead{
           text-align: center;
           a{
             font-size: 24px;
             text-decoration-line: none;
             color: #3CCACE;
-            .title{
+            .Title{
               font-size: 100%;
               font-weight: normal;    
               font-weight: bold;
             }
           }
         }
-        .productLists{
+        .ProductLists{
           width: 780px;
           margin: 26px auto;
           display: flex;
@@ -272,14 +272,14 @@
             text-decoration-line: none;
             background-color: #fff;
             display: inline-block;
-            .productList--img{
+            .ProductList--img{
               width: 220px;
               height: 150px;
               position: relative;
               overflow: hidden;
               margin: 0;
               z-index: auto;
-              img{
+              Img{
                 position: absolute;
                 top: 0;
                 left: 0;
@@ -291,17 +291,17 @@
                 object-fit: cover;
               }
             }
-            .productList--body{
+            .ProductList--body{
               background-color: white;
               color: #333;
               padding: 16px;
-              .name{
+              .Name{
                 overflow: hidden;
                 line-height: 1.5;
                 font-size: 16px;
                 text-align: left;
               }
-              .details{
+              .Details{
                 font-size: 16px;
                 ul{
                   display: flex;
@@ -329,20 +329,20 @@
 
       }
     }
-    .mainPicupBrand{
+    .MainPicupBrand{
       padding: 80px 0 80px;
       background-color: #f8f8f8;
       height: 100%;
-      .head{
+      .Head{
         text-align: center;
         font-size: 28px;
         line-height: 1.4;
         font-weight: bold;
       }
-      .productBox{
+      .ProductBox{
         margin: 0;
         padding: 0;
-        .productHead{
+        .ProductHead{
           text-align: center;
           a{
             font-size: 24px;
@@ -355,12 +355,12 @@
             }
           }
         }
-        .productLists{
+        .ProductLists{
           width: 780px;
           margin: 26px auto;
           display: flex;
           justify-content: space-around;
-          .productList{
+          .ProductList{
             width: 220px;
             display: inline-block;
             float: left;
@@ -368,14 +368,14 @@
               text-decoration-line: none;
               background-color: #fff;
               display: inline-block;
-              .productList--img{
+              .ProductList--img{
                 width: 220px;
                 height: 150px;
                 position: relative;
                 overflow: hidden;
                 margin: 0;
                 z-index: auto;
-                img{
+                Img{
                   position: absolute;
                   top: 0;
                   left: 0;
@@ -387,7 +387,7 @@
                   object-fit: cover;
                 }
               }
-              .productList--body{
+              .ProductList--body{
                 background-color: white;
                 color: #333;
                 padding: 16px;
@@ -397,7 +397,7 @@
                   font-size: 16px;
                   text-align: left;
                 }
-                .details{
+                .Details{
                   font-size: 16px;
                   ul{
                     display: flex;
@@ -426,42 +426,42 @@
       }
     }
 
-    .mainRowDl{
+    .MainRowDl{
       background-image: url('bg-appBanner-pict.jpg');
       padding: 100px 40px;
       position: relative;
       background-size: cover;
       background-position: center;
-      .rowDLInner{
+      .RowDLInner{
         color: #fff;
         text-align: center;
-        .innerTitle{
+        .InnerTitle{
           text-shadow: 0 0 5px rgba(0,0,0,0.4);
           font-size: 24px;
           font-weight: bold;
           line-height: 1.4;
         }
-        .innerText{
+        .InnerText{
           font-size: 35px;
           text-shadow: 0 0 5px rgba(0,0,0,0.4);
         }
       }
-      .rowDlBtn{
+      .RowDlBtn{
         width: 100%;
         display: flex;
         justify-content: center;
         margin: 20px auto 0;
-        .aBtn{
+        .BtnA{
           width: 180px;
           margin-right: 10px;
         }
-        .aBtn:hover{
+        .BtnA:hover{
           opacity: 0.6;
         }
-        .gBtn{
+        .BtnG{
           width: 180px;
         }
-        .gBtn:hover{
+        .BtnG:hover{
           opacity: 0.6;
         }
       }
@@ -478,9 +478,9 @@
   }
 
 
-  .btn{
+  .Btn{
     box-sizing: border-box;
-    .purchaseBtn{
+    .PurchaseBtn{
       width: 90px;
       background: #3CCACE;
       text-align: center;

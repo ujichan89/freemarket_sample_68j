@@ -1,144 +1,144 @@
 %head
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
 
-.wrapper
+.Wrapper
   .Header
 
   .Main
-    .mainMainVisual
-      .contennt
-        .contentSubtitle
+    .MainMainVisual
+      .Contennt
+        .ContentSubTitle
           人生を変えるフリマアプリ
-        .contentText
+        .ContentText
           FRIMAは誰でも簡単に出品・購入できる
           %br
           フリマアプリです
-        .contentBtn
-          = link_to image_tag("app-store-9c5e28e8f81bd9912e0ded2f78821e04778a1356c05dc7c7bf1e88614be37c34.svg", class:"aBtn"),root_path
-          = link_to image_tag("google-play-469c63f1269e456307c4dde176b33cc3bbbbf142ac4d7369656010130149db1a.svg", class:"gBtn"),root_path       
+        .ContentBtn
+          = link_to image_tag("app-store-9c5e28e8f81bd9912e0ded2f78821e04778a1356c05dc7c7bf1e88614be37c34.svg", class:"BtnA"),root_path
+          = link_to image_tag("google-play-469c63f1269e456307c4dde176b33cc3bbbbf142ac4d7369656010130149db1a.svg", class:"BtnG"),root_path       
 
-    .mainReason
-      .subtitle
+    .MainReason
+      .SubTitle
         FURIMAが選ばれる３つの理由
-        .subtitleLine
-      .lists
-        .list
-          .listPict
-            .number
+        .SubTitleLine
+      .Lists
+        .List
+          .ListPict
+            .Number
               1
-            = image_tag("pict-reason-01.jpg", class:"img")
-          .listText
+            = image_tag("pict-reason-01.jpg", class:"Img")
+          .ListText
             %span 3分
             ですぐに出品
-          .listDescription
+          .ListDescription
             スマホで入力するだけで簡単に出品できる！
-        .list
-          .listPict
-            .number
+        .List
+          .ListPict
+            .Number
               2
-            = image_tag("pict-reason-02.jpg", class:"img")
-          .listText
+            = image_tag("pict-reason-02.jpg", class:"Img")
+          .ListText
             %span シンプル
             で使いやすい
-          .listDescription
+          .ListDescription
             めんどくさい入力は必要なく、検索も購入もスムーズ！
-        .list
-          .listPict
-            .number
+        .List
+          .ListPict
+            .Number
               3
-            = image_tag("pict-reason-03.jpg", class:"img")
-          .listText
+            = image_tag("pict-reason-03.jpg", class:"Img")
+          .ListText
             手数料
             %span 業界最安
-          .listDescription
+          .ListDescription
             最大３％でお得に出品!
-    .mainMiddleDl
-      .mainMiddleDlInner
-        .subtitle
+    .MainMiddleDl
+      .MainMiddleDlInner
+        .Subtitle
           会員数日本1位
-        .text
+        .Text
           FURIMAは、フリマアプリで最も人気。
           %br
           出品・購入回数も業界最多です！
           %br
           欲しかったあの商品に出会えるかもしれません。
-        .btn
-          = link_to image_tag("app-store-9c5e28e8f81bd9912e0ded2f78821e04778a1356c05dc7c7bf1e88614be37c34.svg", class:"aBtn"),root_path
-          = link_to image_tag("google-play-469c63f1269e456307c4dde176b33cc3bbbbf142ac4d7369656010130149db1a.svg", class:"gBtn"),root_path       
+        .Btn
+          = link_to image_tag("app-store-9c5e28e8f81bd9912e0ded2f78821e04778a1356c05dc7c7bf1e88614be37c34.svg", class:"BtnA"),root_path
+          = link_to image_tag("google-play-469c63f1269e456307c4dde176b33cc3bbbbf142ac4d7369656010130149db1a.svg", class:"BtnG"),root_path       
 
 
-    .mainCharateristic
-      .head
+    .MainCharateristic
+      .Head
         FURIMAの特徴
-        .headLine
-      .lists
-        .list
-          .listImg
-            = image_tag("icon-01.png", class:"img")
-          .listSubtitle
+        .HeadLine
+      .Lists
+        .List
+          .ListImg
+            = image_tag("icon-01.png", class:"Img")
+          .ListSubTitle
             簡単に売り買いできる
-          .listdetail
+          .Listdetail
             スマホひとつで、いつでもどこでも簡単に出品・購入が可能！      
-        .list
-          .listImg
-            = image_tag("icon-03.png", class:"img")
-          .listSubtitle
+        .List
+          .ListImg
+            = image_tag("icon-03.png", class:"Img")
+          .ListSubtitle
             売上金は即日振込みに対応
-          .listDetail
+          .ListDetail
             午前9時までに振込を以来いただければ、翌日の指定の講座に入金いたします！
-        .list
-          .listImg
-            = image_tag("icon-04.png", class:"img")
-          .listSubtitle
+        .List
+          .ListImg
+            = image_tag("icon-04.png", class:"Img")
+          .ListSubtitle
             様々な支払いに対応
-          .listDetail
+          .ListDetail
             お支払いは、クレジットカードだけでなく、ポイントや売上金など多彩な方法があります。
 
 
-    %section.mainPicupCategory
-      %h2.head ピックアップカテゴリー
-      .productBox
-        .productHead
+    %section.MainPicupCategory
+      %h2.Head ピックアップカテゴリー
+      .ProductBox
+        .ProductHead
           %a
           = link_to root_path do
-            %h3.title 新規投稿商品
-        .productLists
-          .productList
+            %h3.Title 新規投稿商品
+        .ProductLists
+          .ProductList
             %a
             = link_to  "/products/3" do
-              %figure.productList--img
+              %figure.ProductList--img
                 = image_tag("https://s3-ap-northeast-1.amazonaws.com/mercarimaster/uploads/captured_image/content/13/a007.png")
-              .productList--body
-                %h3.name product3
-                .details
+              .ProductList--body
+                %h3.Name product3
+                .Details
                   %ul
                     %li 30000円
                     %li
                       %i.fa.fa-star.likeIcon
                       0
                   %p (税込)
-          .productList
+          .ProductList
             %a
             = link_to "/products/2" do
-              %figure.productList--img
+              %figure.ProductList--img
                 = image_tag("https://s3-ap-northeast-1.amazonaws.com/mercarimaster/uploads/captured_image/content/10/a004.png")
-              .productList--body
-                %h3.name product2
-                .details
+              .ProductList--body
+                %h3.Name product2
+                .Details
                   %ul
                     %li 20000円
                     %li
                       %i.fa.fa-star.likeIcon
                       0
                   %p (税込)
-          .productList
+          .ProductList
             %a
             = link_to "/products/1" do
-              %figure.productList--img
+              %figure.ProductList--img
                 = image_tag("https://s3-ap-northeast-1.amazonaws.com/mercarimaster/uploads/captured_image/content/7/a001.png")
-              .productList--body
+              .ProductList--body
                 %h3.name product1
-                .details
+                .Details
                   %ul
                     %li 10000円
                     %li
@@ -147,50 +147,50 @@
                   %p (税込)
 
 
-    %section.mainPicupBrand
-      %h2.head ピックアップブランド
-      .productBox
-        .productHead
+    %section.MainPicupBrand
+      %h2.Head ピックアップブランド
+      .ProductBox
+        .ProductHead
           %a
           = link_to root_path do
-            %h3.title アーカイバ
-        .productLists
-          .productList
+            %h3.Title アーカイバ
+        .ProductLists
+          .ProductList
             %a
             = link_to  "/products/3" do
-              %figure.productList--img
+              %figure.ProductList--img
                 = image_tag("https://s3-ap-northeast-1.amazonaws.com/mercarimaster/uploads/captured_image/content/13/a007.png")
-              .productList--body
+              .ProductList--body
                 %h3.name product3
-                .details
+                .Details
                   %ul
                     %li 30000円
                     %li
                       %i.fa.fa-star.likeIcon
                       0
                   %p (税込)
-          .productList
+          .ProductList
             %a
             = link_to  "/products/2" do
-              %figure.productList--img
+              %figure.ProductList--img
                 = image_tag("https://s3-ap-northeast-1.amazonaws.com/mercarimaster/uploads/captured_image/content/10/a004.png")
-              .productList--body
+              .ProductList--body
                 %h3.name product2
-                .details
+                .Details
                   %ul
                     %li 20000円
                     %li
                       %i.fa.fa-star.likeIcon
                       0
                   %p (税込)
-          .productList
+          .ProductList
             %a
             = link_to  "/products/3" do
-              %figure.productList--img
+              %figure.ProductList--img
                 = image_tag("https://s3-ap-northeast-1.amazonaws.com/mercarimaster/uploads/captured_image/content/7/a001.png")
-              .productList--body
+              .ProductList--body
                 %h3.name product1
-                .details
+                .Details
                   %ul
                     %li 10000円
                     %li
@@ -200,15 +200,15 @@
 
 
 
-    .mainRowDl
-      .rowDLInner
-        .innerTitle
+    .MainRowDl
+      .RowDLInner
+        .InnerTitle
           だれでもかんたん、人生を変えるフリマアプリ
-        .innerText
+        .InnerText
           今すぐ無料ダウンロード！
-      .rowDlBtn
-        = link_to image_tag("app-store-9c5e28e8f81bd9912e0ded2f78821e04778a1356c05dc7c7bf1e88614be37c34.svg", class:"aBtn"),root_path
-        = link_to image_tag("google-play-469c63f1269e456307c4dde176b33cc3bbbbf142ac4d7369656010130149db1a.svg", class:"gBtn"),root_path       
+      .RowDlBtn
+        = link_to image_tag("app-store-9c5e28e8f81bd9912e0ded2f78821e04778a1356c05dc7c7bf1e88614be37c34.svg", class:"BtnA"),root_path
+        = link_to image_tag("google-play-469c63f1269e456307c4dde176b33cc3bbbbf142ac4d7369656010130149db1a.svg", class:"BtnG"),root_path       
 
 
 
@@ -216,10 +216,10 @@
   .Footer
   
 
-  .btn
-    = link_to "#", class: :"purchaseBtn" do
-      %span.purchaseBtn__text 
+  .Btn
+    = link_to "#", class: :"PurchaseBtn" do
+      %span.PurchaseBtn__text 
         出品する
-      = image_tag("icon_camera.png",class:"purchaseBtn__icon")
+      = image_tag("icon_camera.png",class:"PurchaseBtn__icon")
 
 
