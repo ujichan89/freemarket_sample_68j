@@ -32,12 +32,14 @@
         
         = link_to "パスワードをお忘れの方", new_user_password_path, class: :"Session__input--forget"
         
-          
+    = render partial: "items/footer"
 
-  .Footer 
-    .Footer__logo
-      = link_to "#" do
-        = image_tag "logo-white.png", class: :"Footer__logo--text"
-    .Footer--text
-      FURIMA, ink.
+  -# .FooterLogin
+  -#   .FooterLogin__logo
+  -#     = link_to "#" do
+  -#       = image_tag "logo-white.png", class: :"Footer__logo--text"
+  -#   .FooterLogin--text
+  -#     FURIMA, ink.
+
+
 
