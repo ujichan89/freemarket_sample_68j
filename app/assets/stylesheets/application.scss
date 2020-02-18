@@ -1,12 +1,12 @@
 @import "reset";
 @import "font-awesome-sprockets";
 @import "font-awesome";
-@import "users/new";
-@import "credit_cards"; 
-@import "items/show";
 @import "modules/headerA";
 @import "modules/footerA";
 @import "modules/HeaderB";
 @import "modules/FooterB";
-@import "items";
+@import "items/index";
+@import "items/show";
 @import "users";
+@import "users/new";
+@import "credit_cards"; 
