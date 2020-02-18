@@ -44,19 +44,19 @@
           display: flex;
           margin: 24px 0 0 0;
           box-sizing: border-box;
-          .BtnA{
+          .MainVisualBtnA{
             margin-right: 10px;
             width: 180px;
           }
-          .BtnA:hover{
+          .MainVisualBtnA:hover{
             opacity: 0.6;
           }
 
-          .BtnG{
+          .MainVisualBtnG{
             width: 180px;
             margin-right: 10px;
           }
-          .BtnG:hover{
+          .MainVisualBtnG:hover{
             opacity: 0.6;
           }
         }
@@ -158,23 +158,23 @@
           margin: 20px 0 30px;
           line-height: 1.5;    
         }
-        .Btn{
+        .MiddleDlBtn{
           display: flex;
 
-          .ABtn{
+          .MiddleDlABtn{
             width: 180px;
             margin-right: 10px;
           }
-          .BtnA:hover{
+          .MiddleDlBtnA:hover{
             opacity: 0.6;
           }
 
 
-          .BtnG{
+          .MiddleDlBtnG{
             margin-right: 10px;
             width: 180px;
           }
-          .BtnG:hover{
+          .MiddleDlBtnG:hover{
             opacity: 0.6;
           }
         }
@@ -451,17 +451,17 @@
         display: flex;
         justify-content: center;
         margin: 20px auto 0;
-        .BtnA{
+        .MainRowDlBtnA{
           width: 180px;
           margin-right: 10px;
         }
-        .BtnA:hover{
+        .MainRowDlBtnA:hover{
           opacity: 0.6;
         }
-        .BtnG{
+        .MainRowDlBtnG{
           width: 180px;
         }
-        .BtnG:hover{
+        .MainRowDlBtnG:hover{
           opacity: 0.6;
         }
       }
