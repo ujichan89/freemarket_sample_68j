@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class CreditCardsControllerTest < ActionDispatch::IntegrationTest
+class ItemsControllerTest < ActionDispatch::IntegrationTest
   # test "the truth" do
   #   assert true
   # end
