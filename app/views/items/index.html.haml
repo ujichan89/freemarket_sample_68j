@@ -1,5 +1,4 @@
 = render partial: 'shared/headerA'
-
 .Wrapper
 
   .Main
@@ -8,7 +7,7 @@
         .ContentSubTitle
           人生を変えるフリマアプリ
         .ContentText
-          FRIMAは誰でも簡単に出品・購入できる
+          FURIMAはだれでもかんたんに出品・購入できる
           %br
           フリマアプリです
         .ContentBtn
@@ -17,7 +16,7 @@
 
     .MainReason
       .SubTitle
-        FURIMAが選ばれる３つの理由
+        FURIMAが選ばれる3つの理由
         .SubTitleLine
       .Lists
         .List
@@ -52,7 +51,7 @@
             最大３％でお得に出品!
     .MainMiddleDl
       .MainMiddleDlInner
-        .Subtitle
+        .middleSubtitle
           会員数日本1位
         .Text
           FURIMAは、フリマアプリで最も人気。
@@ -72,10 +71,10 @@
         .List
           .ListImg
             = image_tag("icon-01.png", class:"Img")
-          .ListSubTitle
+          .ListSubtitle
             簡単に売り買いできる
-          .Listdetail
-            スマホひとつで、いつでもどこでも簡単に出品・購入が可能！      
+          .ListDetail
+            スマホひとつで、いつでもどこでも簡単に出品・購入が可能！
         .List
           .ListImg
             = image_tag("icon-03.png", class:"Img")
@@ -194,12 +193,12 @@
                       0
                   %p (税込)
 
-  .Footer
-
   .Btn
     = link_to "#", class: :"PurchaseBtn" do
       %span.PurchaseBtn__text 
         出品する
       = image_tag("icon_camera.png",class:"PurchaseBtn__icon")
 
+
+= render partial: 'shared/appBanner'
 = render partial: 'shared/footerA'
