@@ -19,6 +19,47 @@
     line-height: 32px;
   }
 
+  .MainRowDl{
+    background-image: url('bg-appBanner-pict.jpg');
+    padding: 100px 40px;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    .RowDLInner{
+      color: #fff;
+      text-align: center;
+      .InnerTitle{
+        text-shadow: 0 0 5px rgba(0,0,0,0.4);
+        font-size: 24px;
+        font-weight: bold;
+        line-height: 1.4;
+      }
+      .InnerText{
+        font-size: 35px;
+        text-shadow: 0 0 5px rgba(0,0,0,0.4);
+      }
+    }
+    .RowDlBtn{
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      margin: 20px auto 0;
+      .MainRowDlBtnA{
+        width: 180px;
+        margin-right: 10px;
+      }
+      .MainRowDlBtnA:hover{
+        opacity: 0.6;
+      }
+      .MainRowDlBtnG{
+        width: 180px;
+      }
+      .MainRowDlBtnG:hover{
+        opacity: 0.6;
+      }
+    }
+  }
+
   .__footerContents{
     display: flex;
     max-width: 840px;
