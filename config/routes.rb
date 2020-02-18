@@ -1,3 +1,11 @@
 Rails.application.routes.draw do
-  root to: 'purchases#edit'
+  devise_for :users
+  root to: 'items#index'
+
+  resources :users, only:[:new]
+  resources :items
+  resources :addresses
+  resources :purchases
+  resources :credit_cards
+
 end
