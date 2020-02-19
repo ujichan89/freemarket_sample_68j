@@ -1,5 +1,4 @@
-
-.WrapperLogin
+.Wrapper
   .Logo
     = image_tag "logo.png", class: :"Logo__png"
 
@@ -10,15 +9,12 @@
       = link_to "新規会員登録", new_user_registration_path, class: :"Session__sign--btn"
       
     .Session__input
-  
-  
       = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
         .field
           = f.email_field :email, autofocus: true, autocomplete: "email", placeholder: :"メールアドレス", class: :"Session__input--mail"
 
         .field
           = f.password_field :password, autocomplete: "current-password", placeholder: :"パスワード", class: :"Session__input--pass"
-
 
         -# \% if devise_mapping.rememberable? %&gt;
         -# .field
@@ -32,14 +28,10 @@
         
         = link_to "パスワードをお忘れの方", new_user_password_path, class: :"Session__input--forget"
         
-    = render partial: "items/footer"
-
-  -# .FooterLogin
-  -#   .FooterLogin__logo
-  -#     = link_to "#" do
-  -#       = image_tag "logo-white.png", class: :"Footer__logo--text"
-  -#   .FooterLogin--text
-  -#     FURIMA, ink.
-
-
+  .Footer 
+    .Footer__logo
+      = link_to "#" do
+        = image_tag "logo-white.png", class: :"Footer__logo--text"
+    .Footer--text
+      FURIMA, ink.
 
