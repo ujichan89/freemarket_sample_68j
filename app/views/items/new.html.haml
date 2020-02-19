@@ -1,55 +1,55 @@
-.WrapperNew
+.items__WrapperNew
   = link_to "ログイン", new_user_session_path, class: :"new"
   .Logo
     = image_tag "logo.png", class: :"Logo__png"
 
-  .Contents
-    .Contents__title
+  .items__Contents
+    .items__Contents__title
       商品の情報を入力
 
-    .Contents__image
+    .items__Contents__image
 
-      .Contents__image__title
-        .Contents__image__title--text
+      .items__Contents__image__title
+        .items__Contents__image__title--text
           出品画像
-        .Contents__image__title--must
+        .items__Contents__image__title--must
           必須
-      .Contents__image__capture
+      .items__Contents__image__capture
         最大10枚までアップロードできます
-      .Contents__image__up
-        .Contents__image__up__text
-          .Contents__image__up__text--one
+      .items__Contents__image__up
+        .items__Contents__image__up__text
+          .items__Contents__image__up__text--one
             = icon('fa', 'camera')  
-          .Contents__image__up__text--two
+          .items__Contents__image__up__text--two
             ドラッグアンドドロップ 
-          .Contents__image__up__text--three
+          .items__Contents__image__up__text--three
             またはクリックしてファイルをアップロード 
 
-    .Contents__form
-      .Contents__form__name
-        .Contents__form__name--text
+    .items__Contents__form
+      .items__Contents__form__name
+        .items__Contents__form__name--text
           商品名
-        .Contents__form__name--must
+        .items__Contents__form__name--must
           必須
-      %input.Contents__form--input{ name: :email, placeholder: :"商品名(必須40文字まで)", type: :email, value: :"" }/
+      %input.items__Contents__form--input{ name: :email, placeholder: :"商品名(必須40文字まで)", type: :email, value: :"" }/
 
-      .Contents__form__description 
-        .Contents__form__description--text
+      .items__Contents__form__description 
+        .items__Contents__form__description--text
           商品の説明
-        .Contents__form__description--must 
+        .items__Contents__form__description--must 
           必須
         
-      %input.Contents__form--input-big{ name: :email, placeholder: :"商品の説明(必須1,000文字以内) (色、素材、重さ、定価、注意点など) 例)", type: :email, value: :"", class: :"Contents__form--input-big--text" }/
+      %input.items__Contents__form--input-big{ name: :email, placeholder: :"商品の説明(必須1,000文字以内) (色、素材、重さ、定価、注意点など) 例)", type: :email, value: :"", class: :"Contents__form--input-big--text" }/
     
-    .Contents__detail
-      .Contents__detail__title
-        .Contents__detail__title--text
+    .items__Contents__detail
+      .items__Contents__detail__title
+        .items__Contents__detail__title--text
           商品の詳細
-      .Contents__detail__list
-        .Contents__detail__list__category
-          .Contents__detail__list__category--text
+      .items__Contents__detail__list
+        .items__Contents__detail__list__category
+          .items__Contents__detail__list__category--text
             カテゴリー
-          .Contents__detail__list__category--must
+          .items__Contents__detail__list__category--must
             必須
         %p
           %select#btn{name: :'category'}
@@ -192,8 +192,3 @@
 
       
         = link_to "もどる", "#", class: "Contents__Exhibition__btn--return"    
-            
-          
-  
-
-  = render partial: "footer"
