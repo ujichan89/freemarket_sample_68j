@@ -6,12 +6,14 @@
   .MAin__content
     .Main__content__date
       .item
+        = image_tag @image
       .value
         .itemName
-          商品名
+          = @item.name
         .itemDate
           .itemValue
-            ¥2,500円
+            ¥
+            = @item.value
           .itemTax
             (税込み) 送料込み
   .Main__buy
@@ -20,7 +22,10 @@
         .left
           支払い金額
         .rigth
-          ¥2,500円
+          ¥
+          = @item.value
+          円
+
       .Main__buy__content__point
         ポイントを使用
       .Main__buy__content__method
@@ -55,3 +60,6 @@
 
 
 .Footer
+
+
+/purchases/:id/edit(.:format)     purchases#edit

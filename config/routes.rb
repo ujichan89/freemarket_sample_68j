@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   resources :users, only:[:new]
   resources :items
   resources :addresses
-  resources :purchases, only:[:edit]
+  resources :purchases, only:[:edit, :show]
   resources :credit_cards
 
 end
