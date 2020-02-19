@@ -1,0 +1,62 @@
+-# <h2>住所情報登録</h2>
+
+-# <%= form_for @address do |f| %>
+-#   <%= render "devise/shared/error_messages", resource: @address %>
+
+-#   <div class="field">
+-#     <%= f.label :zipcode %><br />
+-#     <%= f.text_field :zipcode %>
+-#   </div>
+
+-#   <div class="field">
+-#     <%= f.label :address %><br />
+-#     <%= f.text_field :address %>
+-#   </div>
+
+-#   <div class="actions">
+-#     <%= f.submit "Sign up" %>
+-#   </div>
+-# <% end %>
+
+-# <%= render "devise/shared/links" %>
+
+
+%h2 住所情報登録
+= form_for(@address) do |f|
+  = render "devise/shared/error_messages", resource: @address
+  .field
+    = f.label :family_name
+    = f.text_field :family_name
+  .field
+    = f.label :first_name
+    = f.text_field :first_name
+  .field
+    = f.label :family_furigana
+    = f.text_field :family_furigana
+  .field
+    = f.label :first_furigana
+    = f.text_field :first_furigana
+  .field
+    = f.label :number
+    = f.text_field :number
+  .field
+    = f.label :prefecture
+    = f.text_field :prefecture
+
+  .field
+    = f.label :municipality
+    = f.text_field :municipality
+  .field
+    = f.label :street
+    = f.text_field :street
+  .field
+    = f.label :building
+    = f.text_field :building
+  .field
+    = f.label :phone_number
+    = f.text_field :phone_number
+
+  .actions
+    = f.submit "Sign up"
+= render "devise/shared/links"
+
