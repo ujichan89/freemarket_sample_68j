@@ -36,9 +36,6 @@ describe User do
       expect(user.errors[:password_confirmation]).to include("doesn't match Password")
     end
 
-birthday_month, birthday_day
-
-
     # 6. family_nameが空では登録できないこと
     it "is invalid without a family_name" do
       user = build(:user, family_name: nil)
@@ -75,53 +72,35 @@ birthday_month, birthday_day
       end
 
 
-      # 11. birthday_yearが空では登録できないこと
+      # 11. birthday_monthが空では登録できないこと
       it "is invalid without a birthday_year" do
-        user = build(:user, birthday_year: nil)
+        user = build(:user, birthday_month: nil)
         user.valid?
-        expect(user.errors[:birthday_year]).to include("can't be blank")
+        expect(user.errors[:birthday_month]).to include("can't be blank")
       end
 
 
-      # 12. birthday_yearが空では登録できないこと
+      # 12. birthday_dayが空では登録できないこと
       it "is invalid without a birthday_year" do
-        user = build(:user, birthday_year: nil)
+        user = build(:user, birthday_day: nil)
         user.valid?
-        expect(user.errors[:birthday_year]).to include("can't be blank")
+        expect(user.errors[:birthday_day]).to include("can't be blank")
       end
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    # 6. nicknameが7文字以上であれば登録できないこと
+  
+    # 13. nicknameが7文字以上であれば登録できないこと
     it "is invalid with a nickname that has more than 7 characters " do
       user = build(:user, nickname: "aaaaaaaa")
       user.valid?
       expect(user.errors[:nickname]).to include("is too long (maximum is 6 characters)")
     end
 
-    # 7. nicknameが6文字以下では登録できること
+    # 14. nicknameが6文字以下では登録できること
     it "is valid with a nickname that has less than 6 characters " do
       user = build(:user, nickname: "aaaaaa")
       expect(user).to be_valid
     end
 
-    # 8. 重複したemailが存在する場合登録できないこと
+    # 15. 重複したemailが存在する場合登録できないこと
     it "is invalid with a duplicate email address" do
       user = create(:user)
       another_user = build(:user, email: user.email)
@@ -129,27 +108,98 @@ birthday_month, birthday_day
       expect(another_user.errors[:email]).to include("has already been taken")
     end
 
-    # 9. passwordが6文字以上であれば登録できること
+    # 16. passwordが7文字以上であれば登録できること
     it "is valid with a password that has more than 7 characters " do
-      user = build(:user, password: "000000", password_confirmation: "000000")
+      user = build(:user, password: "0000000", password_confirmation: "0000000")
       user.valid?
       expect(user).to be_valid
     end
 
-    # 10. passwordが5文字以下であれば登録できないこと
+    # 17. passwordが6文字以下であれば登録できないこと
     it "is invalid with a password that has less than 6 characters " do
-      user = build(:user, password: "00000", password_confirmation: "00000")
+      user = build(:user, password: "000000", password_confirmation: "000000")
       user.valid?
       expect(user.errors[:password]).to include("is too short (minimum is 6 characters)")
     end
+  end
+end
 
+describe Address do
+  describe '#create' do
+    # 1. family_name, first_name, family_furigana, first_furigana, number, prefecture, municipality, streetが存在すれば登録できること
+    it "is valid with a family_name, first_name, family_furigana, first_furigana, number, prefecture, municipality, street" do
+      user = build(:user)
+      expect(user).to be_valid
+    end
 
+    # 2. family_nameが空では登録できないこと
+    it "is invalid without a family_name," do
+      user = build(:user, family_name: nil)
+      user.valid?
+      expect(user.errors[:family_name,]).to include("can't be blank")
+    end
 
+    # 3. family_furiganaが空では登録できないこと
+    it "is invalid without a family_furigana" do
+      user = build(:user, family_furigana: nil)
+      user.valid?
+      expect(user.errors[:family_furigan]).to include("can't be blank")
+    end
 
+    # 4. first_furiganaが空では登録できないこと
+    it "is invalid without a first_furigana" do
+      user = build(:user, first_furigana: nil)
+      user.valid?
+      expect(user.errors[:first_furigana]).to include("can't be blank")
+    end
 
+    # 5. first_furiganaが空では登録できないこと
+    it "is invalid without a first_furigana" do
+      user = build(:user, first_furigana: nil)
+      user.valid?
+      expect(user.errors[:first_furigana]).to include("can't be blank")
+    end
 
+    # 6. numberが空では登録できないこと
+    it "is invalid without a number" do
+      user = build(:user, number: nil)
+      user.valid?
+      expect(user.errors[:number]).to include("can't be blank")
+    end
 
+    # 7. prefectureが空では登録できないこと
+    it "is invalid without a prefecture" do
+      user = build(:user, prefecture: nil)
+      user.valid?
+      expect(user.errors[:prefecture]).to include("can't be blank")
+    end
 
+    # 8. municipalityが空では登録できないこと
+    it "is invalid without a municipality" do
+      user = build(:user, municipality: nil)
+      user.valid?
+      expect(user.errors[:municipality]).to include("can't be blank")
+    end
 
+    # 9. streetが空では登録できないこと
+    it "is invalid without a street" do
+      user = build(:user, street: nil)
+      user.valid?
+      expect(user.errors[:street]).to include("can't be blank")
+    end
+
+  
+    # 13. numberが8文字以上であれば登録できないこと
+    it "is invalid with a nickname that has more than 8 characters " do
+      user = build(:user, number: "aaaaaaaa")
+      user.valid?
+      expect(user.errors[:number]).to include("is too long (maximum is 7 characters)")
+    end
+
+    # 14. numberが7文字以下では登録できること
+    it "is valid with a nickname that has less than 7 characters " do
+      user = build(:user, nickname: "0000000")
+      expect(user).to be_valid
+    end
   end
 end
