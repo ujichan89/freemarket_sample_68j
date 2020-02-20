@@ -9,7 +9,7 @@ Rails.application.routes.draw do
 
   root to: 'items#index'
 
-  resources :users, only: [:new, :create, :edit, :update, :show, :destroy]
+  resources :users, except: [:index]
   resources :items
   resources :addresses
   resources :purchases
