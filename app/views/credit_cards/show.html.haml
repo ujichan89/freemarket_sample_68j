@@ -1,4 +1,4 @@
-= render partial: 'shared/headerA'
+-# = render partial: 'shared/headerA'
 .Wrapper-my
   .Mypage
     .MypageLeft
@@ -39,7 +39,7 @@
           %li.MypageLeft__list__var__item
             = link_to("発送先・お届け先住所変更", root_path, class: "MypageLeft__list__var__item__link")
           %li.MypageLeft__list__var__item
-            = link_to("お支払い方法", new_credit_card_path, class: "MypageLeft__list__var__item__link")
+            -# = link_to("お支払い方法", new_credit_card_path, class: "MypageLeft__list__var__item__link")
           %li.MypageLeft__list__var__item
             = link_to("メール/パスワード", root_path, class: "MypageLeft__list__var__item__link")
           %li.MypageLeft__list__var__item
@@ -51,36 +51,51 @@
 
 
     .MypageRight
-      .MypageRight__user
-        .MypageRight__user__tabs
-          .MypageRight__user__tabs__top
-            .MypageRight__user__tabs__top__pic
-              = image_tag '/assets/member_photo_noimage_thumb.png', class: "MypageRight__user__tabs__top__pic"
-            .MypageRight__user__tabs__top__name
-              "name"
-            .MypageRight__user__tabs__top__inf
-              .MypageRight__user__tabs__top__inf__val
-                "評価　0"
-              .MypageRight__user__tabs__top__inf__num
-                "出品数　0"
+      .MypageRight__head
+        支払い方法
+      .MypageRight__main
+        .MypageRight__main__index
+          クレジットカード一覧
+          .MypageRight__main__index__information
+            %ul.MypageRight__main__index__information__icon-btn
+              .icon
+                アイコンを入れる？
+              %li.btn
+                = link_to "削除ボタン",credit_card_path, method: :delete
+            .MypageRight__main__index__information__card-deadline
+              .card
+                カード番号載せる？
+              .deadline
+                カード有効期限載せる？
+    -#     .MypageRight__user__tabs
+    -#       .MypageRight__user__tabs__top
+    -#         .MypageRight__user__tabs__top__pic
+    -#           = image_tag '/assets/member_photo_noimage_thumb.png', class: "MypageRight__user__tabs__top__pic"
+    -#         .MypageRight__user__tabs__top__name
+    -#           "name"
+    -#         .MypageRight__user__tabs__top__inf
+    -#           .MypageRight__user__tabs__top__inf__val
+    -#             "評価　0"
+    -#           .MypageRight__user__tabs__top__inf__num
+    -#             "出品数　0"
 
-        .MypageRight__user__todo
-          .MypageRight__user__todo__tabs
-            .MypageRight__user__todo__tabs__news
-              "お知らせ"
-            .MypageRight__user__todo__tabs__todo
-              "やることリスト"
-          .MypageRight__user__todo__contents
-            "お知らせの商品がありません"
-      .MypageRight__purcha
-        .MypageRight__purcha__head
-          "購入した商品"
-        .MypageRight__purcha__tabs
-          .MypageRight__purcha__tabs__now
-            "取引中"
-          .MypageRight__purcha__tabs__past
-            "過去の取引"
-        .MypageRight__purcha__contents
-          "取引中の商品がありません"
-= render partial: 'shared/appBanner'
-= render partial: 'shared/footerA'
+    -#     .MypageRight__user__todo
+    -#       .MypageRight__user__todo__tabs
+    -#         .MypageRight__user__todo__tabs__news
+    -#           "お知らせ"
+    -#         .MypageRight__user__todo__tabs__todo
+    -#           "やることリスト"
+    -#       .MypageRight__user__todo__contents
+    -#         "お知らせの商品がありません"
+    -#   .MypageRight__purcha
+    -#     .MypageRight__purcha__head
+    -#       "購入した商品"
+    -#     .MypageRight__purcha__tabs
+    -#       .MypageRight__purcha__tabs__now
+    -#         "取引中"
+    -#       .MypageRight__purcha__tabs__past
+    -#         "過去の取引"
+    -#     .MypageRight__purcha__contents
+    -#       "取引中の商品がありません"
+-# = render partial: 'shared/appBanner'
+-# = render partial: 'shared/footerA'

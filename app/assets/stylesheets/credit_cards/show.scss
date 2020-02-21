@@ -1,0 +1,168 @@
+* {
+  box-sizing: border-box;
+}
+
+.Wrapper-my {
+  width: 100%;
+  height: 150vh;
+  background-color: rgb(246, 246, 250);
+  font-family: 'Source Sans Pro', Helvetica , Arial, 'æ¸¸ã‚´ã‚·ãƒƒã‚¯ä½“', 'YuGothic', 'ãƒ¡ã‚¤ãƒªã‚ª', 'Meiryo', sans-serif;
+}
+
+.Mypage {
+  background-color: rgb(246, 246, 250);
+  display: flex;
+  margin: 20px 200px;
+
+  .MypageLeft {  /*ユーザー左側のタブ*/
+    width: 280px;
+    margin-right: 40px;
+ 
+
+    &__list {
+      padding-bottom: 30px;
+      font-size: 14px;
+
+      &__var {
+        background-color: burlywood;
+
+        &__top {
+          background-color: lightgray;
+          padding: 12px;
+          position: relative;
+          a {
+            text-decoration: none;
+            color: black;
+          }
+          &::after{
+            content: "";
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            border-top: 2px solid black;
+            border-right: 2px solid black;
+            transform: rotate(45deg);
+            right: 19px;
+            top: 45%;
+            transition: 0.3s;
+          }
+          &:hover{
+            &::after{
+              right: 14px;
+            }
+        }
+      }
+
+        &__item {
+          background-color: white;
+          padding: 12px;
+          border-bottom: solid 1px lightgray;
+          position: relative;
+
+          a {
+            text-decoration: none;
+            color: black;
+          }
+          &::after {
+            content: "";
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            border-top: 2px solid lightgray;
+            border-right: 2px solid lightgray;
+            transform: rotate(45deg);
+            right: 19px;
+            top: 45%;
+            transition: 0.3s;
+          }
+          &:hover {
+            &::after{
+              right: 14px;
+              border-top: 2px solid black;
+              border-right: 2px solid black;
+            }
+          }
+        }
+      }
+    }
+  }
+
+
+  .MypageRight {  /*ユーザーの右側のメインタブ*/
+    width: 700px;
+    height: 400px;
+    background-color: #fff;
+    font-weight:bold;
+    &__head{
+      height: 60px;
+      background-color: #fff;
+      font-size: 24px;
+      text-align: center;
+      line-height: 60px;
+      border-bottom: 1px solid #f5f5f5; 
+      }
+    &__main{
+      height: 400px;
+      background-color: #fff;
+      
+      &__index{
+        height: 300px;
+        font-size: 16px;
+        background-color: #fff;
+        text-align: center;
+        margin-block-start: 1em;
+        margin-block-end: 1em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+        display: block;
+        border-bottom: 1px solid #f5f5f5; 
+        border-top: 1px solid #f5f5f5;
+        &__information{
+          height: 200px;
+          background-color: #fff;
+          
+          
+          justify-content: space-between;
+          margin: 0 126px;
+            &__icon-btn{
+              height: 130px;
+              background-color: #fff;
+              display: flex;
+              justify-content: space-between;
+              position: relative;
+              .icon{
+                width: 100px;
+                height: 50px;
+                background-color: hotpink;
+                margin-top:40px;
+              }
+              .btn{
+                width: 100px;
+                height: 50px;
+                background-color: orange;
+                margin-top:40px;
+                text-decoration: none;
+                line-height: 50px;
+              }
+            }
+            &__card-deadline{
+              height: 130px;
+              background-color: #fff;
+              
+              
+              .card{
+                font-size: 15px;
+                width: 200px;
+                background-color: paleturquoise;
+              }
+              .deadline{
+              font-size: 15px;
+              width: 200px;
+              background-color: palevioletred;
+              }
+            }
+        }
+      }
+    }
+  }
+}
