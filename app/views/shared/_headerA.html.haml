@@ -1,6 +1,6 @@
 .Header
   .__mainMenu
-    =image_tag 'logo/logo.png', class: '--logo'
+    =link_to (image_tag 'logo/logo.png', class: '--logo'), root_path
     .--keywordSeach
       %input{type: 'text', placeholder: 'キーワードから探す', class: '__inputbox'}
       =image_tag 'icon/icon-search 1.png', class: '__btn'
