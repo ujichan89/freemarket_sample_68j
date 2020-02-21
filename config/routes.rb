@@ -11,8 +11,8 @@ Rails.application.routes.draw do
 
   resources :users, except: [:index]
   resources :items
-  resources :addresses
   resources :purchases
+  resources :addresses
   resources :credit_cards
 
 end

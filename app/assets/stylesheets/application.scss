@@ -9,3 +9,23 @@
 @import "footerA";
 @import "users/user";
 @import "users/new_address";
+
+@import "modules/headerA";
+@import "modules/footerA";
+@import "modules/footerB";
+
+@import "modules/appBanner";
+
+@import "items/index";
+@import "items/new";
+@import "items/show";
+
+@import "addresses/new";
+
+@import "users/registrations/new";
+@import "users/sessions/new";
+@import "users/show";
+
+@import "purchases/show";
+
+@import "credit_cards";
