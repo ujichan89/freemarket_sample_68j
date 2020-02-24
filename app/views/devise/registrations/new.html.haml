@@ -4,6 +4,7 @@
     .Main
       .UserInputTitle
         会員情報入力
+      .UserInputError
         = render "devise/shared/error_messages", resource: resource
       = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
         .Input

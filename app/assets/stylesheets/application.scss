@@ -13,7 +13,6 @@
 @import "modules/headerB";
 @import "modules/footerA";
 @import "modules/footerB";
-
 @import "modules/appBanner";
 
 @import "items/index";
@@ -23,9 +22,8 @@
 @import "addresses/new";
 
 @import "users/registrations/new";
+@import "users/registrations/new_address";
 @import "users/sessions/new";
 @import "users/show";
 
 @import "purchases/show";
-
-@import "credit_cards";

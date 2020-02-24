@@ -35,4 +35,18 @@ class ItemsController < ApplicationController
   def item_params
     params.require(:item).permit(:name, :price, :status, :description, :charge, :area, :day, :sale, images_attributes: [:picture])
   end
+
+  def edit
+    @item = Item.find(params[:id])
+  end
+
+  def update
+    item = Item.find(params[:id])
+    item.update(item_params)
+  end
+
+  def destroy
+    item = Item.find(params[:id])
+    item.destory
+  end
 end
