@@ -1,13 +1,5 @@
--# toppage
-
-
--# - if user_signed_in?
--#   = link_to "ログアウト", destroy_user_session_path, method: :delete
--# - else
--#   = link_to "ログイン", new_user_session_path, method: :get
--# = render partial: 'shared/headerA'
+= render partial: 'shared/headerA'
 .Wrapper
-
   .Main
     .MainMainVisual
       .Contennt
@@ -119,7 +111,7 @@
         .ProductLists
           = render 'brand', bras: @bras, picbs: @picbs
 
-  .Btn
+  .PurchaseBtn
     = link_to new_item_path, class: :"PurchaseBtn" do
       %span.PurchaseBtn__text 
         出品する
