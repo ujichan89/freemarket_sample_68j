@@ -67,20 +67,27 @@
       margin-top: 5px;
     }
     &__upload {
-      height: 220px;
-      width: 86%;
-      margin: 10px 0px 0px 30px;
-      padding-bottom: 15px;
+      height: 250px;
+      width: 600px;
+      margin: 0 auto;
       background-color: rgb(246, 246, 250);
       border:  dashed 1px rgb(182, 182, 182);
       text-align: center;
-    }
-    .cameraBtn{
-      font-size: 80px;
-      color: gray;
-      margin: 0 auto;
-    }
 
+      &--cameraBtnUpper{
+        font-size: 80px;
+        color: gray;
+        margin: 0 auto;
+      }
+      &--cameraBtnDowner{
+        font-size: 80px;
+        color: gray;
+        margin: 0 auto;
+      }
+    }
+    #error_explanation{
+      color: red;
+    }
   }
   &__form {
     height: 300px;
