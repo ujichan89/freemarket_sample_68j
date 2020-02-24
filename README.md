@@ -63,7 +63,16 @@
 - belongs_to :user
 
 
-## credit_cardsテーブル
+## cardsテーブル
+
+|Column|Type|Options|
+|------|----|-------|
+|user_id|references|null: false, foreign_key: true|
+|customer_id|string|null: false|
+|crad_id|string|null: false|
+
+
+<!-- ## credit_cardsテーブル
 
 |Column|Type|Options|
 |------|----|-------|
@@ -75,7 +84,7 @@
 |user_id|references|null: false, foreign_key: true|
 
 ### Association
-- belongs_to :user
+- belongs_to :user -->
 
 
 ## imagesテーブル
