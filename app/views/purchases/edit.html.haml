@@ -49,7 +49,7 @@
           %Pこの商品はゆうゆうメルカリ便をしようしているため、   
           %Pアプリのみ購入できます。
         .buyBtn
-          = form_tag(pay_purchases_path, method: :post) do
+          = form_tag(pay_purchases_path(item_id: @item.id), method: :post) do
             %button 購入する
           -# = link_to "#", class: "btn" do
           -#   購入ボタン

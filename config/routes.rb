@@ -14,9 +14,8 @@ Rails.application.routes.draw do
   resources :addresses
   resources :credit_cards
 
-  resources :purchases, only: [:edit, :update] do
+  resources :purchases, only: [:edit] do
     collection do
-      # get 'index', to: 'purchase#index'
       get 'edit', to: 'purchases#edit'
       post 'pay', to: 'purchases#pay'
       get 'done', to: 'purchases#done'
