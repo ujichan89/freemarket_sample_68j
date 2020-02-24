@@ -1,0 +1,69 @@
+.Wrapper__cards
+  .Contents
+    .Contents__title
+      クレジットカード情報入力
+    = form_tag(pay_cards_path, method: :post, class: "Contents__card", id: 'charge-form', name: "inputForm") do
+      .Contents__card__name
+        .Contents__card__name--text
+          カード番号
+        .Contents__card__name--must
+          必須
+      = text_field_tag "number", "", class: "number", class: "Contents__card--input", placeholder: "半角数字のみ", maxlength: "16", type: "text", id: "card_number"
+      .Contents__card__picture
+        =image_tag "/assets/visa.svg", class: "Contents__card__picture__phot"
+        =image_tag "/assets/master-card.svg", class: "Contents__card__picture__phot"
+        =image_tag "/assets/saison-card.svg", class: "Contents__card__picture__phot"
+        =image_tag "/assets/jcb.svg", class: "Contents__card__picture__phot"
+        =image_tag "/assets/american_express.svg", class: "Contents__card__picture__phot"
+        =image_tag "/assets/dinersclub.svg", class: "Contents__card__picture__phot"
+        =image_tag "/assets/discover.svg", class: "Contents__card__picture__phot"
+
+      .Contents__date__name
+        .Contents__date__name--text
+          有効期限
+        .Contents__date__name--must
+          必須
+      .Contents__date__name--select
+        %select#exp_month{name: "exp_month", type: "text", class: "Contents__date__name--select__num"}
+          %option{value: ""} --
+          %option{value: "1"}01
+          %option{value: "2"}02
+          %option{value: "3"}03
+          %option{value: "4"}04
+          %option{value: "5"}05
+          %option{value: "6"}06
+          %option{value: "7"}07
+          %option{value: "8"}08
+          %option{value: "9"}09
+          %option{value: "10"}10
+          %option{value: "11"}11
+          %option{value: "12"}12
+        月
+
+        %select#exp_year{name: "exp_year", type: "text", class: "Contents__date__name--select__num"}
+          %option{value: ""} --
+          %option{value: "2019"}19
+          %option{value: "2020"}20
+          %option{value: "2021"}21
+          %option{value: "2022"}22
+          %option{value: "2023"}23
+          %option{value: "2024"}24
+          %option{value: "2025"}25
+          %option{value: "2026"}26
+          %option{value: "2027"}27
+          %option{value: "2028"}28
+          %option{value: "2029"}29
+        年
+
+      .Contents__card__name
+        .Contents__card__name--text
+          セキュリティコード
+        .Contents__card__name--must
+          必須
+      = text_field_tag "cvc", "", class: "cvc", class: "Contents__card--input", placeholder: "カード背面3~4桁の番号", maxlength: "4", id: "cvc"
+      #card_token
+      = submit_tag "追加する", id: "token_submit", class: "Contents__Exhibition__btn--btn"
+
+    .Contents__Exhibition
+      .Contents__Exhibition__btn
+        

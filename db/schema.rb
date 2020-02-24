@@ -10,20 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_02_21_101400) do
+ActiveRecord::Schema.define(version: 2020_02_24_051702) do
 
   create_table "addresses", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "family_name"
-    t.string "first_name"
-    t.string "family_furigana"
-    t.string "first_furigana"
-    t.integer "number"
-    t.string "prefecture"
-    t.string "municipality"
-    t.string "street"
+    t.string "family_name", null: false
+    t.string "first_name", null: false
+    t.string "family_furigana", null: false
+    t.string "first_furigana", null: false
+    t.integer "number", null: false
+    t.string "prefecture", null: false
+    t.string "municipality", null: false
+    t.string "street", null: false
     t.string "building"
     t.string "phone_number"
-    t.bigint "user_id"
+    t.bigint "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_addresses_on_user_id"
@@ -31,6 +31,14 @@ ActiveRecord::Schema.define(version: 2020_02_21_101400) do
 
   create_table "brands", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "cards", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.integer "user_id", null: false
+    t.string "customer_id", null: false
+    t.string "card_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -113,4 +121,5 @@ ActiveRecord::Schema.define(version: 2020_02_21_101400) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "addresses", "users"
 end
