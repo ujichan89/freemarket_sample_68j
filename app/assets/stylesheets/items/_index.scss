@@ -260,6 +260,12 @@
               font-weight: bold;
             }
           }
+          a:hover{
+            opacity: 0.6;
+          }
+        }
+        .ProductHead:hover{
+          opacity: 0.6;
         }
         .ProductLists{
           width: 780px;
@@ -323,6 +329,9 @@
               }
             }
           }
+          a:hover{
+            opacity: 0.6;
+          }
         }
 
       }
@@ -352,6 +361,9 @@
               font-weight: bold;
             }
           }
+        }
+        .ProductHead:hover{
+          opacity: 0.6;
         }
         .ProductLists{
           width: 780px;
@@ -420,6 +432,9 @@
               }
             }
           }
+          .ProductList:hover{
+            opacity: 0.6;
+          }
         }
       }
     }
@@ -428,7 +443,7 @@
   .Btn{
     box-sizing: border-box;
     .PurchaseBtn{
-      width: 90px;
+      width: 120px;
       background: #3CCACE;
       text-align: center;
       border-radius: 4%;

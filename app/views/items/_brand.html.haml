@@ -1,0 +1,15 @@
+-bras.zip(picbs) do |bra, picb|
+  .ProductList
+    %a
+    = link_to  "/products/#{bra.id}" do
+      %figure.ProductList--img
+        = image_tag("#{picb.picture}")
+      .ProductList--body
+        %h3.Name #{bra.name}
+        .Details
+          %ul
+            %li #{bra.price}円
+            %li
+              %i.fa.fa-star.likeIcon
+                0
+          %p (税込)
