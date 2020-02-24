@@ -4,8 +4,8 @@
   .Main
     .UserInputTitle2
       発送元・お届け先住所変更
+    .UserInputError2
       = render "devise/shared/error_messages", resource: @address
-
     = form_for(@address) do |f|
       .Input2
         .Input__name

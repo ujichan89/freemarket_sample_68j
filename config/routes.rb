@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   root to: 'items#index'
 
   resources :users, except: [:index]
-  resources :items, only: [:index, :show, :new]
+  resources :items, only: [:index, :new, :show, :edit, :update, :destroy ]
   resources :addresses
   resources :credit_cards
 
@@ -34,3 +34,4 @@ Rails.application.routes.draw do
 
 
 end
+
