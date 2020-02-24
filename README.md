@@ -71,21 +71,7 @@
 |customer_id|string|null: false|
 |crad_id|string|null: false|
 
-
-<!-- ## credit_cardsテーブル
-
-|Column|Type|Options|
-|------|----|-------|
-|number|integer|null: false|
-|owner|string|null: false|
-|expiration|integer|null: false|
-|type|string|null: false|
-|security|integer|null: false|
-|user_id|references|null: false, foreign_key: true|
-
 ### Association
-- belongs_to :user -->
-
 
 ## imagesテーブル
 
