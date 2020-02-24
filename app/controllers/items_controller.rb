@@ -20,7 +20,7 @@ class ItemsController < ApplicationController
     item.update(item_params)
   end
 
-  def destory
+  def destroy
     item = Item.find(params[:id])
     item.destory
   end
