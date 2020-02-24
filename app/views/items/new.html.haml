@@ -54,6 +54,8 @@
               = i.label :picture, for: "item_images_attributes_9_picture", class: "items__Contents__image__upload--cameraBtnDowner" do
                 = icon('fa', 'camera')
               = i.file_field :picture, id: "item_images_attributes_9_picture", style: "display: none;", name: "item[images_attributes][9][picture]"
+              - if @item.errors.any?
+                %p.red 画像がありません
 
       .items__Contents__form
         .items__Contents__form__name
@@ -61,7 +63,8 @@
             商品名
           .items__Contents__form__name--must
             必須
-        %input.items__Contents__form--input{ name: :email, placeholder: :"商品名(必須40文字まで)", type: :email, value: :"" }
+
+        = f.text_field :name, class: "items__Contents__form--input"
 
         .items__Contents__form__description 
           .items__Contents__form__description--text
@@ -219,5 +222,4 @@
         
         .Contents__Exhibition__btn
           = f.submit '送信', class: "Contents__Exhibition__btn--btn"
-          = link_to "もどる", "#", class: "Contents__Exhibition__btn--return"    
 = render partial: 'shared/footerB'
