@@ -29,7 +29,6 @@
           - if @default_card_information.blank?
             %br /
           - else
-            -#以下カード情報を表示
             = "**** **** **** " + @default_card_information.last4
             - exp_month = @default_card_information.exp_month.to_s
             - exp_year = @default_card_information.exp_year.to_s.slice(2,3)
@@ -51,8 +50,7 @@
         .buyBtn
           = form_tag(pay_purchases_path(item_id: @item.id), method: :post) do
             %button 購入する
-          -# = link_to "#", class: "btn" do
-          -#   購入ボタン
+
         .instoreVav
           %Pアプリをお持ちでに方は以下よりインストールして   
           %pご利用頂けます。
