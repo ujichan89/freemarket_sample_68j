@@ -1,15 +1,11 @@
+= render partial: 'shared/headerB'
 = form_for @item do |f|
   .items__WrapperNew
-    = link_to "ログイン", new_user_session_path, class: :"new"
-    .Logo
-      = image_tag "logo.png", class: :"Logo__png"
-
     .items__Contents
       .items__Contents__title
         商品の情報を入力
 
       .items__Contents__image
-
         .items__Contents__image__title
           .items__Contents__image__title--text
             出品画像
@@ -58,7 +54,6 @@
               = i.label :picture, for: "item_images_attributes_9_picture", class: "items__Contents__image__upload--cameraBtnDowner" do
                 = icon('fa', 'camera')
               = i.file_field :picture, id: "item_images_attributes_9_picture", style: "display: none;", name: "item[images_attributes][9][picture]"
-
 
       .items__Contents__form
         .items__Contents__form__name
@@ -225,3 +220,4 @@
         .Contents__Exhibition__btn
           = f.submit '送信', class: "Contents__Exhibition__btn--btn"
           = link_to "もどる", "#", class: "Contents__Exhibition__btn--return"    
+= render partial: 'shared/footerB'
