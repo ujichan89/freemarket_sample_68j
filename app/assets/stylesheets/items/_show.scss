@@ -82,6 +82,31 @@
     }
   }
 
+  &__edit{
+    background-color: #fff;
+    width: 700px;
+    margin: 24px auto ;
+    padding: 10px 24px;
+    text-align: center;
+      &--editButtan{
+        margin: 16px 0 16px 0;
+        background: #ea352d;
+        border: 1px solid #ea352d;
+        color: #fff;
+        line-height: 48px;
+      }
+      &--or{
+        margin: 16px 0 16px 0;
+        color: #333;
+      }
+      &--deleteButtan{
+        margin: 16px 0 16px 0;
+        background: #aaa;
+        border: 1px solid #aaa;
+        color: #fff;
+        line-height: 48px;
+    }
+  }
 
     &__comments{
     background-color: #fff;
