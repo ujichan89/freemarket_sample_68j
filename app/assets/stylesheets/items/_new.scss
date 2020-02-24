@@ -38,7 +38,7 @@
   }
 
   &__image {
-    height: 300px;
+    height: 350px;
     width: 100%;
     border-bottom: 0.2px solid lightgrey;
 
@@ -66,20 +66,28 @@
       margin-left: 30px;
       margin-top: 5px;
     }
-    &__up {
-      height: 200px;
-      width: 86%;
-      margin-top: 10px;
-      margin-left: 30px;
+    &__upload {
+      height: 250px;
+      width: 600px;
+      margin: 0 auto;
       background-color: rgb(246, 246, 250);
       border:  dashed 1px rgb(182, 182, 182);
+      text-align: center;
 
-      &__text {
-        text-align: center;
-        margin-top: 55px;
+      &--cameraBtnUpper{
+        font-size: 80px;
+        color: gray;
+        margin: 0 auto;
+      }
+      &--cameraBtnDowner{
+        font-size: 80px;
+        color: gray;
+        margin: 0 auto;
       }
     }
-
+    #error_explanation{
+      color: red;
+    }
   }
   &__form {
     height: 300px;
@@ -115,7 +123,6 @@
         border: 1px solid lightgrey;
         border-radius: 3px;
         font-size: 15px;
-        
     }
     
     &__description {
