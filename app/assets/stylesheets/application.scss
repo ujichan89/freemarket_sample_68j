@@ -2,15 +2,15 @@
 @import "font-awesome-sprockets";
 @import "font-awesome";
 @import "mypage";
+@import "users/user";
+
 @import "credit_cards"; 
 @import "items/show";
-@import "users/user";
-@import "users/new_address";
 
 @import "modules/headerA";
+@import "modules/headerB";
 @import "modules/footerA";
 @import "modules/footerB";
-
 @import "modules/appBanner";
 
 @import "items/index";
@@ -20,9 +20,8 @@
 @import "addresses/new";
 
 @import "users/registrations/new";
+@import "users/registrations/new_address";
 @import "users/sessions/new";
 @import "users/show";
 
 @import "purchases/show";
-
-@import "credit_cards";

@@ -1,10 +1,10 @@
+= render partial: 'shared/headerB'
 #account-page.account-page
   .Box
-    .Header
-      ここはヘッダーです
     .Main
       .UserInputTitle
         会員情報入力
+      .UserInputError
         = render "devise/shared/error_messages", resource: resource
       = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
         .Input
@@ -93,3 +93,4 @@
               に同意したものとみなします
             .Input__submit__btn
               = f.submit "Next", class: "Btn"
+= render partial: 'shared/footerB'
