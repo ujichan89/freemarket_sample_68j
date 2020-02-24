@@ -39,7 +39,7 @@
 
 ### Association
 - has_one :addresses
-- has_many :credit_cards
+- has_many :cards
 - has_many :purchases
 - has_many :items
 
@@ -72,6 +72,8 @@
 |crad_id|string|null: false|
 
 ### Association
+- belongs_to :user
+
 
 ## imagesテーブル
 
