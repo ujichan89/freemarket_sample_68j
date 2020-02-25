@@ -11,7 +11,7 @@ $(function(){
     if(profit == '') {   // もし､計算結果が''なら表示も消す｡
     $('.Contents__price__right__profit--rod').html('');
     $('.Contents__price__right__commission--rod').html('');
-    };
+    }
   });
   $("select").on("mouseover", function(){
     $(this).css("border-color", "deepskyblue");

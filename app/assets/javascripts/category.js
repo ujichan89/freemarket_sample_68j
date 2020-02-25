@@ -1,19 +1,19 @@
 $(document).on('turbolinks:load', function() {
 
   // selectを追加するHTML
-  var cat_seach = $("#select");
+  var cat_search = $("#select");
 
   function appendSelect(catNum) {
     if(catNum == 1) {
-      var select_id = `m_category`
+      var character_id = `m_category`
     } else if(catNum == 2) {
-      var select_id = `s_category`
+      var character_id = `s_category`
     }
     var html =
-    `<select name="item[category_id]" class="select-default" id="${select_id}">
+    `<select name="item[category_id]" class="select-default" id="${character_id}">
         <option value>選択してください</option>
     </select>`
-    cat_seach.append(html)
+    cat_search.append(html)
   };
 
 
