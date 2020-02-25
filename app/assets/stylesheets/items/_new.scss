@@ -603,7 +603,8 @@
 .Wrapper {
   height: 400vh;
   width: 100%;
-  background-color: rgb(246, 246, 250);
+  // background-color: rgb(246, 246, 250);
+  background-color: #efefef;
   position: relative;
 }
 
@@ -670,24 +671,29 @@
     }
     &__up {
       height: 200px;
-      width: 86%;
-      margin-top: 10px;
-      margin-left: 30px;
+      width: 600px;
+      margin: 0 auto;
+      // margin-top: 10px;
+      // margin-left: 30px;
       background-color: rgb(246, 246, 250);
       border:  dashed 1px rgb(182, 182, 182);
       cursor: pointer;
+      text-align: center;
 
-      &__text {
-        text-align: center;
-        margin-top: 55px;
-        
-        &--two {
-          text-align: center;
-        }
-      
+      &--cameraBtnUpper {
+        font-size: 80px;
+        color: gray;
+        margin: 0 auto;
+      }
+      &--cameraBtnDowner {
+        font-size: 80px;
+        color: gray;
+        margin: 0 auto;
       }
     }
-
+    #error_explanation {
+      color: red;
+    }
   }
   &__name {
     height: 300px;
