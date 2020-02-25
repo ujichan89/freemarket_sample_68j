@@ -9,6 +9,7 @@ class CreateItems < ActiveRecord::Migration[5.2]
       t.string :area
       t.string :day
       t.integer :sale
+      t.references :prefecture
       t.references :user
       t.references :category
       t.references :brand
