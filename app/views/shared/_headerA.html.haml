@@ -1,6 +1,6 @@
 .Header
   .__mainMenu
-    =image_tag 'logo/logo.png', class: '--logo'
+    =link_to (image_tag 'logo/logo.png', class: '--logo'), root_path
     .--keywordSeach
       %input{type: 'text', placeholder: 'キーワードから探す', class: '__inputbox'}
       =image_tag 'icon/icon-search 1.png', class: '__btn'
@@ -23,6 +23,6 @@
 
     .--loguinMenu
       .__login
-        = link_to 'ログイン', '#', class:'--login'
+        = link_to 'ログイン', new_user_session_path, class:'--login'
       .__signUp
-        = link_to '新規会員登録', '#', class:'--signUp'
+        = link_to '新規会員登録', new_user_registration_path, class:'--signUp'

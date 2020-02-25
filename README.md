@@ -5,14 +5,14 @@
 |name|string|null: false|
 |price|integer|null: false|
 |status|integer|null: false|
-|description|string|null: false|
+|description|text|null: false|
 |charge|string|null: false|
 |area|string|null: false|
 |day|string|null: false|
 |sale|integer|null: false|
 |user_id|references|null: false, foreign_key: true|
-|category_id|references|null: false, foreign_key: ture|
-|brand_id|references|null: false, foreign_key: ture|
+|category_id|references|null: false, foreign_key: true|
+|brand_id|references|null: false, foreign_key: true|
 
 ### Association
 - belongs_to :user
@@ -39,7 +39,7 @@
 
 ### Association
 - has_one :addresses
-- has_many :credit_cards
+- has_many :cards
 - has_many :purchases
 - has_many :items
 
@@ -50,7 +50,8 @@
 |------|----|-------|
 |family_name|string|null: false|
 |first_name|string|null: false|
-|furigana|string|null: false|
+|family_furigana|string|null: false|
+|first_furigana|string|null: false|
 |number|integer|null: false|
 |prefecture|string|null: false|
 |municipality|string|null: false|
@@ -63,16 +64,13 @@
 - belongs_to :user
 
 
-## credit_cardsテーブル
+## cardsテーブル
 
 |Column|Type|Options|
 |------|----|-------|
-|number|integer|null: false|
-|owner|string|null: false|
-|expiration|integer|null: false|
-|type|string|null: false|
-|security|integer|null: false|
 |user_id|references|null: false, foreign_key: true|
+|customer_id|string|null: false|
+|card_id|string|null: false|
 
 ### Association
 - belongs_to :user

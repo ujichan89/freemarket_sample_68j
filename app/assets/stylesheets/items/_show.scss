@@ -6,7 +6,7 @@
   &__main{
     text-align: center;
     background-color: #fff;
-    width: 620px;
+    width: 700px;
     height: 100%;
     margin: 0 auto;
     padding: 24px 40px 40px;
@@ -82,16 +82,41 @@
     }
   }
 
+  &__edit{
+    background-color: #fff;
+    width: 700px;
+    margin: 24px auto ;
+    padding: 10px 24px;
+    text-align: center;
+      &--editButtan{
+        margin: 16px 0 16px 0;
+        background: #ea352d;
+        border: 1px solid #ea352d;
+        color: #fff;
+        line-height: 48px;
+      }
+      &--or{
+        margin: 16px 0 16px 0;
+        color: #333;
+      }
+      &--deleteButtan{
+        margin: 16px 0 16px 0;
+        background: #aaa;
+        border: 1px solid #aaa;
+        color: #fff;
+        line-height: 48px;
+    }
+  }
 
     &__comments{
     background-color: #fff;
-    width: 652px;
+    width: 700px;
     margin: 10px auto ;
     padding: 24px;
     text-align: center;
       &--commentform{
         margin: 0px;
-        width: 626px;
+        width: 652px;
         height: 104px;
         padding: 10px;
       }
