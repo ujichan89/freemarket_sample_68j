@@ -6,8 +6,8 @@
       = @item.name
 
     .GoodDetealContents__main--images
-      = image_tag '@images.picture.url'
-      -# = image_tag 'items/a004.png', class: 'GoodDetealContents__main--images__mainImage'
+      - @images.each do |image|
+        = image_tag image.picture.to_s, class: 'GoodDetealContents__main--images__mainImage'
       -# = image_tag 'items/a004.png', class: 'GoodDetealContents__main--images__subImage'
       -# = image_tag 'items/a005.png', class: 'GoodDetealContents__main--images__subImage'
       -# = image_tag 'items/a006.png', class: 'GoodDetealContents__main--images__subImage'
