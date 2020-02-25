@@ -1,7 +1,7 @@
 -cates.zip(piccs) do |cate, picc|
   .ProductList
     %a
-    = link_to  "/products/#{cate.id}" do
+    = link_to item_path(@cates) do
       %figure.ProductList--img
         = image_tag("#{picc.picture}")
       .ProductList--body
