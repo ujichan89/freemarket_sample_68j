@@ -13,7 +13,7 @@ class Item < ApplicationRecord
 
   validates :name,  presence: true, length: {maximum: 40}
   validates :description,  presence: true , length: {maximum: 1000}
-  validates :status, presence: true
+  validates :status, :category, presence: true
 
 
 end
