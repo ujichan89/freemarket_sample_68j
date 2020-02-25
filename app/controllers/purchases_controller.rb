@@ -27,7 +27,4 @@ class PurchasesController < ApplicationController
   @item.update(sale: 1)
   redirect_to action: 'done'
   end
-
-  private
-
 end
