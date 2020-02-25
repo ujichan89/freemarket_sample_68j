@@ -32,6 +32,7 @@ class ItemsController < ApplicationController
     @user = @item.user
     @category = @item.category
     @brand = @item.brand
+    @images = @item.images
   end
 
   def edit

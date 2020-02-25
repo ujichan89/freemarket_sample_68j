@@ -41,7 +41,7 @@
         %tr
           %th ブランド
           %td
-            = @brand.name
+            = @brand.try(:name)
         %tr
           %th 商品の状態
           %td
