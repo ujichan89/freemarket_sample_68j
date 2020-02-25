@@ -129,7 +129,7 @@
           .ProductList
             %a
             - unless @items == nil
-              = link_to edit_purchase_path(@items.ids[4]) do
+              = link_to edit_purchase_path(@items.ids[0]) do
                 %figure.ProductList--img
                   = image_tag("https://s3-ap-northeast-1.amazonaws.com/mercarimaster/uploads/captured_image/content/7/a001.png")
                 .ProductList--body

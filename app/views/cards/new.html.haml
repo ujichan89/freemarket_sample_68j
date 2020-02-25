@@ -8,7 +8,7 @@
           カード番号
         .Contents__card__name--must
           必須
-      = text_field_tag "number", "", class: "number", class: "Contents__card--input", placeholder: "半角数字のみ", maxlength: "16", type: "text", id: "card_number"
+      = text_field_tag "number", "", class: "number", class: "Contents__card--input", placeholder: "半角数字のみ", type: "text", id: "card_number", maxlength: "16"
       .Contents__card__picture
         =image_tag "/assets/visa.svg", class: "Contents__card__picture__phot"
         =image_tag "/assets/master-card.svg", class: "Contents__card__picture__phot"
@@ -66,4 +66,4 @@
 
     .Contents__Exhibition
       .Contents__Exhibition__btn
-        
+

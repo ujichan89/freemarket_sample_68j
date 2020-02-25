@@ -24,6 +24,10 @@ class PurchasesController < ApplicationController
     :customer => card.customer_id,
     :currency => 'jpy',
   )
+
   redirect_to action: 'done'
   end
+
+  private
+
 end

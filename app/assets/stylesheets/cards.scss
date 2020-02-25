@@ -1,3 +1,152 @@
-// Place all the styles related to the cards controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.Wrapper__cards {
+  height: 100vh;
+  width: 100%;
+  background-color: rgb(246, 246, 250);
+  position: relative;
+}
+
+//_______________________________________________________
+
+
+.Contents {
+  height: 650px;
+  width: 50%;
+  background-color: white;
+  margin: 0 auto;
+  
+  &__title {
+    height: 50px;
+    width: 100%;
+    text-align: center;
+    border-bottom: 0.2px solid lightgrey;
+    line-height: 50px;
+    font-size: x-large;
+    font-weight: bold;
+  }
+
+  &__card {
+    width: 100%;
+    padding: 0 180px;
+
+    &__name {
+      display: flex;
+      padding-top: 20px;
+      margin-left: 30px;
+      margin-top: 20px;
+
+      &--text {
+        font-size: 15px;
+        font-weight: bold;
+      }
+      &--must {
+        color: white;
+        background-color: #3CCACE;
+        font-size: 5px;
+        font-weight: bold;
+        border-radius: 2px;
+        padding: 4px;
+        margin-left: 10px;
+      }     
+    }
+    &--input {
+        height: 50px;
+        width: 35%; 
+        line-height: 50px;
+        padding-left: 30px;
+        margin-top: 15px;
+        margin-left: 30px;
+        border: 1px solid lightgrey;
+        border-radius: 3px;
+        font-size: 15px;
+    }
+
+    &__picture {
+      height: 30px;
+      width: 20%;
+      display: flex;
+      margin-top: 15px;
+      padding-left: 27px;
+      &__phot {
+        height: 18px;
+        margin-right: 12px
+      }
+    }
+  }
+
+  &__date {
+    height: 300px;
+    width: 100%;
+    border-bottom: 0.2px solid lightgrey;
+
+    &__name {
+      display: flex;
+      padding-top: 20px;
+      margin-left: 30px;
+
+      &--text {
+        font-size: 15px;
+        font-weight: bold;
+      }
+      &--must {
+        color: white;
+        background-color: #3CCACE;
+        font-size: 5px;
+        font-weight: bold;
+        border-radius: 2px;
+        padding: 4px;
+        margin-left: 10px;
+        height: 18px;
+      }     
+    }
+    &--input {
+        height: 50px;
+        width: 35%; 
+        line-height: 50px;
+        padding-left: 30px;
+        margin-top: 15px;
+        margin-left: 30px;
+        border: 1px solid lightgrey;
+        border-radius: 3px;
+        font-size: 15px;
+    }
+  }
+  
+  &__Exhibition {
+    height: 350px;
+    width: 100%;
+
+    &__text {
+      padding-top: 50px;
+      padding-left: 40px;
+    }
+  &__btn{
+      display: flex;
+      flex-direction: column;
+      margin-top: 30px;
+  
+    &--btn {
+      height: 50px;
+      width: 350px;
+      font-size: 14px;
+      text-decoration: none;
+      color: white;
+      background-color: red;
+      text-align: center;
+      line-height: 50px;
+      margin: 0 auto;
+      cursor: pointer;
+    }
+   }
+  }
+ }
+
+//_______________________________________________________
+
+
+.Contents__date__name--select__num {
+  height: 50px;
+  width: 120px;
+  margin-top: 10px;
+  margin-left: 30px
+}

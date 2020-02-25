@@ -39,7 +39,7 @@
 
 ### Association
 - has_one :addresses
-- has_many :credit_cards
+- has_many :cards
 - has_many :purchases
 - has_many :items
 
@@ -57,21 +57,6 @@
 |street|string|null: false|
 |building|string|
 |phone_number|integer|
-|user_id|references|null: false, foreign_key: true|
-
-### Association
-- belongs_to :user
-
-
-## credit_cardsテーブル
-
-|Column|Type|Options|
-|------|----|-------|
-|number|integer|null: false|
-|owner|string|null: false|
-|expiration|integer|null: false|
-|type|string|null: false|
-|security|integer|null: false|
 |user_id|references|null: false, foreign_key: true|
 
 ### Association
