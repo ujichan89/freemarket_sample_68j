@@ -15,7 +15,7 @@ class ItemsController < ApplicationController
     if @item.save
       redirect_to action: "index"
     else
-      render "new"
+      render action: :new
     end
   end
 
@@ -34,7 +34,7 @@ class ItemsController < ApplicationController
 
   private
   def item_params
-    params.require(:item).permit(:name, :price, :status, :description, :charge, :area, :day, :sale, images_attributes: [:picture])
+    params.require(:item).permit(:name, images_attributes: [:picture])
   end
 
   def edit

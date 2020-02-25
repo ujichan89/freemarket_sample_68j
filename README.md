@@ -50,7 +50,8 @@
 |------|----|-------|
 |family_name|string|null: false|
 |first_name|string|null: false|
-|furigana|string|null: false|
+|family_furigana|string|null: false|
+|first_furigana|string|null: false|
 |number|integer|null: false|
 |prefecture|string|null: false|
 |municipality|string|null: false|
@@ -58,6 +59,18 @@
 |building|string|
 |phone_number|integer|
 |user_id|references|null: false, foreign_key: true|
+
+### Association
+- belongs_to :user
+
+
+## cardsテーブル
+
+|Column|Type|Options|
+|------|----|-------|
+|user_id|references|null: false, foreign_key: true|
+|customer_id|string|null: false|
+|card_id|string|null: false|
 
 ### Association
 - belongs_to :user
