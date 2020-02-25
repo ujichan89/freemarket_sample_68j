@@ -52,11 +52,6 @@ ActiveRecord::Schema.define(version: 2020_02_24_051702) do
     t.index ["ancestry"], name: "index_categories_on_ancestry"
   end
 
-  create_table "goods", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "images", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.text "picture"
     t.bigint "item_id"
@@ -74,7 +69,6 @@ ActiveRecord::Schema.define(version: 2020_02_24_051702) do
     t.string "area"
     t.string "day"
     t.integer "sale"
-    t.bigint "prefecture_id"
     t.bigint "user_id"
     t.bigint "category_id"
     t.bigint "brand_id"
@@ -82,7 +76,6 @@ ActiveRecord::Schema.define(version: 2020_02_24_051702) do
     t.datetime "updated_at", null: false
     t.index ["brand_id"], name: "index_items_on_brand_id"
     t.index ["category_id"], name: "index_items_on_category_id"
-    t.index ["prefecture_id"], name: "index_items_on_prefecture_id"
     t.index ["user_id"], name: "index_items_on_user_id"
   end
 
