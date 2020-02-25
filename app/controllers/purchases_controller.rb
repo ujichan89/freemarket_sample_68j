@@ -24,7 +24,7 @@ class PurchasesController < ApplicationController
     :customer => card.customer_id,
     :currency => 'jpy',
   )
-
+  @item.update(sale: 1)
   redirect_to action: 'done'
   end
 
