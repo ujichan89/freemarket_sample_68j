@@ -29,11 +29,9 @@ class ItemsController < ApplicationController
 
   def show
     @item = Item.find(params[:id])
-  end
-
-  private
-  def item_params
-    params.require(:item).permit(:name, images_attributes: [:picture])
+    @user = @item.user
+    @category = @item.category
+    @brand = @item.brand
   end
 
   def edit
@@ -48,5 +46,10 @@ class ItemsController < ApplicationController
   def destroy
     item = Item.find(params[:id])
     item.destory
+  end
+
+  private
+  def item_params
+    params.require(:item).permit(:name, images_attributes: [:picture])
   end
 end
