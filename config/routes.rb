@@ -10,7 +10,12 @@ Rails.application.routes.draw do
   root to: 'items#index'
 
   resources :users, except: [:index]
-  resources :items, only: [:index, :new, :create, :show, :edit, :update, :destroy]
+  
+  resources :items do
+    collection do
+      get 'search'
+    end
+  end
   resources :addresses
 
   resources :purchases, only: [:edit] do
@@ -28,7 +33,5 @@ Rails.application.routes.draw do
       post 'delete', to: 'cards#delete'
     end
   end
-
-
 end
 
