@@ -6,8 +6,9 @@
   
   &__list {
     height: 70px;
-    width: 70%;
+    width: 60%;
     margin: 0 auto;
+    text-align: center;
     padding-top: 60px;
 
     &--text {
@@ -40,9 +41,10 @@
   &__logo {
 
     &--text {
-      height: 40px;
-      margin-left: 1450px;
-      margin-top: 150px;
+      height: 50px;
+      margin-top: 40px;
+      margin-left: 620px;
+   
 
     &:hover {
       opacity: 0.6;
@@ -52,7 +54,6 @@
   }
   &--text {
     font-size: 10px;
-    margin-left: 240px;
-    margin-top: 10px;
+    text-align: center;
   }
 }
