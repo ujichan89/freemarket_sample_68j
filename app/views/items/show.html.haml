@@ -3,17 +3,8 @@
 !!!
 %html
   %head
-    -# %link{href: "https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css", rel: "stylesheet"}/
     %script{src: "https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"}
     %script{src: "https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"}
-
-:javascript
-  $(document).ready(function(){
-    $('.slider').bxSlider({
-      slideHight: 100,
-      slideWidth: 500,
-    });
-  });
 
 .GoodDetealContents
   .GoodDetealContents__main
@@ -107,18 +98,18 @@
       %i.fas.fa-comment
       コメントする
 
-    .GoodDetealContents__paginate
-      .GoodDetealContents--prev
-        = link_to '#' do
-          %i.fa.fa-angle-left
-          前の商品
-      .GoodDetealContents--next
-        = link_to '#' do
-          後ろの商品
-          %i.fa.fa-angle-right
+  .GoodDetealContents__paginate
+    .GoodDetealContents--prev
+      = link_to '#' do
+        %i.fa.fa-angle-left
+        前の商品
+    .GoodDetealContents--next
+      = link_to '#' do
+        後ろの商品
+        %i.fa.fa-angle-right
 
-    .GoodDetealContents__more
-      = link_to 'メンズをもっと見る', '#'
+  .GoodDetealContents__more
+    = link_to 'メンズをもっと見る', '#'
 
 = render partial: 'shared/appBanner'
 = render partial: 'shared/footerA'

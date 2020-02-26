@@ -1,4 +1,6 @@
 class ItemsController < ApplicationController
+  before_action :set_item, except: [:index, :new, :create]
+
   def index
     @items = Item.includes(:images).order('created_at DESC')
   end
@@ -18,17 +20,7 @@ class ItemsController < ApplicationController
     end
   end
 
-  def edit
-  end
-
-  def update
-  end
-
-  def destroy
-  end
-
   def show
-    @item = Item.find(params[:id])
     @user = @item.user
     @category = @item.category
     @brand = @item.brand
@@ -36,20 +28,21 @@ class ItemsController < ApplicationController
   end
 
   def edit
-    @item = Item.find(params[:id])
   end
 
   def update
-    item = Item.find(params[:id])
     item.update(item_params)
   end
 
   def destroy
-    item = Item.find(params[:id])
     item.destory
   end
 
   private
+  def set_item
+    @item = Item.find(params[:id])
+  end
+  
   def item_params
     params.require(:item).permit(:name, images_attributes: [:picture])
   end
