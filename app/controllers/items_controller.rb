@@ -38,31 +38,31 @@ class ItemsController < ApplicationController
 
   def destroy
 
-    @item = Item.new(item_params)
-    if @item.save
-      redirect_to root_path, notice: '出品できました'
-    else
-      flash.now[:alert] = 'ちゃんと書いてください'
-      render :new
-    end
+    # @item = Item.new(item_params)
+    # if @item.save
+    #   redirect_to root_path, notice: '出品できました'
+    # else
+    #   flash.now[:alert] = 'ちゃんと書いてください'
+    #   render :new
+    # end
 
 
-    def destroy
-      if current_furimauser.id == @item.furimauser_id && @item.destroy
-        redirect_to root_path
-      else
-        redirect_to  detail_index_path
-      end
-    end
+    # def destroy
+    #   if current_furimauser.id == @item.furimauser_id && @item.destroy
+    #     redirect_to root_path
+    #   else
+    #     redirect_to  detail_index_path
+    #   end
+    # end
 
 
-    def destroy
-      if @image.destroy
-        redirect_to root_path
-      else
-        redirect_to exhibition_path(item)
-      end
-    end
+    # def destroy
+    #   if @image.destroy
+    #     redirect_to root_path
+    #   else
+    #     redirect_to exhibition_path(item)
+    #   end
+    # end
 
   end
 
