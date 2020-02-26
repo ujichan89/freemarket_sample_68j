@@ -2,15 +2,8 @@
 //新規登録時  例外処理
 
 $(function(){
-  $("#UserInput__btn").on('click',function(e){
-    e.preventDefault();                      //エラー文消さない
-    if(input_check()){                        //
-      return false;                           //親要素のイベントを発生させない
-    }
-  });
-});
 
-// 入力内容チェックのための関数
+  // 入力内容チェックのための関数
 function input_check(){
   let result = true;
 
@@ -147,21 +140,25 @@ function input_check(){
 }
 
 
-//__________________________________________________________________________________________________
-
-
-以下アドレス
-
-新規登録時  例外処理
-
-$(function(){
-  $("#AddressInput__btn").on('click',function(e){
+  $("#UserInput__btn").on('click',function(e){
     e.preventDefault();                      //エラー文消さない
-    if(input_check()){                        //
+    if(input_check()){                      //この中にsubmitアクションを作る
+
+      $('#new_user').attr('action', '/users').submit();
+      
       return false;                           //親要素のイベントを発生させない
     }
   });
 });
+
+//__________________________________________________________________________________________________
+
+
+// 以下アドレス
+
+// 新規登録時  例外処理
+
+$(function(){
 
 // 入力内容チェックのための関数
 function input_check(){
@@ -258,3 +255,17 @@ function input_check(){
 
   return result;
 }
+
+
+
+  $("#AddressInput__btn").on('click',function(e){
+    e.preventDefault();                      //エラー文消さない
+    if(input_check()){                        //
+
+      $('#new_address').attr('action', '/addresses').submit();
+
+      return false;                           //親要素のイベントを発生させない
+    }
+  });
+});
+
