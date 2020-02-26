@@ -47,7 +47,7 @@
           %li.MypageLeft__list__var__item
             = link_to("電話番号の確認", root_path, class: "MypageLeft__list__var__item__link")
           %li.MypageLeft__list__var__item
-            = link_to("ログアウト", destroy_user_session_path, class: "MypageLeft__list__var__item__link")
+            = link_to("ログアウト", destroy_user_session_path, method: :delete, class: "MypageLeft__list__var__item__link")
 
 
     .MypageRight
@@ -57,7 +57,7 @@
             .MypageRight__user__tabs__top__pic
               = image_tag '/assets/member_photo_noimage_thumb.png', class: "MypageRight__user__tabs__top__pic"
             .MypageRight__user__tabs__top__name
-              "name"
+              #{current_user.nickname}
             .MypageRight__user__tabs__top__inf
               .MypageRight__user__tabs__top__inf__val
                 "評価　0"

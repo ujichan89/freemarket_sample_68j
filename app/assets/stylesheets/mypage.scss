@@ -138,7 +138,7 @@
             width: 350px;
             text-align: center;
             line-height: 75px;
-            border-top: solid 2px red;
+            border-top: solid 2px #3CCACE;
             &:hover{
               color: gray;
             }
@@ -146,7 +146,7 @@
 
           &__todo {
             background-color: lightgray;
-            border-top: solid 2px red;
+            border-top: solid 2px #3CCACE;
             width: 350px;
             text-align: center;
             line-height: 75px;
@@ -195,7 +195,7 @@
           width: 350px;
           text-align: center;
           line-height: 75px;
-          border-top: solid 2px red;
+          border-top: solid 2px #3CCACE;
           &:hover{
             color: gray;
           }
@@ -203,7 +203,7 @@
 
         &__past {
           background-color: lightgray;
-          border-top: solid 2px red;
+          border-top: solid 2px #3CCACE;
           width: 350px;
           text-align: center;
           line-height: 75px;
