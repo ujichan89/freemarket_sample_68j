@@ -30,7 +30,11 @@
         ¥#{@item.price}
       .GoodDetealContents__main--priceingInformation__priceSupplement
         (税込) 送料込み
-        
+
+    - unless user_signed_in? && @item.user_id == current_user
+      .GoodDetealContents__main--purchaseButton
+        = link_to '購入画面に進む', '#'
+
     .GoodDetealContents__main--goodDescription
       .GoodDetealContents__main--goodDescription__goodName
         = @item.description

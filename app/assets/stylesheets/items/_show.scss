@@ -41,6 +41,18 @@
       }
     }
 
+    &--purchaseButton{
+      margin-top: 16px;
+      background: #3CCACE;
+      text-align: center;
+      font-weight: 600;
+      a{
+        font-size: 24px;
+        color: #fff;
+        line-height: 56px;
+      }
+    }
+
     &--goodDescription{
       &__goodName{
         margin: 25px 0px 35px 0px;
@@ -160,7 +172,6 @@
     position: relative;
   }
 }
-
 
 table{
   border: 1px solid #dedede;
