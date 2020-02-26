@@ -90,56 +90,13 @@ a {
       text-align: center;
       border-bottom: solid 1px rgb(239, 239, 239);
     }
+
     .Input2{
         height: 100%;
         width: 400px;
         margin: 0 auto;
 
-      &__nickname{
-        margin: 20px 0;
-
-        &__text{
-          margin-bottom: 5px;
-        }
-        &__form{
-          height: 45px;
-          width: 100%;
-          border-radius: 5px;
-          border: solid 1px rgb(220, 220, 220);
-        }
-      }
-
-      &__email{
-        margin: 20px 0;
-
-        &__text{
-         margin-bottom: 5px;
-       } 
-       &__form{
-        height: 45px;
-        width: 100%;
-        border-radius: 5px;
-        border: solid 1px rgb(220, 220, 220);
-       }
-      }
-      
-      &__password{
-        margin: 20px 0;
-
-        &__text{
-          margin-bottom: 5px;
-        }
-        &__form{
-          height: 45px;
-          width: 100%;
-          border-radius: 5px;
-          border: solid 1px rgb(220, 220, 220);
-        }
-      }
-
-      &__name{
-        
-
+        &__name{
         &__title{
           margin-bottom: 10px;
         }
@@ -184,25 +141,6 @@ a {
           }
         }
       }
-      &__birthday{
-
-        &__select{
-          width: 100%;
-          display: flex;
-          justify-content: space-between;
-
-          #user_birthday_month{
-            height: 45px;
-            width: 100px;
-          }
-          #user_birthday_day{
-            height: 45px;
-            width: 100px;
-          }
-        }
-      }
-
-
       &__submit{
 
         &__text{
@@ -215,15 +153,132 @@ a {
     }
   }
 }
-#error_explanation {
-  padding: 20px 150px;
-}
-#address_prefecture{
+
+.Input__number__form {
   height: 45px;
   width: 100%;
+  border-radius: 5px;
+  border: solid 1px rgb(220, 220, 220);
 }
 
-#birthday_year{
+#address_prefecture{
   height: 45px;
-  width: 100px;
+  width: 400px;
+  border-radius: 5px;
+  border: solid 1px rgb(220, 220, 220);
 }
+
+
+.Input__error {
+  &__municipality {
+    height: 45px;
+    width: 100%;
+    border-radius: 5px;
+    border: solid 1px rgb(220, 220, 220);
+  }
+
+  &__street{
+    height: 45px;
+    width: 100%;
+    border-radius: 5px;
+    border: solid 1px rgb(220, 220, 220);
+  }
+
+  &__building{
+    height: 45px;
+    width: 100%;
+    border-radius: 5px;
+    border: solid 1px rgb(220, 220, 220);
+  }
+
+  &__phone_number{
+    height: 45px;
+    width: 100%;
+    border-radius: 5px;
+    border: solid 1px rgb(220, 220, 220);
+  }
+}
+
+#Input_error__family_name_address {
+  font-size: 15px;
+  font-weight: normal;
+  color: #FF4040;
+  display: block;
+  margin: 0;
+}
+
+#Input_error__first_name_address {
+  font-size: 15px;
+  font-weight: normal;
+  color: #FF4040;
+  display: block;
+  margin: 0;
+  margin-bottom: 30px;
+}
+
+#Input_error__family_furigana_address {
+  font-size: 15px;
+  font-weight: normal;
+  color: #FF4040;
+  display: block;
+  margin: 0;
+}
+
+#Input_error__first_furigana_address {
+  font-size: 15px;
+  font-weight: normal;
+  color: #FF4040;
+  display: block;
+  margin: 0;
+  margin-bottom: 30px;
+}
+
+#Input_error__number {
+  font-size: 15px;
+  font-weight: normal;
+  color: #FF4040;
+  display: block;
+  margin: 0;
+}
+
+#Input_error__prefecture {
+  font-size: 15px;
+  font-weight: normal;
+  color: #FF4040;
+  display: block;
+  margin: 0;
+}
+
+#Input_error__municipality {
+  font-size: 15px;
+  font-weight: normal;
+  color: #FF4040;
+  display: block;
+  margin: 0;
+}
+
+#Input_error__street {
+  font-size: 15px;
+  font-weight: normal;
+  color: #FF4040;
+  display: block;
+  margin: 0;
+}
+
+#Input_error__building {
+  font-size: 15px;
+  font-weight: normal;
+  color: #FF4040;
+  display: block;
+  margin: 0;
+}
+
+#Input_error__phone_number {
+  font-size: 15px;
+  font-weight: normal;
+  color: #FF4040;
+  display: block;
+  margin: 0;
+}
+
+
