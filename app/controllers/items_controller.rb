@@ -1,22 +1,34 @@
 class ItemsController < ApplicationController
+
   def index
-    @items = Item.includes(:images).order('created_at DESC')
+    lac    = Item.group(:category_id).order('count_category_id DESC').count(:category_id).first
+    category = lac[0]
+    @cates = Item.where(sale: 0).where(category_id: category).first(3)
+    @piccs = Image.where(item_id: @cates).distinct
+
+    lab    = Item.group(:brand_id).order('count_brand_id DESC').count(:brand_id).first
+    brand  = lab[0]
+    @bras  = Item.where(sale: 0).where(brand_id: brand).first(3)
+    @picbs = Image.where(item_id: @bras).distinct
   end
+
 
   def new
     @item = Item.new
+    @parents = Category.where(ancestry: nil)
+    @item.build_brand
     @item.images.new
   end
-
+ 
   def create
     @item = Item.new(item_params)
-    @item.save
     if @item.save
-      redirect_to action: "index"
+      redirect_to root_path, notice: '出品できました'
     else
-      render action: :new
+      flash.now[:alert] = 'ちゃんと書いてください'
+      render :new
     end
-  end
+  end  
 
   def edit
   end
@@ -25,6 +37,33 @@ class ItemsController < ApplicationController
   end
 
   def destroy
+
+    # @item = Item.new(item_params)
+    # if @item.save
+    #   redirect_to root_path, notice: '出品できました'
+    # else
+    #   flash.now[:alert] = 'ちゃんと書いてください'
+    #   render :new
+    # end
+
+
+    # def destroy
+    #   if current_furimauser.id == @item.furimauser_id && @item.destroy
+    #     redirect_to root_path
+    #   else
+    #     redirect_to  detail_index_path
+    #   end
+    # end
+
+
+    # def destroy
+    #   if @image.destroy
+    #     redirect_to root_path
+    #   else
+    #     redirect_to exhibition_path(item)
+    #   end
+    # end
+
   end
 
   def show
@@ -33,6 +72,23 @@ class ItemsController < ApplicationController
     @category = @item.category
     @brand = @item.brand
     @images = @item.images
+
+  def search
+    if params[:l_cat]
+      @m_cat = Category.find(params[:l_cat]).children
+    elsif params[:m_cat]
+      @s_cat = Category.find(params[:m_cat]).children
+    end
+
+    respond_to do |format|
+      format.html
+      format.json 
+    end
+  end
+
+  private
+  def item_params
+    params.require(:item).permit(:name, :price, :status, :description, :charge, :area, :day, :category_id, brand_attributes: [:id, :name], images_attributes: [:picture])
   end
 
   def edit
@@ -49,8 +105,4 @@ class ItemsController < ApplicationController
     item.destory
   end
 
-  private
-  def item_params
-    params.require(:item).permit(:name, images_attributes: [:picture])
-  end
 end
