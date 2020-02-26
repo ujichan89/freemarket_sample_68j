@@ -49,4 +49,11 @@ class CardsController < ApplicationController
       @default_card_information = customer.cards.retrieve(card.card_id)
     end
   end
+
+  private
+
+  def set_card
+    Card.where(user_id: current_user.id)
+  end
+
 end
