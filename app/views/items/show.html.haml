@@ -65,12 +65,13 @@
         不適切な商品の通報
 
   .GoodDetealContents__edit
-    .GoodDetealContents__edit--editButtan
-      商品の編集
-    .GoodDetealContents__edit--or
-      or
-    .GoodDetealContents__edit--deleteButtan
-      この商品を削除する
+    - if user_signed_in? && current_user.id == item.user_id
+      .GoodDetealContents__edit--editButtan
+        商品の編集
+      .GoodDetealContents__edit--or
+        or
+      .GoodDetealContents__edit--deleteButtan
+        この商品を削除する
 
   .GoodDetealContents__comments
     %textarea{class: 'GoodDetealContents__comments--commentform'}
