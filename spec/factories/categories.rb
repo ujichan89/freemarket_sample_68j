@@ -1,5 +1,5 @@
 FactoryBot.define do
-  factory :category do
-    
+  factory :image do
+    genre            {00}
   end
 end
