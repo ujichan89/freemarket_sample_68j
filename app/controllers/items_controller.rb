@@ -1,4 +1,5 @@
 class ItemsController < ApplicationController
+
   def index
     lac    = Item.group(:category_id).order('count_category_id DESC').count(:category_id).first
     category = lac[0]
@@ -11,20 +12,23 @@ class ItemsController < ApplicationController
     @picbs = Image.where(item_id: @bras).distinct
   end
 
+
   def new
     @item = Item.new
+    @parents = Category.where(ancestry: nil)
+    @item.build_brand
     @item.images.new
   end
-
+ 
   def create
     @item = Item.new(item_params)
-    @item.save
     if @item.save
-      redirect_to action: "index"
+      redirect_to root_path, notice: '出品できました'
     else
-      render "new"
+      flash.now[:alert] = 'ちゃんと書いてください'
+      render :new
     end
-  end
+  end  
 
   def edit
   end
@@ -39,9 +43,24 @@ class ItemsController < ApplicationController
     @item = Item.find(params[:id])
   end
 
+
+  def search
+    if params[:l_cat]
+      @m_cat = Category.find(params[:l_cat]).children
+    elsif params[:m_cat]
+      @s_cat = Category.find(params[:m_cat]).children
+    end
+
+    respond_to do |format|
+      format.html
+      format.json 
+    end
+  end
+
   private
+ 
   def item_params
-    params.require(:item).permit(:name, :price, :status, :description, :charge, :area, :day, :sale, images_attributes: [:picture])
+    params.require(:item).permit(:name, :price, :status, :description, :charge, :area, :day, :category_id, brand_attributes: [:id, :name], images_attributes: [:picture])
   end
 
   def edit
@@ -57,4 +76,8 @@ class ItemsController < ApplicationController
     item = Item.find(params[:id])
     item.destory
   end
+
+
+  
+
 end
