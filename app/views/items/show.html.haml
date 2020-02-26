@@ -3,14 +3,15 @@
 !!!
 %html
   %head
-    %link{href: "https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css", rel: "stylesheet"}/
+    -# %link{href: "https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css", rel: "stylesheet"}/
     %script{src: "https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"}
     %script{src: "https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"}
 
 :javascript
   $(document).ready(function(){
     $('.slider').bxSlider({
-      slideWidth: 300,
+      slideHight: 100,
+      slideWidth: 500,
     });
   });
 
@@ -23,9 +24,6 @@
       - @images.each do |image|
         %li
           = image_tag image.picture.to_s
-      -# = image_tag 'items/a004.png', class: 'GoodDetealContents__main--images__MainImage'
-      -# = image_tag 'items/a005.png', class: 'GoodDetealContents__main--images__subImage'
-      -# = image_tag 'items/a006.png', class: 'GoodDetealContents__main--images__subImage'
 
     .GoodDetealContents__main--priceingInformation
       .GoodDetealContents__main--priceingInformation__price
@@ -85,13 +83,14 @@
         %i.fa.fa-flag
         不適切な商品の通報
 
-  .GoodDetealContents__edit
-    .GoodDetealContents__edit--editButtan
-      商品の編集
-    .GoodDetealContents__edit--or
-      or
-    .GoodDetealContents__edit--deleteButtan
-      この商品を削除する
+  - if user_signed_in? && @item.user_id == current_user
+    .GoodDetealContents__edit
+      .GoodDetealContents__edit--editButtan
+        商品の編集
+      .GoodDetealContents__edit--or
+        or
+      .GoodDetealContents__edit--deleteButtan
+        この商品を削除する
 
   .GoodDetealContents__comments
     %textarea{class: 'GoodDetealContents__comments--commentform'}
@@ -104,18 +103,18 @@
       %i.fas.fa-comment
       コメントする
 
-  .GoodDetealContents__paginate
-    .GoodDetealContents--prev
-      = link_to '#' do
-        %i.fa.fa-angle-left
-        前の商品
-    .GoodDetealContents--next
-      = link_to '#' do
-        後ろの商品
-        %i.fa.fa-angle-right
+    .GoodDetealContents__paginate
+      .GoodDetealContents--prev
+        = link_to '#' do
+          %i.fa.fa-angle-left
+          前の商品
+      .GoodDetealContents--next
+        = link_to '#' do
+          後ろの商品
+          %i.fa.fa-angle-right
 
-  .GoodDetealContents__more
-    = link_to 'メンズをもっと見る', '#'
+    .GoodDetealContents__more
+      = link_to 'メンズをもっと見る', '#'
 
 = render partial: 'shared/appBanner'
 = render partial: 'shared/footerA'
