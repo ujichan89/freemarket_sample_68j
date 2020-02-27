@@ -2,6 +2,7 @@ class ItemsController < ApplicationController
   before_action :set_item, except: [:index, :new, :create]
 
   def index
+    @items = Item.all
     lac    = Item.group(:category_id).order('count_category_id DESC').count(:category_id).first
     category = lac[0]
     @cates = Item.where(sale: 0).where(category_id: category).first(3)
@@ -35,6 +36,7 @@ class ItemsController < ApplicationController
     @category = @item.category
     @brand = @item.brand
     @images = @item.images
+
   end
 
   def search

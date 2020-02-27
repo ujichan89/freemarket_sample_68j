@@ -1,7 +1,7 @@
 $(document).on('turbolinks:load', function() {
 
   // selectを追加するHTML
-  var cat_search = $("#select");　
+  var cat_search = $("#select");
 
   function appendSelect(catNum) {
     if(catNum == 1) {
