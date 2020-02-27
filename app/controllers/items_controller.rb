@@ -1,4 +1,5 @@
 class ItemsController < ApplicationController
+  before_action :set_item, except: [:index, :new, :create]
 
   def index
     @items = Item.all
@@ -12,7 +13,6 @@ class ItemsController < ApplicationController
     @bras  = Item.where(sale: 0).where(brand_id: brand).first(3)
     @picbs = Image.where(item_id: @bras).distinct
   end
-
 
   def new
     @item = Item.new
@@ -31,13 +31,11 @@ class ItemsController < ApplicationController
     end
   end  
 
-  def edit
-  end
-
-  def update
-  end
-
-  def destroy
+  def show
+    @user = @item.user
+    @category = @item.category
+    @brand = @item.brand
+    @images = @item.images
 
   end
 
@@ -54,27 +52,24 @@ class ItemsController < ApplicationController
     end
   end
 
-  private
- 
-  def item_params
-    params.require(:item).permit(:name, :price, :status, :description, :charge, :area, :day, :category_id, brand_attributes: [:id, :name], images_attributes: [:picture])
-  end
-
   def edit
-    @item = Item.find(params[:id])
   end
 
   def update
-    item = Item.find(params[:id])
     item.update(item_params)
   end
 
   def destroy
-    item = Item.find(params[:id])
     item.destory
   end
 
-
+  private
+  def set_item
+    @item = Item.find(params[:id])
+  end
   
-
+  private
+  def item_params
+    params.require(:item).permit(:name, :price, :status, :description, :charge, :area, :day, :category_id, brand_attributes: [:id, :name], images_attributes: [:picture])
+  end
 end
