@@ -14,6 +14,7 @@
     &--goodName{
       font-weight: bold;
       font-size: 24px;
+      margin-bottom: 15px;
     }
 
     &--images{
@@ -36,7 +37,19 @@
       &__price{
         font-size: 46px;
         font-weight: bold;
-        margin: 15px 10px 0 0;
+        margin: 45px 10px 0 0;
+      }
+    }
+
+    &--purchaseButton{
+      margin-top: 16px;
+      background: #3CCACE;
+      text-align: center;
+      font-weight: 600;
+      a{
+        font-size: 24px;
+        color: #fff;
+        line-height: 56px;
       }
     }
 
@@ -141,8 +154,8 @@
   }
 
   &__paginate{
-    width: 700px;
     text-decoration: none;
+    width: 700px;
     display: flex;
     margin: 10px auto;
     justify-content: space-between;
@@ -159,7 +172,6 @@
     position: relative;
   }
 }
-
 
 table{
   border: 1px solid #dedede;

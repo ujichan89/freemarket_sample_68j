@@ -11,14 +11,26 @@ Rails.application.routes.draw do
   root to: 'items#index'
 
   resources :users, except: [:index]
+  
   resources :items do
     collection do
       get 'search'
     end
   end
-  resources :purchases
   resources :addresses
-  resources :credit_cards
 
+  resources :purchases, only: [:edit] do
+    collection do
+      post 'pay', to: 'purchases#pay'
+      get 'done', to: 'purchases#done'
+
+    end
+  end
+
+  resources :cards, only: [:new, :show, :destroy] do
+    collection do
+      post 'pay', to: 'cards#pay'
+    end
+  end
 end
 
