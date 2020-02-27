@@ -2,15 +2,15 @@ class ItemsController < ApplicationController
 
   def index
     @items = Item.all
-    lac    = Item.group(:category_id).order('count_category_id DESC').count(:category_id).first
-    category = lac[0]
-    @cates = Item.where(sale: 0).where(category_id: category).first(3)
-    @piccs = Image.where(item_id: @cates).distinct
+    # lac    = Item.group(:category_id).order('count_category_id DESC').count(:category_id).first
+    # category = lac[0]
+    # @cates = Item.where(sale: 0).where(category_id: category).first(3)
+    # @piccs = Image.where(item_id: @cates).distinct
 
-    lab    = Item.group(:brand_id).order('count_brand_id DESC').count(:brand_id).first
-    brand  = lab[0]
-    @bras  = Item.where(sale: 0).where(brand_id: brand).first(3)
-    @picbs = Image.where(item_id: @bras).distinct
+    # lab    = Item.group(:brand_id).order('count_brand_id DESC').count(:brand_id).first
+    # brand  = lab[0]
+    # @bras  = Item.where(sale: 0).where(brand_id: brand).first(3)
+    # @picbs = Image.where(item_id: @bras).distinct
   end
 
 
