@@ -13,7 +13,6 @@ class ItemsController < ApplicationController
     @picbs = Image.where(item_id: @bras).distinct
   end
 
-
   def new
     @item = Item.new
     @parents = Category.where(ancestry: nil)
@@ -36,6 +35,7 @@ class ItemsController < ApplicationController
     @category = @item.category
     @brand = @item.brand
     @images = @item.images
+  end
 
   def search
     if params[:l_cat]
@@ -48,11 +48,6 @@ class ItemsController < ApplicationController
       format.html
       format.json 
     end
-  end
-
-  private
-  def item_params
-    params.require(:item).permit(:name, :price, :status, :description, :charge, :area, :day, :category_id, brand_attributes: [:id, :name], images_attributes: [:picture])
   end
 
   def edit
@@ -71,7 +66,8 @@ class ItemsController < ApplicationController
     @item = Item.find(params[:id])
   end
   
+  private
   def item_params
-    params.require(:item).permit(:name, images_attributes: [:picture])
+    params.require(:item).permit(:name, :price, :status, :description, :charge, :area, :day, :category_id, brand_attributes: [:id, :name], images_attributes: [:picture])
   end
 end
