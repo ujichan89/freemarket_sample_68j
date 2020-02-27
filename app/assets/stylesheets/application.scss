@@ -2,7 +2,9 @@
 @import "font-awesome-sprockets";
 @import "font-awesome";
 @import "mypage";
-@import "cards";
+
+@import "cards/new";
+@import "cards/show";
 
 @import "modules/headerA";
 @import "modules/headerB";

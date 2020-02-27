@@ -9,6 +9,8 @@
         .Contents__card__name--must
           必須
       = text_field_tag "number", "", class: "number", class: "Contents__card--input", placeholder: "半角数字のみ", type: "text", id: "card_number", maxlength: "16"
+      %p#warn1
+        正しく入力してください。
       .Contents__card__picture
         =image_tag "/assets/visa.svg", class: "Contents__card__picture__phot"
         =image_tag "/assets/master-card.svg", class: "Contents__card__picture__phot"
@@ -31,7 +33,8 @@
 
         = select_tag "exp_year", options_for_card_year, id: "exp_year", class: "Contents__date__name--select__num"
         年
-
+        %p#warn2
+          正しく入力してください。
       .Contents__card__name
         .Contents__card__name--text
           セキュリティコード
@@ -39,6 +42,8 @@
           必須
       = text_field_tag "cvc", "", class: "cvc", class: "Contents__card--input", placeholder: "カード背面3~4桁の番号", maxlength: "4", id: "cvc"
       #card_token
+      %p#warn3
+        正しく入力してください。
       = submit_tag "追加する", id: "token_submit", class: "Contents__Exhibition__btn--btn"
 
     .Contents__Exhibition
