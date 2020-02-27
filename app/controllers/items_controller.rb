@@ -1,4 +1,5 @@
 class ItemsController < ApplicationController
+  before_action :set_item, except: [:index, :new, :create]
 
   def index
     lac    = Item.group(:category_id).order('count_category_id DESC').count(:category_id).first
@@ -11,7 +12,6 @@ class ItemsController < ApplicationController
     @bras  = Item.where(sale: 0).where(brand_id: brand).first(3)
     @picbs = Image.where(item_id: @bras).distinct
   end
-
 
   def new
     @item = Item.new
@@ -30,40 +30,11 @@ class ItemsController < ApplicationController
     end
   end  
 
-  def edit
-  end
-
-  def update
-  end
-
-  def destroy
-
-    # @item = Item.new(item_params)
-    # if @item.save
-    #   redirect_to root_path, notice: '出品できました'
-    # else
-    #   flash.now[:alert] = 'ちゃんと書いてください'
-    #   render :new
-    # end
-
-
-    # def destroy
-    #   if current_furimauser.id == @item.furimauser_id && @item.destroy
-    #     redirect_to root_path
-    #   else
-    #     redirect_to  detail_index_path
-    #   end
-    # end
-
-
-    # def destroy
-    #   if @image.destroy
-    #     redirect_to root_path
-    #   else
-    #     redirect_to exhibition_path(item)
-    #   end
-    # end
-
+  def show
+    @user = @item.user
+    @category = @item.category
+    @brand = @item.brand
+    @images = @item.images
   end
 
   def search
@@ -79,27 +50,24 @@ class ItemsController < ApplicationController
     end
   end
 
-  private
- 
-  def item_params
-    params.require(:item).permit(:name, :price, :status, :description, :charge, :area, :day, :category_id, brand_attributes: [:id, :name], images_attributes: [:picture])
-  end
-
   def edit
-    @item = Item.find(params[:id])
   end
 
   def update
-    item = Item.find(params[:id])
     item.update(item_params)
   end
 
   def destroy
-    item = Item.find(params[:id])
     item.destory
   end
 
-
+  private
+  def set_item
+    @item = Item.find(params[:id])
+  end
   
-
+  private
+  def item_params
+    params.require(:item).permit(:name, :price, :status, :description, :charge, :area, :day, :category_id, brand_attributes: [:id, :name], images_attributes: [:picture])
+  end
 end

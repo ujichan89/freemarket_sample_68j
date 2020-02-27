@@ -3,57 +3,65 @@
 .GoodDetealContents
   .GoodDetealContents__main
     .GoodDetealContents__main--goodName
-      product
+      = @item.name
 
-    .GoodDetealContents__main--images
-      = image_tag 'items/a004.png', class: 'GoodDetealContents__main--images__mainImage'
-      = image_tag 'items/a004.png', class: 'GoodDetealContents__main--images__subImage'
-      = image_tag 'items/a005.png', class: 'GoodDetealContents__main--images__subImage'
-      = image_tag 'items/a006.png', class: 'GoodDetealContents__main--images__subImage'
+    %ul.slider
+      - @images.each do |image|
+        %li
+          = image_tag image.picture.to_s
 
     .GoodDetealContents__main--priceingInformation
       .GoodDetealContents__main--priceingInformation__price
-        ¥20000
+        ¥#{@item.price}
       .GoodDetealContents__main--priceingInformation__priceSupplement
         (税込) 送料込み
-        
+
+    - unless user_signed_in? && @item.user_id == current_user
+      .GoodDetealContents__main--purchaseButton
+        = link_to '購入画面に進む', '#'
+
     .GoodDetealContents__main--goodDescription
       .GoodDetealContents__main--goodDescription__goodName
-        product
+        = @item.description
 
       %table{border: '1', class: '.GoodDetealContents__main--goodDescription__goodName__goodtable',align: 'center'}
         %tr
           %th 出品者
-          %td hoge
+          %td 
+            = @user.nickname
         %tr
           %th カテゴリー
           %td
             = link_to '#' do
-              %p メンズ
+              %p 
+                = @category.parent.parent.genre
             = link_to '#' do
-              %p ジャケット/アウター
+              %p 
+                = @category.parent.genre
             = link_to '#' do
-              %p ノーカラージャケット
+              %p 
+                = @category.genre
         %tr
           %th ブランド
-          %td 
-        %tr
-          %th 商品のサイズ
-          %td 
+          %td
+            = @brand.try(:name)
         %tr
           %th 商品の状態
-          %td 新品/未使用
+          %td
+            = @item.status
         %tr
           %th 配送料の負担
-          %td 着払い (購入者負担)
+          %td
+            = @item.charge
         %tr
           %th 発送元の地域
           %td 
             = link_to '#' do
-              青森県
+              = @item.area
         %tr
           %th 発送日の目安
-          %td 1-2日で発送
+          %td 
+            = @item.day
 
     .GoodDetealContents__main--options
       .GoodDetealContents__main--options__favorite
@@ -64,8 +72,8 @@
         %i.fa.fa-flag
         不適切な商品の通報
 
-  .GoodDetealContents__edit
-    - if user_signed_in? && current_user.id == @item.user_id
+  - if user_signed_in? && @item.user_id == current_user
+    .GoodDetealContents__edit
       .GoodDetealContents__edit--editButtan
         商品の編集
       .GoodDetealContents__edit--or

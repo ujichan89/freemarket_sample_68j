@@ -13,6 +13,5 @@ class User < ApplicationRecord
   validates :family_furigana, presence: true, format: { with: /[\p{katakana} ー－]+/ }
   validates :first_furigana, presence: true, format: { with: /[\p{katakana} ー－]+/ }
   has_one :address
-
 end
 
