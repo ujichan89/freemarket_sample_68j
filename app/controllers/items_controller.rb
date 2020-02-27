@@ -36,7 +36,6 @@ class ItemsController < ApplicationController
     @category = @item.category
     @brand = @item.brand
     @images = @item.images
-
   end
 
   def search
@@ -68,7 +67,6 @@ class ItemsController < ApplicationController
     @item = Item.find(params[:id])
   end
   
-  private
   def item_params
     params.require(:item).permit(:name, :price, :status, :description, :charge, :area, :day, :category_id, brand_attributes: [:id, :name], images_attributes: [:picture])
   end

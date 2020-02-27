@@ -7,18 +7,17 @@ Rails.application.routes.draw do
     post 'addresses', to: 'users/registrations#create_address'
   end
 
-
   root to: 'items#index'
-
-  resources :users, except: [:index]
-  
   resources :items do
     collection do
       get 'search'
     end
   end
+
   resources :addresses
 
+  resources :users, except: [:index]
+  
   resources :purchases, only: [:edit] do
     collection do
       post 'pay', to: 'purchases#pay'
@@ -33,4 +32,3 @@ Rails.application.routes.draw do
     end
   end
 end
-
