@@ -42,7 +42,7 @@
   &__image {
     height: 300px;
     width: 100%;
-    border-bottom: 0.2px solid lightgrey;
+    // border-bottom: 0.2px solid lightgrey;
 
     &__title {
         // display: flex;
@@ -101,7 +101,7 @@
   &__name {
     height: 300px;
     width: 100%;
-    border-bottom: 0.2px solid lightgrey;
+    // border-bottom: 0.2px solid lightgrey;
 
     &__form {
       // display: flex;
@@ -130,7 +130,7 @@
         padding-left: 30px;
         margin-top: 15px;
         margin-left: 30px;
-        border: 1px solid lightgrey;
+        // border: 1px solid lightgrey;
         border-radius: 3px;
         font-size: 15px;
         
@@ -171,7 +171,7 @@
   &__detail {
     height: 500px;
     width: 100%;
-    border-bottom: 0.2px solid lightgrey;
+    // border-bottom: 0.2px solid lightgrey;
     display: flex;
     
    
@@ -279,7 +279,7 @@
   &__delivery {
     height: 350px;
     width: 100%;
-    border-bottom: 0.2px solid lightgrey;
+    // border-bottom: 0.2px solid lightgrey;
     display: flex;
 
     &__title {
@@ -366,6 +366,7 @@
     width: 100%;
     border-bottom: 0.2px solid lightgrey;
     display: flex;
+    padding-top: 50px;
     
     &__title {
       height: 100%;
@@ -664,4 +665,86 @@ h1 {
     background-color: deepskyblue;
     font-size: xx-large;
   }
+}
+
+
+
+#error_explanation {
+  padding: 20px 150px;
+}
+
+#Input_error__image{
+  font-size: 15px;
+  font-weight: normal;
+  color: #FF4040;
+  display: block;
+  margin: 0;
+  margin-left: 65px;
+}
+
+#Input_error__itemname{
+  font-size: 15px;
+  font-weight: normal;
+  color: #FF4040;
+  display: block;
+  margin: 0;
+  margin-left: 30px;
+}
+
+#Input_error__description{
+  font-size: 15px;
+  font-weight: normal;
+  color: #FF4040;
+  display: block;
+  margin: 0;
+  margin-left: 30px;
+}
+
+#Input_error__category{
+  font-size: 15px;
+  font-weight: normal;
+  color: #FF4040;
+  display: block;
+  margin: 0;
+}
+
+#Input_error__status{
+  font-size: 15px;
+  font-weight: normal;
+  color: #FF4040;
+  display: block;
+  margin: 0;
+}
+
+#Input_error__charge{
+  font-size: 15px;
+  font-weight: normal;
+  color: #FF4040;
+  display: block;
+  margin: 0;
+}
+
+#Input_error__area{
+  font-size: 15px;
+  font-weight: normal;
+  color: #FF4040;
+  display: block;
+  margin: 0;
+}
+
+#Input_error__day{
+  font-size: 15px;
+  font-weight: normal;
+  color: #FF4040;
+  display: block;
+  margin: 0;
+}
+
+#Input_error__price{
+  font-size: 15px;
+  font-weight: normal;
+  color: #FF4040;
+  display: block;
+  margin: 0;
+  margin-left: 290px;
 }
