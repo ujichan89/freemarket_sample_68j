@@ -2,7 +2,6 @@
 .WrapperNew {
   height: 400vh;
   width: 100%;
-  // background-color: rgb(246, 246, 250);
   background-color: #efefef;
   position: relative;
 
@@ -42,10 +41,8 @@
   &__image {
     height: 300px;
     width: 100%;
-    border-bottom: 0.2px solid lightgrey;
 
     &__title {
-        // display: flex;
         padding-top: 20px;
         margin-left: 30px;
 
@@ -101,10 +98,8 @@
   &__name {
     height: 300px;
     width: 100%;
-    border-bottom: 0.2px solid lightgrey;
 
     &__form {
-      // display: flex;
       padding-top: 20px;
       margin-left: 30px;
 
@@ -130,14 +125,12 @@
         padding-left: 30px;
         margin-top: 15px;
         margin-left: 30px;
-        border: 1px solid lightgrey;
         border-radius: 3px;
         font-size: 15px;
         
     }
     
     &__description {
-      // display: flex;
       padding-top: 20px;
       margin-left: 30px;
 
@@ -171,7 +164,6 @@
   &__detail {
     height: 500px;
     width: 100%;
-    border-bottom: 0.2px solid lightgrey;
     display: flex;
     
    
@@ -196,7 +188,6 @@
      
       
       &__category {
-        // display: flex;
         padding-top: 20px;
         margin-left: 30px;
 
@@ -215,7 +206,6 @@
         }
       }
       &__brand {
-        // display: flex;
         padding-top: 20px;
         margin-left: 30px;
        
@@ -247,7 +237,6 @@
  
 
       &__status {
-        // display: flex;
         padding-top: 20px;
         margin-left: 30px;
 
@@ -279,7 +268,6 @@
   &__delivery {
     height: 350px;
     width: 100%;
-    border-bottom: 0.2px solid lightgrey;
     display: flex;
 
     &__title {
@@ -305,7 +293,6 @@
       width: 70%;
 
       &__burden {
-        // display: flex;
         padding-top: 20px;
 
         &--text {
@@ -324,7 +311,6 @@
       }
 
       &__area {
-        // display: flex;
         padding-top: 20px;
 
         &--text {
@@ -342,7 +328,6 @@
         }
       }
       &__date {
-        // display: flex;
         padding-top: 20px;
 
         &--text {
@@ -366,6 +351,7 @@
     width: 100%;
     border-bottom: 0.2px solid lightgrey;
     display: flex;
+    padding-top: 50px;
     
     &__title {
       height: 100%;
@@ -419,9 +405,6 @@
             padding: 3px;
             margin-left: 10px;
           }
-          // &--select {
-          //   height: 100px;
-          // }
         }
         &__form {
           display:flex;
@@ -436,7 +419,6 @@
           }
           &--field {
             height: 40px;
-            // border-radius: 2px;
             text-align: right;
             padding-right: 20px;
           }
@@ -601,7 +583,6 @@ h1 {
     height: 50px;
     padding: 10px 16px 8px;
     border-radius: 4px;
-    // border: 1px solid #ccc;
     background: #fff;
     cursor: pointer;
     
@@ -615,7 +596,6 @@ h1 {
     height: 50px;
     padding: 10px 16px 8px;
     border-radius: 4px;
-    // border: 1px solid #ccc;
     background: #fff;
     cursor: pointer;
     
@@ -631,7 +611,6 @@ h1 {
     top: 38%;
     right: 11%;
     z-index: 2;
-    // color: #888;
     color: deeppink;
     cursor: pointer;
     font-size: 20px;
@@ -664,4 +643,86 @@ h1 {
     background-color: deepskyblue;
     font-size: xx-large;
   }
+}
+
+
+
+#error_explanation {
+  padding: 20px 150px;
+}
+
+#Input_error__image{
+  font-size: 15px;
+  font-weight: normal;
+  color: #FF4040;
+  display: block;
+  margin: 0;
+  margin-left: 65px;
+}
+
+#Input_error__itemname{
+  font-size: 15px;
+  font-weight: normal;
+  color: #FF4040;
+  display: block;
+  margin: 0;
+  margin-left: 30px;
+}
+
+#Input_error__description{
+  font-size: 15px;
+  font-weight: normal;
+  color: #FF4040;
+  display: block;
+  margin: 0;
+  margin-left: 30px;
+}
+
+#Input_error__category{
+  font-size: 15px;
+  font-weight: normal;
+  color: #FF4040;
+  display: block;
+  margin: 0;
+}
+
+#Input_error__status{
+  font-size: 15px;
+  font-weight: normal;
+  color: #FF4040;
+  display: block;
+  margin: 0;
+}
+
+#Input_error__charge{
+  font-size: 15px;
+  font-weight: normal;
+  color: #FF4040;
+  display: block;
+  margin: 0;
+}
+
+#Input_error__area{
+  font-size: 15px;
+  font-weight: normal;
+  color: #FF4040;
+  display: block;
+  margin: 0;
+}
+
+#Input_error__day{
+  font-size: 15px;
+  font-weight: normal;
+  color: #FF4040;
+  display: block;
+  margin: 0;
+}
+
+#Input_error__price{
+  font-size: 15px;
+  font-weight: normal;
+  color: #FF4040;
+  display: block;
+  margin: 0;
+  margin-left: 290px;
 }

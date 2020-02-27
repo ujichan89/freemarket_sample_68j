@@ -57,19 +57,20 @@
               = i.label :picture, for: "item_images_attributes_9_picture", class: "items__Contents__image__upload--cameraBtnDowner" do
                 = icon('fa', 'camera')
               = i.file_field :picture, id: "item_images_attributes_9_picture", style: "display: none;", name: "item[images_attributes][9][picture]"
-
+          #Input_error__image
 
    
       .Contents__name
         .Contents__name__form
           %span.Contents__name__form--text 商品名
           %span.Contents__name__form--must 必須
-        = f.text_field :name, placeholder: :"商品名(40文字まで)", class: :"Contents__name--input"
+        = f.text_field :name, placeholder: :"商品名(40文字まで)", class: :"Contents__name--input", id: "item_name"
+        #Input_error__itemname
         .Contents__name__description
           %span.Contents__name__description--text 商品の説明
           %span.Contents__name__description--must 必須
-        = f.text_area :description, placeholder: :"商品の説明(1000文字以内)", class: :"Contents__name--input-big"
-
+        = f.text_area :description, placeholder: :"商品の説明(1000文字以内)", class: :"Contents__name--input-big", id: "item_description"
+        #Input_error__description
 
 
       .Contents__detail
@@ -81,9 +82,9 @@
             %span.Contents__detail__list__category--text カテゴリー
             %span.Contents__detail__list__category--must 必須
             .form.relative#select
-              = f.collection_select :category_id, @parents, :id, :genre,{prompt: "選択してください"}, class: "select-default", id: "parent-form", genre: 'item[category_ids][]'
+              = f.collection_select :category_id, @parents, :id, :genre,{prompt: "選択してください"}, class: "select-default", id: "parent_form", genre: 'item[category_ids][]'
               = icon('fa', 'chevron-down', class: 'icon')
-       
+              #Input_error__category
       
           .Contents__detail__list__brand
             = f.fields_for :brand do |b|
@@ -91,7 +92,7 @@
               %span.Contents__detail__list__brand--any 任意  
               = b.text_field :name, placeholder: "シャネル", value: "", class: 'Contents__detail__list__brand--input'
           
-          
+
           .Contents__detail__list__status
             %span.Contents__detail__list__status--text 商品の状態   
             %span.Contents__detail__list__status--must 必須
@@ -99,6 +100,7 @@
             .form.relative  
               = f.select :status, [['新品、未使用', '新品、未使用'], ['未使用に近い', '未使用に近い'], ['目立った傷や汚れなし', '目立った傷や汚れなし']], {include_blank: "選択してください", selected: 1}, { id: "item_id", class: "select-default"}
               = icon('fa', 'chevron-down', class: 'icon')
+              #Input_error__status
       
       .Contents__delivery
         .Contents__delivery__title
@@ -113,22 +115,25 @@
             %span.Contents__delivery__category__burden--text 配送料の負担
             %span.Contents__delivery__category__burden--must 必須
             .form.relative
-              = f.select :charge, [['送料込み(出品者負担)', '送料込み(出品者負担)'], ['着払い(購入者負担)', '着払い(購入者負担)']], {include_blank: "選択してください", selected: 1}, { id: "item_id", class: "select-default"}
+              = f.select :charge, [['送料込み(出品者負担)', '送料込み(出品者負担)'], ['着払い(購入者負担)', '着払い(購入者負担)']], {include_blank: "選択してください", selected: 1}, { id: "item_charge", class: "select-default"}
               = icon('fa', 'chevron-down', class: 'icon')
+              #Input_error__charge
 
           .Contents__delivery__category__area
             %span.Contents__delivery__category__area--text 配送元の地域
             %span.Contents__delivery__category__area--must 必須
             .form.relative
-              = f.collection_select :area, Prefecture.all, :id, :name, prompt: "選択してください"
+              = f.collection_select :area, Prefecture.all, :id, :name, prompt: "選択してください", id: "item_area"
               = icon('fa', 'chevron-down', class: 'icon')
+              #Input_error__area
 
           .Contents__delivery__category__date
             %span.Contents__delivery__category__date--text 配送までの日数
             %span.Contents__delivery__category__date--must 必須 
             .form.relative
-              = f.select :day, [['1~2日で発送', '1~2日で発送'], ['2~3日で発送', '2~3日で発送'], ['4~7日で発送', '4~7日で発送']], {include_blank: "選択してください", selected: 1}, { id: "item_id", class: "select-default"}
+              = f.select :day, [['1~2日で発送', '1~2日で発送'], ['2~3日で発送', '2~3日で発送'], ['4~7日で発送', '4~7日で発送']], {include_blank: "選択してください", selected: 1}, { id: "item_day", class: "select-default"}
               = icon('fa', 'chevron-down', class: 'icon')
+              #Input_error__day
       
       .Contents__price
         .Contents__price__title
@@ -147,8 +152,9 @@
             .Contents__price__right__category__form
               .Contents__price__right__category__form--text
                 ¥ 
-              = f.text_field :price, placeholder: :"例) 300", class: :"Contents__price__right__category__form--field", id: :"price_calc"
-
+              = f.text_field :price, placeholder: :"例) 300", class: :"Contents__price__right__category__form--field", id: "price_calc"
+              
+          #Input_error__price
           .Contents__price__right__commission
             .Contents__price__right__commission--text
               販売手数料 (10%)
@@ -161,8 +167,7 @@
               = f.number_field :price, style: "display: none", id: "price"
             .Contents__price__right__profit--rod    
               ➖
-       
-       
+        
       .Contents__Exhibition
         .Contents__Exhibition__text
           %p
@@ -180,7 +185,7 @@
             に同意したことになります。
         
         .Contents__Exhibition__btn
-          = f.submit "出品する", class: "post"
+          = f.submit "出品する", class: "post", id: "ItemInput__btn"
 
         
           = link_to "もどる", "#", class: "Contents__Exhibition__btn--return"
