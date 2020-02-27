@@ -20,7 +20,7 @@ FactoryBot.define do
     first_name            {"彩"}
     family_furigana       {"ヤマダ"}
     first_furigana        {"アヤ"}
-    number                {"0000000"}
+    number                {0000000}
     prefecture            {"北海道"}
     municipality          {"サンプル"}
     street                {"テキスト"}
