@@ -19,7 +19,7 @@ function input_check(){
   $('#item_area').removeClass("inp_error");
   $('#item_day').removeClass("inp_error");
   $('#price_calc').removeClass("inp_error");
-
+  
 
 
   // 入力エラー文をリセット
