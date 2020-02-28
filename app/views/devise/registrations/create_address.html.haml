@@ -1,3 +1,13 @@
-%h2 登録が完了しました
-= link_to(root_path) do
-  = "トップへ戻る"
+.Overall
+  .Register
+    .Register__link
+      登録が完了しました
+  .BeforeLink
+    .BeforeLink__list
+      %ul.BeforeLink__list__var
+        %li.BeforeLink__list__var__item1
+          = link_to("トップページへ戻る", root_path, class: "BeforeLink__list__var__item1__link1")
+        %li.BeforeLink__list__var__item2
+          = link_to("マイページ", root_path, class: "BeforeLink__list__var__item__link2")
+        %li.BeforeLink__list__var__item3
+          = link_to("出品する", root_path, class: "BeforeLink__list__var__item__link3")
