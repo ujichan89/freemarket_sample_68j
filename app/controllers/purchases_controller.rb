@@ -8,7 +8,7 @@ class PurchasesController < ApplicationController
     if card.blank?
       redirect_to controller: "cards", action: "new"
     else
-      Payjp.api_key = ENV["PAYJP_PRIVATE_KEY"]
+      Payjp.api_key = Rails.application.credentials[:payjp][:PAYJP_PRIVATE_KEY]
       customer = Payjp::Customer.retrieve(card.customer_id)
       @default_card_information = customer.cards.retrieve(card.card_id)
     end
@@ -17,7 +17,8 @@ class PurchasesController < ApplicationController
   def pay
     @item = Item.find_by(id: params[:item_id])
     card = set_card
-    Payjp.api_key = ENV['PAYJP_PRIVATE_KEY']
+    Payjp.api_key = Rails.application.credentials[:payjp][:PAYJP_PRIVATE_KEY]
+
     Payjp::Charge.create(
     :amount => @item.price,
     :customer => card.customer_id,
