@@ -75,11 +75,11 @@
   - if user_signed_in? && @item.user == current_user
     .GoodDetealContents__edit
       .GoodDetealContents__edit--editButtan
-        商品の編集
+        = link_to '商品の編集', edit_item_path
       .GoodDetealContents__edit--or
         or
       .GoodDetealContents__edit--deleteButtan
-        この商品を削除する
+        = link_to "削除する", item_path, method: :delete
 
   .GoodDetealContents__comments
     %textarea{class: 'GoodDetealContents__comments--commentform'}
