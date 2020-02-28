@@ -118,6 +118,9 @@
         border: 1px solid #aaa;
         color: #fff;
         line-height: 48px;
+        &__delete{
+          color: white;
+        }
     }
     a{
       color: #fff;
@@ -200,3 +203,17 @@ a{
   text-decoration: none;
   color: #3CCACE;
 }
+
+.notification {
+  color: white;
+  text-align: center;  
+
+  .notice {
+    background-color: deeppink;
+  }
+
+  .alert {
+    background-color: deepskyblue;
+    font-size: xx-large;
+  }
+} 
