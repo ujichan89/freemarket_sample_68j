@@ -57,12 +57,12 @@
             .MypageRight__user__tabs__top__pic
               = image_tag '/assets/member_photo_noimage_thumb.png', class: "MypageRight__user__tabs__top__pic"
             .MypageRight__user__tabs__top__name
-              "name"
+              #{current_user.nickname}
             .MypageRight__user__tabs__top__inf
               .MypageRight__user__tabs__top__inf__val
-                "評価　0"
+                評価　0
               .MypageRight__user__tabs__top__inf__num
-                "出品数　0"
+                出品数　0
 
         .MypageRight__user__todo
           .MypageRight__user__todo__tabs

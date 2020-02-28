@@ -105,6 +105,10 @@
 
       .__signUp{
         padding: 0 0 0 16px;
+        .--login{
+          text-decoration: none;
+          color: #333;
+        }
 
         .--signUp{
           text-decoration: none;
