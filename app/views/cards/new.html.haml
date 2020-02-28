@@ -1,51 +1,53 @@
-.Wrapper__cards
-  .Contents
-    .Contents__title
-      クレジットカード情報入力
-    = form_tag(pay_cards_path, method: :post, class: "Contents__card", id: 'charge-form', name: "inputForm") do
-      .Contents__card__name
-        .Contents__card__name--text
-          カード番号
-        .Contents__card__name--must
-          必須
-      = text_field_tag "number", "", class: "number", class: "Contents__card--input", placeholder: "半角数字のみ", type: "text", id: "card_number", maxlength: "16"
-      %p#warn1
-        正しく入力してください。
-      .Contents__card__picture
-        =image_tag "/assets/visa.svg", class: "Contents__card__picture__phot"
-        =image_tag "/assets/master-card.svg", class: "Contents__card__picture__phot"
-        =image_tag "/assets/saison-card.svg", class: "Contents__card__picture__phot"
-        =image_tag "/assets/jcb.svg", class: "Contents__card__picture__phot"
-        =image_tag "/assets/american_express.svg", class: "Contents__card__picture__phot"
-        =image_tag "/assets/dinersclub.svg", class: "Contents__card__picture__phot"
-        =image_tag "/assets/discover.svg", class: "Contents__card__picture__phot"
+= render partial: 'shared/headerA'
 
-      .Contents__date__name
-        .Contents__date__name--text
-          有効期限
-        .Contents__date__name--must
-          必須
-      .Contents__date__name--select
+.Wrapper-my
+  .Mypage
+    .MypageLeft
+      = render partial: 'shared/mypageLeft'
 
-        = select_tag "exp_month", options_for_card_month, id: "exp_month", class: "Contents__date__name--select__num"
+    .Wrapper__cards
+      .Contents
+        .Contents__title
+          クレジットカード情報入力
+        = form_tag(pay_cards_path, method: :post, class: "Contents__card", id: 'charge-form', name: "inputForm") do
+          .Contents__card__name
+            .Contents__card__name--text
+              カード番号
+            .Contents__card__name--must
+              必須
+          = text_field_tag "number", "", class: "number", class: "Contents__card--input", placeholder: "半角数字のみ", type: "text", id: "card_number", maxlength: "16"
+          .Contents__card__picture
+            =image_tag "visa.svg", class: "Contents__card__picture__phot"
+            =image_tag "master-card.svg", class: "Contents__card__picture__phot"
+            =image_tag "saison-card.svg", class: "Contents__card__picture__phot"
+            =image_tag "jcb.svg", class: "Contents__card__picture__phot"
+            =image_tag "american_express.svg", class: "Contents__card__picture__phot"
+            =image_tag "dinersclub.svg", class: "Contents__card__picture__phot"
+            =image_tag "discover.svg", class: "Contents__card__picture__phot"
 
-        月
+          .Contents__date__name
+            .Contents__date__name--text
+              有効期限
+            .Contents__date__name--must
+              必須
+          .Contents__date__name--select
+            = select_tag "exp_month", options_for_card_month, id: "exp_month", class: "Contents__date__name--select__num"
+            月
 
-        = select_tag "exp_year", options_for_card_year, id: "exp_year", class: "Contents__date__name--select__num"
-        年
-        %p#warn2
-          正しく入力してください。
-      .Contents__card__name
-        .Contents__card__name--text
-          セキュリティコード
-        .Contents__card__name--must
-          必須
-      = text_field_tag "cvc", "", class: "cvc", class: "Contents__card--input", placeholder: "カード背面3~4桁の番号", maxlength: "4", id: "cvc"
-      #card_token
-      %p#warn3
-        正しく入力してください。
-      = submit_tag "追加する", id: "token_submit", class: "Contents__Exhibition__btn--btn"
+            = select_tag "exp_year", options_for_card_year, id: "exp_year", class: "Contents__date__name--select__num"
+            年
 
-    .Contents__Exhibition
-      .Contents__Exhibition__btn
+          .Contents__card__name
+            .Contents__card__name--text
+              セキュリティコード
+            .Contents__card__name--must
+              必須
+          = text_field_tag "cvc", "", class: "cvc", class: "Contents__card--input", placeholder: "カード背面3~4桁の番号", maxlength: "4", id: "cvc"
+          #card_token
+          = submit_tag "追加する", id: "token_submit", class: "Contents__Exhibition__btn--btn"
 
+        .Contents__Exhibition
+          .Contents__Exhibition__btn
+
+= render partial: 'shared/appBanner'
+= render partial: 'shared/footerA'

@@ -1,0 +1,103 @@
+.Overall {
+  width: 100%;
+}
+
+.Register {
+  background-color: #3CCACE;
+  height: 120px;
+  width: 700px;
+  margin: 0 auto;
+
+  &__link {
+    height: 120px;
+    width: 700px;
+    color: white;
+    font-size: 30px;
+    text-align: center;
+    line-height: 120px;
+    margin-top: 100px;
+  }
+}
+
+
+.BeforeLink {
+  width: 700px;
+  display: flex;
+  justify-content: center;
+  margin-left: 300px;
+  &__list {
+    text-align: center;
+    margin-top: 70px;
+
+    &__var {
+      display: flex;
+      justify-content: center;
+
+
+      &__item1 {
+        margin-top: 10px;
+        position: relative;
+      }
+
+      &__item2 {
+        margin-top: 10px;
+        position: relative;
+      }
+
+
+      &__item3 {
+        margin-top: 10px;
+        position: relative;
+      }
+    }
+  }
+}
+
+
+.BeforeLink__list__var__item1__link1 {
+  background: pink;
+  border-radius: 50% 50% 50% 70%/50% 50% 70% 60%;
+  color: #fff;
+  padding: 5%;
+  width: 180px;
+  height: 180px;
+  margin: 0 -15px;
+  mix-blend-mode: multiply;
+  position: absolute;
+  text-align: center;
+  line-height: 50px;
+  padding-top: 30px;
+  line-height: 120px;
+}
+.BeforeLink__list__var__item__link2 {
+  background: plum;
+  border-radius: 80% 30% 50% 50%/50%;
+  color: #fff;
+  padding: 5%;
+  width: 180px;
+  height: 180px;
+  margin: 0 -15px;
+  mix-blend-mode: multiply;
+  position: absolute;
+  text-align: center;
+  line-height: 50px;
+  padding-top: 30px;
+  margin-left: 150px;
+  line-height: 120px;
+}
+.BeforeLink__list__var__item__link3 {
+  background: palevioletred;
+  border-radius: 40% 40% 50% 40%/30% 50% 50% 50%;
+  color: #fff;
+  padding: 5%;
+  width: 180px;
+  height: 180px;
+  margin: 0 -15px;
+  mix-blend-mode: multiply;
+  position: absolute;
+  text-align: center;
+  line-height: 50px;
+  padding-top: 30px;
+  margin-left: -180px;
+  line-height: 120px;
+}
