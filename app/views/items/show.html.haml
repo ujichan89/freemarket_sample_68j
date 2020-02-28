@@ -18,7 +18,7 @@
 
     - unless user_signed_in? && @item.user_id == current_user
       .GoodDetealContents__main--purchaseButton
-        = link_to '購入画面に進む', '#'
+        = link_to '購入画面に進む', edit_purchase_path
 
     .GoodDetealContents__main--goodDescription
       .GoodDetealContents__main--goodDescription__goodName
