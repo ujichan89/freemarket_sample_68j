@@ -54,10 +54,14 @@ class ItemsController < ApplicationController
   end
 
   def edit
+    @parents = Category.where(ancestry: nil)
+
   end
 
   def update
+    item = Item.find(params[:id])
     item.update(item_params)
+    redirect_to root_path
   end
 
   def destroy
@@ -68,6 +72,10 @@ class ItemsController < ApplicationController
   private
   def set_item
     @item = Item.find(params[:id])
+  end
+
+  def update_params
+    params.require(:item).permit(:name, :price, :status, :description, :charge, :area, :day, :category_id, brand_attributes: [:id, :name], images_attributes: [:picture, :id])
   end
   
   def item_params
