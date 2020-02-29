@@ -18,7 +18,7 @@
           %br 枠線の中をクリックしてください
 
           #image-box-1
-            .item-num-0#image-box__container       
+            .item-num-0#image-box__container
               = f.fields_for :images do |i|
                 %label.upload-label
                   .Contents__image__upload
@@ -78,7 +78,6 @@
           %span.Contents__name__description--must 必須
         = f.text_area :description, placeholder: :"商品の説明(1000文字以内)", class: :"Contents__name--input-big", id: "item_description"
         #Input_error__description
-
 
       .Contents__detail
         .Contents__detail__title
