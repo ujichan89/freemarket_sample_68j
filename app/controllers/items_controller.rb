@@ -1,5 +1,5 @@
 class ItemsController < ApplicationController
-  before_action :set_item, only: [:show, :edit]
+  before_action :set_item, only: [:show, :edit, :destroy]
 
   def index
     @items = Item.all
@@ -60,12 +60,8 @@ class ItemsController < ApplicationController
   end
 
   def destroy
-    if user_signed_in? && @item.user == current_user
-      @item.destroy
-      redirect_to root_path
-    else 
-      flash[:alert] = "削除に失敗しました"
-    end
+    @item.destroy
+    redirect_to root_path
   end
 
   private
