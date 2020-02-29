@@ -57,7 +57,7 @@
           %th 発送元の地域
           %td 
             = link_to '#' do
-              = @item.area
+              = Prefecture.find_by_id(@area).name
         %tr
           %th 発送日の目安
           %td 

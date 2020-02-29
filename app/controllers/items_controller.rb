@@ -35,6 +35,7 @@ class ItemsController < ApplicationController
     @user = @item.user
     @category = @item.category
     @brand = @item.brand
+    @area = @item.area
     @images = @item.images
   end
 
@@ -47,7 +48,7 @@ class ItemsController < ApplicationController
 
     respond_to do |format|
       format.html
-      format.json 
+      format.json
     end
   end
 

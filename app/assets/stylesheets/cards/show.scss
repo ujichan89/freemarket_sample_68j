@@ -1,0 +1,59 @@
+
+.Wrapper-my{
+  .Mypage{
+    .MypageRight {
+      width: 700px;
+      &__user {
+        background-color: white;
+
+        &__tabs {
+          background-image: image-url('awa.jpg');
+          height: 200px;
+
+          &__top {
+            padding-top: 30px;
+
+            &__pic {
+              width: 60px;
+              height: 60px;
+              margin: 0 auto;
+              border-radius: 50%;
+            }
+
+            &__name {
+              text-align: center;
+            }
+
+            &__inf {
+              display: flex;
+              justify-content: center;
+              &__val {
+                padding-right: 20px;
+              }
+            }
+          }
+      }
+
+        &__todo {
+          background-color: white;
+          height: 300px;
+          &__tabs {
+            height: 300px;
+            background-color:white;
+            display: flex;
+            font-weight: bold;
+            position: relative;
+            &__text{
+              width: 550px;
+              background-color: white;
+              font-size: 25px;
+              .a{
+                margin-top: 20px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
