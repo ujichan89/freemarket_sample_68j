@@ -125,7 +125,6 @@
 
       &__todo {
         background-color: white;
-        height: 300px;
 
         &__tabs {
           background-color: white;
@@ -136,6 +135,7 @@
 
           &__news {
             background-color: white;
+            height: 75px;
             width: 350px;
             text-align: center;
             line-height: 75px;
@@ -147,6 +147,7 @@
 
           &__todo {
             background-color: #eee;
+            height: 75px;
             border-top: solid 2px #3CCACE;
             width: 350px;
             text-align: center;

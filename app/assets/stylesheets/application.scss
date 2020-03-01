@@ -4,7 +4,6 @@
 @import "mypage";
 
 @import "cards/new";
-@import "cards/show";
 
 @import "modules/headerA";
 @import "modules/headerB";
@@ -15,6 +14,7 @@
 @import "items/index";
 @import "items/new";
 @import "items/show";
+@import "items/edit";
 
 @import "addresses/new";
 
@@ -22,7 +22,6 @@
 @import "users/registrations/new_address";
 @import "users/registrations/create_address";
 @import "users/sessions/new";
-
 
 @import "purchases/show";
 @import "jquery.bxslider";
