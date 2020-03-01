@@ -55,7 +55,7 @@ class ItemsController < ApplicationController
 
   def edit
     @parents = Category.where(ancestry: nil)
-
+    @item.build_brand
   end
 
   def update
