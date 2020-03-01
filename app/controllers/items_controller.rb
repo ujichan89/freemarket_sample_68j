@@ -23,6 +23,7 @@ class ItemsController < ApplicationController
  
   def create
     @item = Item.new(item_params)
+    @item.sale =  0
     if @item.save
       redirect_to root_path, notice: '出品できました'
     else
