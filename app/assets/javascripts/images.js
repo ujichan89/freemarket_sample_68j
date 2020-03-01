@@ -85,7 +85,7 @@ $(function(){
                     <div class='item-image__operetion'>
                       <div class='item-image__operetion--delete'>削除</div>
                     </div>
-                  </div>`
+                   </div>`
     
         $('#image-box__container').before(html);
       };
