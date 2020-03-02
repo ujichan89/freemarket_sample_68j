@@ -1,7 +1,9 @@
+= render partial: 'shared/headerB'
+
 #account-page.account-page
 .Wrapper
-  .Logo
-    = image_tag "logo.png", class: :"Logo__png"
+  -# .Logo
+  -#   = image_tag "logo.png", class: :"Logo__png"
 
   .Session
     .Session__sign
@@ -30,9 +32,9 @@
         = link_to "パスワードをお忘れの方", new_user_password_path, class: :"Session__input--forget"
         
   .Footer 
-    .Footer__logo
-      = link_to "#" do
-        = image_tag "logo-white.png", class: :"Footer__logo--text"
-    .Footer--text
-      FURIMA, ink.
-
+    -# .Footer__logo
+    -#   = link_to "#" do
+    -#     = image_tag "logo-white.png", class: :"Footer__logo--text"
+    -# .Footer--text
+    -#   FURIMA, ink.
+    = render partial: 'shared/footerA'
