@@ -55,34 +55,21 @@ class ItemsController < ApplicationController
   end
 
   def edit
-    if user_signed_in? && @item.user == current_user
-      @parents = Category.where(ancestry: nil)
-      @ctgrChild = @item.category.parent.siblings
-      @ctgrGrandchild = @item.category.siblings
-      # binding.pry
-      @item.build_brand
-    else
-      redirect_to root_path
-    end
+    @parents = Category.where(ancestry: nil)
+    @ctgrChild = @item.category.parent.siblings
+    @ctgrGrandchild = @item.category.siblings
+    @item.build_brand
   end
 
   def update
-    if @item.user == current_user
-      item = Item.find(params[:id])
-      item.update(item_params)
-      redirect_to root_path
-    else
-      redirect_to root_path
-    end
+    item = Item.find(params[:id])
+    item.update(item_params)
+    redirect_to root_path
   end
 
   def destroy
-    if @item.user == current_user
-      @item.destroy
-      redirect_to root_path
-    else
-      redirect_to root_path
-    end
+    @item.destroy
+    redirect_to root_path
   end
 
   private

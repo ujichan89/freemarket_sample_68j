@@ -5,9 +5,9 @@ $(function() {
 
  function appendSelect(catNum) {
    if(catNum == 1) {
-     var character_id = `m_editCategory`
+     var character_id = 'm_editCategory'
    } else if(catNum == 2) {
-     var character_id = `s_editCategory`
+     var character_id = 's_editCategory'
    }
    var html =
    `<select name="item[category_id]" class="select-default" id="${character_id}">
