@@ -5,10 +5,11 @@
     .GoodDetealContents__main--goodName
       = @item.name
 
-    %ul.slider
+    %ul#slider
       - @images.each do |image|
         %li
           = image_tag image.picture.to_s
+    .GoodDetealContents__main--subImage
 
     .GoodDetealContents__main--priceingInformation
       .GoodDetealContents__main--priceingInformation__price
@@ -108,7 +109,7 @@
         %i.fa.fa-angle-right
 
   .GoodDetealContents__more
-    = link_to 'メンズをもっと見る', '#'
+    = link_to "#{@category.parent.parent.genre}をもっと見る", '#'
 
 = render partial: 'shared/appBanner'
 = render partial: 'shared/footerA'
