@@ -19,7 +19,7 @@
 
     &--subImage{
       img{
-        margin-top: 10px;
+        margin: 10px 10px 0 0;
         height: 87px;
         object-fit: cover;
       }
@@ -29,7 +29,7 @@
       &__price{
         font-size: 46px;
         font-weight: bold;
-        margin: 45px 10px 0 0;
+        margin: 10px 0 0 0;
       }
     }
 
