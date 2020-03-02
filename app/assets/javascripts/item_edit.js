@@ -115,6 +115,7 @@ function input_check(){
 
       $('.form').submit();
       // console.log($('.form').attr('action', '/items'));
+      // $('.form').attr('action', '/items/8').submit();
       return false;                           //親要素のイベントを発生させない
     }
   });
