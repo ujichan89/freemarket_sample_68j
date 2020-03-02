@@ -99,7 +99,7 @@
             = f.fields_for :brand do |b|
               %span.EditContents__detail__list__brand--text ブランド
               %span.EditContents__detail__list__brand--any 任意  
-              = b.text_field :name, placeholder: "シャネル", value: @item.brand.name, class: 'EditContents__detail__list__brand--input'
+              = b.text_field :name, placeholder: "シャネル", value:  @item.brand.name, class: 'EditContents__detail__list__brand--input'
           
           
           .EditContents__detail__list__status
@@ -115,7 +115,7 @@
           .EditContents__delivery__title--text
             配送について
           = link_to "#" do
-            = icon('fa', 'question-circle', class: 'Contents__delivery__title--icon')
+            = icon('fa', 'question-circle', class: 'EditContents__delivery__title--icon')
         
         .EditContents__delivery__category 
 
@@ -190,7 +190,7 @@
             に同意したことになります。
         
         .Contents__Exhibition__btn
-          = f.submit "この内容で編集する", class: "post"
+          = f.submit "この内容で編集する", class: "EditContents__Exhibition__btn"
         
 
         
