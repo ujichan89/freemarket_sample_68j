@@ -16,9 +16,14 @@
       .GoodDetealContents__main--priceingInformation__priceSupplement
         (税込) 送料込み
 
-    - unless user_signed_in? && @item.user == current_user
+    - if user_signed_in? && @item.user == current_user
+      .GoodDetealContents__main--purchaseButton
+    - elsif user_signed_in? && @item.user != current_user
       .GoodDetealContents__main--purchaseButton
         = link_to '購入画面に進む', edit_purchase_path(@item)
+    - else
+      .GoodDetealContents__main--purchaseButton
+        = link_to '購入画面に進む', new_user_session_path
 
     .GoodDetealContents__main--goodDescription
       .GoodDetealContents__main--goodDescription__goodName
