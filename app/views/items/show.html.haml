@@ -108,7 +108,7 @@
         %i.fa.fa-angle-right
 
   .GoodDetealContents__more
-    = link_to 'メンズをもっと見る', '#'
+    = link_to "#{@category.parent.parent.genre}をもっと見る", '#'
 
 = render partial: 'shared/appBanner'
 = render partial: 'shared/footerA'
