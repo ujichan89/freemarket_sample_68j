@@ -33,6 +33,7 @@
 
   // Lカテゴリーが選択された時のアクション
   $("#parent_form").on('change', function() {
+   console.log(this)
     l_cat = $(this).val()
     $("#m_category, #s_category").remove()
 

@@ -35,7 +35,6 @@ class ItemsController < ApplicationController
   def show
     @user = @item.user
     @category = @item.category
-    # binding.pry
     @brand = @item.brand
     @area = @item.area
     @images = @item.images
@@ -56,11 +55,9 @@ class ItemsController < ApplicationController
   end
 
   def edit
-    @category = Category.where(ancestry: nil)
-    @ctgrChild = Category.where(ancestry: @category.ids)
-    # @ctgrGrandchild = Category.where(ancestry: @item.category.id)
-    # @ctgrGrandchild = Category.where(ancestry: @item.category.siblings)
-    @ctgrGrandchild = Category.where(ancestry: @item.category.sibling_ids.genre)
+    @parents = Category.where(ancestry: nil)
+    @ctgrChild = @item.category.parent.siblings
+    @ctgrGrandchild = @item.category.siblings
     # binding.pry
     @item.build_brand
   end
@@ -82,7 +79,7 @@ class ItemsController < ApplicationController
   end
 
   def update_params
-    params.require(:item).permit(:name, :price, :status, :description, :charge, :area, :day, :category_id, brand_attributes: [:id, :name], images_attributes: [:picture, :id])
+    params.require(:item).permit(:name, :price, :status, :description, :charge, :area, :day, :category_id, brand_attributes: [:id, :name], images_attributes: [:picture, :id]).mrege(user_id: current_user.id)
   end
   
   def item_params
