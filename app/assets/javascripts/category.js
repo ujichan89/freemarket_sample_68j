@@ -1,4 +1,4 @@
-$(document).on('turbolinks:load', function() {
+ $(function() {
 
   // selectを追加するHTML
   var cat_search = $("#select");
@@ -71,4 +71,4 @@ $(document).on('turbolinks:load', function() {
       });
     });
   });
-});
+ });
