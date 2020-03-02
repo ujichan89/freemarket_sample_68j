@@ -277,6 +277,7 @@
             background-color: #fff;
             display: inline-block;
             .ProductList--img{
+              width: 220px;
               height: 150px;
               position: relative;
               overflow: hidden;
@@ -370,7 +371,7 @@
           display: flex;
           justify-content: space-around;
           .ProductList{
-            width: 220px;
+            // width: 220px;
             display: inline-block;
             float: left;
             a{
