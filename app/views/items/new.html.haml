@@ -18,54 +18,55 @@
           %br 枠線の中をクリックしてください
 
           #image-box-1
-            .item-num-0#image-box__container       
+            .item-num-0#image-box__container
               = f.fields_for :images do |i|
                 %label.upload-label
                   .Contents__image__upload
                     .container
                       = i.label :picture, for: "item_images_attributes_0_picture", class: "camera" do
                         = icon('fa', 'camera',)
-                      = i.file_field :picture, id: "item_images_attributes_0_picture", style: "display: none;", name: "item[images_attributes][0][picture]", id: :"img"
+                      = i.file_field :picture, id: "item_images_attributes_0_picture", class: "img",  style: "display: none;", name: "item[images_attributes][0][picture]"
 
                       = i.label :picture, for: "item_images_attributes_1_picture", class: "camera" do
-                        = icon('fa', 'camera', class: :"hidden")
-                      = i.file_field :picture, id: "item_images_attributes_1_picture", style: "display: none;", name: "item[images_attributes][1][picture]"
+                        = icon('fa', 'camera')
+                      = i.file_field :picture, id: "item_images_attributes_1_picture", class: "img", style: "display: none;", name: "item[images_attributes][1][picture]"
 
                       = i.label :picture, for: "item_images_attributes_2_picture", class: "camera" do
-                        = icon('fa', 'camera', class: :"hidden")
-                      = i.file_field :picture, id: "item_images_attributes_2_picture", style: "display: none;", name: "item[images_attributes][2][picture]"
+                        = icon('fa', 'camera')
+                      = i.file_field :picture, id: "item_images_attributes_2_picture", class: "img", style: "display: none;", name: "item[images_attributes][2][picture]"
 
                       = i.label :picture, for: "item_images_attributes_3_picture", class: "camera" do
-                        = icon('fa', 'camera', class: :"hidden")
-                      = i.file_field :picture, id: "item_images_attributes_3_picture", style: "display: none;", name: "item[images_attributes][3][picture]"
+                        = icon('fa', 'camera')
+                      = i.file_field :picture, id: "item_images_attributes_3_picture", class: "img", style: "display: none;", name: "item[images_attributes][3][picture]"
 
                       = i.label :picture, for: "item_images_attributes_4_picture", class: "camera" do
-                        = icon('fa', 'camera', class: :"hidden")
-                      = i.file_field :picture, id: "item_images_attributes_4_picture", style: "display: none;", name: "item[images_attributes][4][picture]"
-
+                        = icon('fa', 'camera')
+                      = i.file_field :picture, id: "item_images_attributes_4_picture",  class: "img", style: "display: none;", name: "item[images_attributes][4][picture]"
+                    #image-box-2
                       = i.label :picture, for: "item_images_attributes_5_picture", class: "camera" do
-                        = icon('fa', 'camera', class: :"hidden")
+                        = icon('fa', 'camera')
                       = i.file_field :picture, id: "item_images_attributes_5_picture", style: "display: none;", name: "item[images_attributes][5][picture]"
 
                       = i.label :picture, for: "item_images_attributes_6_picture", class: "camera" do
-                        = icon('fa', 'camera', class: :"hidden")
+                        = icon('fa', 'camera')
                       = i.file_field :picture, id: "item_images_attributes_6_picture", style: "display: none;", name: "item[images_attributes][6][picture]"
 
                       = i.label :picture, for: "item_images_attributes_7_picture", class: "camera" do
-                        = icon('fa', 'camera', class: :"hidden")
+                        = icon('fa', 'camera')
                       = i.file_field :picture, id: "item_images_attributes_7_picture", style: "display: none;", name: "item[images_attributes][7][picture]"
 
                       = i.label :picture, for: "item_images_attributes_8_picture", class: "camera" do
-                        = icon('fa', 'camera', class: :"hidden")
+                        = icon('fa', 'camera')
                       = i.file_field :picture, id: "item_images_attributes_8_picture", style: "display: none;", name: "item[images_attributes][8][picture]"
 
                       = i.label :picture, for: "item_images_attributes_9_picture", class: "camera" do
-                        = icon('fa', 'camera', class: :"hidden")
+                        = icon('fa', 'camera')
                       = i.file_field :picture, id: "item_images_attributes_9_picture", style: "display: none;", name: "item[images_attributes][9][picture]"
                       %label{for: "img-file"}
                         %i.fas.fa-camera
                       - if @item.errors.any?
                         %p.red 画像がありません
+                  #Input_error__image
 
       .Contents__name
         .Contents__name__form
@@ -78,7 +79,6 @@
           %span.Contents__name__description--must 必須
         = f.text_area :description, placeholder: :"商品の説明(1000文字以内)", class: :"Contents__name--input-big", id: "item_description"
         #Input_error__description
-
 
       .Contents__detail
         .Contents__detail__title

@@ -37,5 +37,13 @@
         .MypageRight__purcha__contents
           取引中の商品がありません
 
+.Wrapper
+  .Main
+    .PurchaseBtn
+      = link_to new_item_path, class: :"PurchaseBtn" do
+        %span.PurchaseBtn__text 
+          出品する
+        = image_tag("icon_camera.png",class:"PurchaseBtn__icon")
+
 = render partial: 'shared/appBanner'
 = render partial: 'shared/footerA'

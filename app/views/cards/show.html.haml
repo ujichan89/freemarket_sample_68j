@@ -77,5 +77,13 @@
               = form_tag(card_path, method: :delete, id: 'charge-form',  name: "inputForm") do
                 %input{ type: "hidden", name: "card_id", value: "" }
                 %button 削除する
-              
+
+.Wrapper
+  .Main
+    .PurchaseBtn
+      = link_to new_item_path, class: :"PurchaseBtn" do
+        %span.PurchaseBtn__text 
+          出品する
+        = image_tag("icon_camera.png",class:"PurchaseBtn__icon")
+        
 = render partial: 'shared/footerA'
