@@ -5,11 +5,11 @@
     .GoodDetealContents__main--goodName
       = @item.name
 
-    %ul#sample
+    %ul#slider
       - @images.each do |image|
         %li
           = image_tag image.picture.to_s
-    .custom-thumb
+    .subImage
 
     .GoodDetealContents__main--priceingInformation
       .GoodDetealContents__main--priceingInformation__price

@@ -5,12 +5,12 @@ $(function() {
 
   // サムネイルの作成
   var insert = '';
-  for (var i = 0; i < $('#sample li').length; i++) {
-      insert += '<a data-slide-index="' + i + '" href="#"><img src="' + $('#sample li').eq(i).children('img').attr('src') + '" width="' + thumbWidth + '" height="' + thumbHeight + '" /></a>';
+  for (var i = 0; i < $('#slider li').length; i++) {
+      insert += '<a data-slide-index="' + i + '" href="#"><img src="' + $('#slider li').eq(i).children('img').attr('src') + '" width="' + thumbWidth + '" height="' + thumbHeight + '" /></a>';
   };
-  $('.custom-thumb').append(insert);
+  $('.subImage').append(insert);
 
-  $('#sample').bxSlider({
-      pagerCustom: '.custom-thumb',
+  $('#slider').bxSlider({
+      pagerCustom: '.-thumb',
   });
 });
