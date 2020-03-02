@@ -1,199 +1,212 @@
 .WrapperEdit
-  = link_to "戻る", root_path
+	= link_to "戻る", root_path
 
-  .EditLogo
-    = image_tag "logo.png", class: :"EditLogo__png"
-  .EditContents 
-    .EditContents__title
-      商品の情報を入力
-    = form_with model: @item, class: :form, local: true do |f|
-      .EditContents__image
-        .EditContents__image__title
-          %span.EditContents__image__title--text 出品画像
-          %span.EditContents__image__title--must 必須  
-        .EditContents__image__capture
-          最大10枚までアップロードできます
-          %br 枠線の中をクリックしてください
+	.EditLogo
+		= image_tag "logo.png", class: :"EditLogo__png"
+	.EditContents 
+		.EditContents__title
+			商品の情報を入力
+		= form_with model: @item, class: :form, local: true do |f|
+			.EditContents__image
+				.EditContents__image__title
+					%span.EditContents__image__title--text 出品画像
+					%span.EditContents__image__title--must 必須  
+				.EditContents__image__capture
+					最大10枚までアップロードできます
+					%br 枠線の中をクリックしてください
 
-          #image-box-1
-            .item-num-0#image-box__container       
-              = f.fields_for :images do |i|
-                %label.upload-label
-                  .EditContents__image__upload
-                    .container
-                      = i.label :picture, for: "item_images_attributes_0_picture", class: "items__Contents__image__upload--cameraBtnUpper" do
-                        = icon('fa', 'camera',)
-                      = i.file_field :picture, id: "item_images_attributes_0_picture", style: "display: none;", name: "item[images_attributes][0][picture]"
+					#image-box-1
+						.item-num-0#image-box__container       
+							= f.fields_for :images do |i|
+								%label.upload-label
+									.EditContents__image__upload
+										.container
+											= i.label :picture, for: "item_images_attributes_0_picture", class: "items__Contents__image__upload--cameraBtnUpper" do
+												= icon('fa', 'camera',)
+											= i.file_field :picture, id: "item_images_attributes_0_picture", style: "display: none;", name: "item[images_attributes][0][picture]"
 
-                      = i.label :picture, for: "item_images_attributes_1_picture", class: "items__Contents__image__upload--cameraBtnUpper" do
-                        = icon('fa', 'camera', class: :"hidden")
-                      = i.file_field :picture, id: "item_images_attributes_1_picture", style: "display: none;", name: "item[images_attributes][1][picture]"
+											= i.label :picture, for: "item_images_attributes_1_picture", class: "items__Contents__image__upload--cameraBtnUpper" do
+												= icon('fa', 'camera', class: :"hidden")
+											= i.file_field :picture, id: "item_images_attributes_1_picture", style: "display: none;", name: "item[images_attributes][1][picture]"
 
-                      = i.label :picture, for: "item_images_attributes_2_picture", class: "items__Contents__image__upload--cameraBtnUpper" do
-                        = icon('fa', 'camera', class: :"hidden")
-                      = i.file_field :picture, id: "item_images_attributes_2_picture", style: "display: none;", name: "item[images_attributes][2][picture]"
+											= i.label :picture, for: "item_images_attributes_2_picture", class: "items__Contents__image__upload--cameraBtnUpper" do
+												= icon('fa', 'camera', class: :"hidden")
+											= i.file_field :picture, id: "item_images_attributes_2_picture", style: "display: none;", name: "item[images_attributes][2][picture]"
 
-                      = i.label :picture, for: "item_images_attributes_3_picture", class: "items__Contents__image__upload--cameraBtnUpper" do
-                        = icon('fa', 'camera', class: :"hidden")
-                      = i.file_field :picture, id: "item_images_attributes_3_picture", style: "display: none;", name: "item[images_attributes][3][picture]"
+											= i.label :picture, for: "item_images_attributes_3_picture", class: "items__Contents__image__upload--cameraBtnUpper" do
+												= icon('fa', 'camera', class: :"hidden")
+											= i.file_field :picture, id: "item_images_attributes_3_picture", style: "display: none;", name: "item[images_attributes][3][picture]"
 
-                      = i.label :picture, for: "item_images_attributes_4_picture", class: "items__Contents__image__upload--cameraBtnUpper" do
-                        = icon('fa', 'camera', class: :"hidden")
-                      = i.file_field :picture, id: "item_images_attributes_4_picture", style: "display: none;", name: "item[images_attributes][4][picture]"
+											= i.label :picture, for: "item_images_attributes_4_picture", class: "items__Contents__image__upload--cameraBtnUpper" do
+												= icon('fa', 'camera', class: :"hidden")
+											= i.file_field :picture, id: "item_images_attributes_4_picture", style: "display: none;", name: "item[images_attributes][4][picture]"
 
-                      = i.label :picture, for: "item_images_attributes_5_picture", class: "items__Contents__image__upload--cameraBtnDowner" do
-                        = icon('fa', 'camera', class: :"hidden")
-                      = i.file_field :picture, id: "item_images_attributes_5_picture", style: "display: none;", name: "item[images_attributes][5][picture]"
+											= i.label :picture, for: "item_images_attributes_5_picture", class: "items__Contents__image__upload--cameraBtnDowner" do
+												= icon('fa', 'camera', class: :"hidden")
+											= i.file_field :picture, id: "item_images_attributes_5_picture", style: "display: none;", name: "item[images_attributes][5][picture]"
 
-                      = i.label :picture, for: "item_images_attributes_6_picture", class: "items__Contents__image__upload--cameraBtnDowner" do
-                        = icon('fa', 'camera', class: :"hidden")
-                      = i.file_field :picture, id: "item_images_attributes_6_picture", style: "display: none;", name: "item[images_attributes][6][picture]"
+											= i.label :picture, for: "item_images_attributes_6_picture", class: "items__Contents__image__upload--cameraBtnDowner" do
+												= icon('fa', 'camera', class: :"hidden")
+											= i.file_field :picture, id: "item_images_attributes_6_picture", style: "display: none;", name: "item[images_attributes][6][picture]"
 
-                      = i.label :picture, for: "item_images_attributes_7_picture", class: "items__Contents__image__upload--cameraBtnDowner" do
-                        = icon('fa', 'camera', class: :"hidden")
-                      = i.file_field :picture, id: "item_images_attributes_7_picture", style: "display: none;", name: "item[images_attributes][7][picture]"
+											= i.label :picture, for: "item_images_attributes_7_picture", class: "items__Contents__image__upload--cameraBtnDowner" do
+												= icon('fa', 'camera', class: :"hidden")
+											= i.file_field :picture, id: "item_images_attributes_7_picture", style: "display: none;", name: "item[images_attributes][7][picture]"
 
-                      = i.label :picture, for: "item_images_attributes_8_picture", class: "items__Contents__image__upload--cameraBtnDowner" do
-                        = icon('fa', 'camera', class: :"hidden")
-                      = i.file_field :picture, id: "item_images_attributes_8_picture", style: "display: none;", name: "item[images_attributes][8][picture]"
+											= i.label :picture, for: "item_images_attributes_8_picture", class: "items__Contents__image__upload--cameraBtnDowner" do
+												= icon('fa', 'camera', class: :"hidden")
+											= i.file_field :picture, id: "item_images_attributes_8_picture", style: "display: none;", name: "item[images_attributes][8][picture]"
 
-                      = i.label :picture, for: "item_images_attributes_9_picture", class: "items__Contents__image__upload--cameraBtnDowner" do
-                        = icon('fa', 'camera', class: :"hidden")
-                      = i.file_field :picture, id: "item_images_attributes_9_picture", style: "display: none;", name: "item[images_attributes][9][picture]"
-                      %label{for: "img-file"}
-                        %i.fas.fa-camera
-                      - if @item.errors.any?
-                        %p.red 画像がありません
-           
-
-
-   
-      .EditContents__name
-        .EditContents__name__form
-          %span.EditContents__name__form--text 商品名
-          %span.EditContents__name__form--must 必須
-        = f.text_field :name, placeholder: :"商品名(40文字まで)", class: :"EditContents__name--input"
-        .EditContents__name__description
-          %span.EditContents__name__description--text 商品の説明
-          %span.EditContents__name__description--must 必須
-        = f.text_area :description, placeholder: :"商品の説明(1000文字以内)", class: :"EditContents__name--input-big"
+											= i.label :picture, for: "item_images_attributes_9_picture", class: "items__Contents__image__upload--cameraBtnDowner" do
+												= icon('fa', 'camera', class: :"hidden")
+											= i.file_field :picture, id: "item_images_attributes_9_picture", style: "display: none;", name: "item[images_attributes][9][picture]"
+											%label{for: "img-file"}
+												%i.fas.fa-camera
+											- if @item.errors.any?
+												%p.red 画像がありません
+					 
 
 
+	 
+			.EditContents__name
+				.EditContents__name__form
+					%span.EditContents__name__form--text 商品名
+					%span.EditContents__name__form--must 必須
+				= f.text_field :name, placeholder: :"商品名(40文字まで)", class: :"EditContents__name--input"
+				.EditContents__name__description
+					%span.EditContents__name__description--text 商品の説明
+					%span.EditContents__name__description--must 必須
+				= f.text_area :description, placeholder: :"商品の説明(1000文字以内)", class: :"EditContents__name--input-big"
 
-      .EditContents__detail
-        .EditContents__detail__title
-          .EditContents__detail__title--text
-            商品の詳細
-        .EditContents__detail__list
-          .EditContents__detail__list__category
-            %span.EditContents__detail__list__category--text カテゴリー
-            %span.EditContents__detail__list__category--must 必須
-            .form.relative#select
-              = f.collection_select :category_id, @parents, :id, :genre,{prompt: "選択してください"}, class: "select-default", id: "parent-form", genre: 'item[category_ids][]'
-              = icon('fa', 'chevron-down', class: 'icon')
-            
-            
-       
-      
-          .EditContents__detail__list__brand
-            = f.fields_for :brand do |b|
-              %span.EditContents__detail__list__brand--text ブランド
-              %span.EditContents__detail__list__brand--any 任意  
-              = b.text_field :name, placeholder: "シャネル", value: @item.brand.name, class: 'EditContents__detail__list__brand--input'
-          
-          
-          .EditContents__detail__list__status
-            %span.EditContents__detail__list__status--text 商品の状態   
-            %span.EditContents__detail__list__status--must 必須
 
-            .form.relative  
-              = f.select :status, [['新品、未使用', '新品、未使用'], ['未使用に近い', '未使用に近い'], ['目立った傷や汚れなし', '目立った傷や汚れなし']], {include_blank: "選択してください", selected: @item.status}, { id: "item_id", class: "select-default"}
-              = icon('fa', 'chevron-down', class: 'icon')
-      
-      .EditContents__delivery
-        .EditContents__delivery__title
-          .EditContents__delivery__title--text
-            配送について
-          = link_to "#" do
-            = icon('fa', 'question-circle', class: 'Contents__delivery__title--icon')
-        
-        .EditContents__delivery__category 
 
-          .EditContents__delivery__category__burden 
-            %span.EditContents__delivery__category__burden--text 配送料の負担
-            %span.EditContents__delivery__category__burden--must 必須
-            .form.relative
-              = f.select :charge, [['送料込み(出品者負担)', '送料込み(出品者負担)'], ['着払い(購入者負担)', '着払い(購入者負担)']], {include_blank: "選択してください", selected: @item.charge}, { id: "item_id", class: "select-default"}
-              = icon('fa', 'chevron-down', class: 'icon')
+			.EditContents__detail
+				.EditContents__detail__title
+					.EditContents__detail__title--text
+						商品の詳細
+				.EditContents__detail__list
+					.EditContents__detail__list__category
+						%span.EditContents__detail__list__category--text カテゴリー
+						%span.EditContents__detail__list__category--must 必須
+						.form.relative#select
 
-          .EditContents__delivery__category__area
-            %span.EditContents__delivery__category__area--text 配送元の地域
-            %span.EditContents__delivery__category__area--must 必須
-            .form.relative
-              = f.collection_select :area, Prefecture.all, :id, :name, prompt: "選択してください"
-              = icon('fa', 'chevron-down', class: 'icon')
+							= @item.category.parent.parent.id
+							= @item.category.parent.parent.genre
+							%br
+							= @item.category.parent.id
+							= @item.category.parent.genre
+							%br
+							= @item.category.id
+							= @item.category.genre
 
-          .EditContents__delivery__category__date
-            %span.EditContents__delivery__category__date--text 配送までの日数
-            %span.EditContents__delivery__category__date--must 必須 
-            .form.relative
-              = f.select :day, [['1~2日で発送', '1~2日で発送'], ['2~3日で発送', '2~3日で発送'], ['4~7日で発送', '4~7日で発送']], {include_blank: "選択してください", selected: @item.day}, { id: "item_id", class: "select-default"}
-              = icon('fa', 'chevron-down', class: 'icon')
-      
-      .EditContents__price
-        .EditContents__price__title
-          .EditContents__price__title--text
-            販売価格(300〜9,999,999)
-          = link_to "#" do
-            = icon('fa', 'question-circle', class: 'EditContents__price__title--icon') 
 
-        .EditContents__price__right
-          .EditContents__price__right__category
-            .EditContents__price__right__category__list
-              .EditContents__price___right__category__list--text
-                価格
-              .EditContents__price__right__category__list--must
-                必須
-            .EditContents__price__right__category__form
-              .EditContents__price__right__category__form--text
-                ¥ 
-              = f.text_field :price, placeholder: :"例) 300", class: :"EditContents__price__right__category__form--field", id: :"price_calc"
+							= f.collection_select :category_id, @category, :id, :genre, {selected: @item.category.parent.parent.id},  {class: "select-default", id: "parent-form"}
+							= icon('fa', 'chevron-down', class: 'icon')
+							= f.collection_select :category_id, @ctgrChild, :id, :genre,{selected: @item.category.parent.id}, class: "select-default", id: "parent-form", genre: 'item[category_ids][]'
+							= icon('fa', 'chevron-down', class: 'icon')
+							= f.collection_select :category_id, @ctgrGrandchild, :id, :genre,{selected: @item.category.id}, class: "select-default", id: "parent-form", genre: 'item[category_ids][]'
+							= icon('fa', 'chevron-down', class: 'icon')
+			 
+			
+					.EditContents__detail__list__brand
+						= f.fields_for :brand do |b|
+							%span.EditContents__detail__list__brand--text ブランド
+							%span.EditContents__detail__list__brand--any 任意  
+							= b.text_field :name, placeholder: "シャネル", value: @item.brand.name, class: 'EditContents__detail__list__brand--input'
+					
+					
+					.EditContents__detail__list__status
+						%span.EditContents__detail__list__status--text 商品の状態   
+						%span.EditContents__detail__list__status--must 必須
 
-          .EditContents__price__right__commission
-            .EditContents__price__right__commission--text
-              販売手数料 (10%)
-            .EditContents__price__right__commission--rod   
-              ➖
+						.form.relative  
+							= f.select :status, [['新品、未使用', '新品、未使用'], ['未使用に近い', '未使用に近い'], ['目立った傷や汚れなし', '目立った傷や汚れなし']], {include_blank: "選択してください", selected: @item.status}, { id: "item_id", class: "select-default"}
+							= icon('fa', 'chevron-down', class: 'icon')
+			
+			.EditContents__delivery
+				.EditContents__delivery__title
+					.EditContents__delivery__title--text
+						配送について
+					= link_to "#" do
+						= icon('fa', 'question-circle', class: 'Contents__delivery__title--icon')
+				
+				.EditContents__delivery__category 
 
-          .EditContents__price__right__profit
-            .EditContents__price__right__profit--text
-              販売利益
-              = f.number_field :price, style: "display: none", id: "price"
-            .EditContents__price__right__profit--rod    
-              ➖
-       
-       
-      .EditContents__Exhibition
-        .EditContents__Exhibition__text
-          %p
-            = link_to "禁止されている出品", "#", class: "EditContents__Exhibition__text--link"
-            ,
-            = link_to "行為", "#", class: "EditContents__Exhibition__text--link"
-            を必ずご確認ください。
-          %pまたブランド品でシリアルナンバー等がある場合はご記載ください。
-          %p
-            = link_to "偽ブランドの販売", "#", class: "EditContents__Exhibition__text--link"
-            は犯罪であり処罰される可能性があります。
-          %p
-            また、出品をもちまして
-            = link_to "加盟店規約", "#", class: "EditContents__Exhibition__text--link"
-            に同意したことになります。
-        
-        .Contents__Exhibition__btn
-          = f.submit "この内容で編集する", class: "post"
-        
+					.EditContents__delivery__category__burden 
+						%span.EditContents__delivery__category__burden--text 配送料の負担
+						%span.EditContents__delivery__category__burden--must 必須
+						.form.relative
+							= f.select :charge, [['送料込み(出品者負担)', '送料込み(出品者負担)'], ['着払い(購入者負担)', '着払い(購入者負担)']], {include_blank: "選択してください", selected: @item.charge}, { id: "item_id", class: "select-default"}
+							= icon('fa', 'chevron-down', class: 'icon')
 
-        
-          = link_to "もどる", "#", class: "EditContents__Exhibition__btn--return"
-    
-  = render "/shared/footerB"
+					.EditContents__delivery__category__area
+						%span.EditContents__delivery__category__area--text 配送元の地域
+						%span.EditContents__delivery__category__area--must 必須
+						.form.relative
+							= f.collection_select :area, Prefecture.all, :id, :name, prompt: "選択してください"
+							= icon('fa', 'chevron-down', class: 'icon')
+
+					.EditContents__delivery__category__date
+						%span.EditContents__delivery__category__date--text 配送までの日数
+						%span.EditContents__delivery__category__date--must 必須 
+						.form.relative
+							= f.select :day, [['1~2日で発送', '1~2日で発送'], ['2~3日で発送', '2~3日で発送'], ['4~7日で発送', '4~7日で発送']], {include_blank: "選択してください", selected: @item.day}, { id: "item_id", class: "select-default"}
+							= icon('fa', 'chevron-down', class: 'icon')
+			
+			.EditContents__price
+				.EditContents__price__title
+					.EditContents__price__title--text
+						販売価格(300〜9,999,999)
+					= link_to "#" do
+						= icon('fa', 'question-circle', class: 'EditContents__price__title--icon') 
+
+				.EditContents__price__right
+					.EditContents__price__right__category
+						.EditContents__price__right__category__list
+							.EditContents__price___right__category__list--text
+								価格
+							.EditContents__price__right__category__list--must
+								必須
+						.EditContents__price__right__category__form
+							.EditContents__price__right__category__form--text
+								¥ 
+							= f.text_field :price, placeholder: :"例) 300", class: :"EditContents__price__right__category__form--field", id: :"price_calc"
+
+					.EditContents__price__right__commission
+						.EditContents__price__right__commission--text
+							販売手数料 (10%)
+						.EditContents__price__right__commission--rod   
+							➖
+
+					.EditContents__price__right__profit
+						.EditContents__price__right__profit--text
+							販売利益
+							= f.number_field :price, style: "display: none", id: "price"
+						.EditContents__price__right__profit--rod    
+							➖
+			 
+			 
+			.EditContents__Exhibition
+				.EditContents__Exhibition__text
+					%p
+						= link_to "禁止されている出品", "#", class: "EditContents__Exhibition__text--link"
+						,
+						= link_to "行為", "#", class: "EditContents__Exhibition__text--link"
+						を必ずご確認ください。
+					%pまたブランド品でシリアルナンバー等がある場合はご記載ください。
+					%p
+						= link_to "偽ブランドの販売", "#", class: "EditContents__Exhibition__text--link"
+						は犯罪であり処罰される可能性があります。
+					%p
+						また、出品をもちまして
+						= link_to "加盟店規約", "#", class: "EditContents__Exhibition__text--link"
+						に同意したことになります。
+				
+				.Contents__Exhibition__btn
+					= f.submit "この内容で編集する", class: "post"
+				
+
+				
+					= link_to "もどる", "#", class: "EditContents__Exhibition__btn--return"
+		
+	= render "/shared/footerB"

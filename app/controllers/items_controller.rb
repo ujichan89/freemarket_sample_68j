@@ -34,6 +34,7 @@ class ItemsController < ApplicationController
   def show
     @user = @item.user
     @category = @item.category
+    # binding.pry
     @brand = @item.brand
     @area = @item.area
     @images = @item.images
@@ -53,7 +54,13 @@ class ItemsController < ApplicationController
   end
 
   def edit
-    @parents = Category.where(ancestry: nil)
+    @category = Category.where(ancestry: nil)
+    @ctgrChild = Category.where(ancestry: @category.ids)
+    # @ctgrGrandchild = Category.where(ancestry: @item.category.id)
+    # @ctgrGrandchild = Category.where(ancestry: @item.category.siblings)
+    @ctgrGrandchild = Category.where(ancestry: @item.category.sibling_ids.genre)
+
+    # binding.pry
 
   end
 
