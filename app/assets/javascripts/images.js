@@ -60,7 +60,7 @@ $(function(){
   //   })
   // }
   
-  $('#item_images_attributes_0_picture').change(function(){
+  $('.img').change(function(){
     
     var file = $('input[type="file"]').prop('files')[0];
  
