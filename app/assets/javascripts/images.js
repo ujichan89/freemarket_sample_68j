@@ -76,16 +76,17 @@ $(function(){
       }
       fileReader.onloadend = function() {
         var src = fileReader.result
-        var html= `<div class=' item-image' data-image='${file.name}'>
-                    <div class=' item-image__content'>
-                      <div class='item-image__content--icon'>
-                        <img src="${src}" width="114" height="80">
-                      </div>
-                    </div>
-                    <div class='item-image__operetion'>
-                      <div class='item-image__operetion--delete'>削除</div>
-                    </div>
-                   </div>`
+        var html= 
+        `<div class=' item-image' data-image='${file.name}'>
+          <div class=' item-image__content'>
+            <div class='item-image__content--icon'>
+              <img src="${src}" width="114" height="80">
+            </div>
+          </div>
+          <div class='item-image__operetion'>
+            <div class='item-image__operetion--delete'>削除</div>
+          </div>
+        </div>`
     
         $('#image-box__container').before(html);
       };
