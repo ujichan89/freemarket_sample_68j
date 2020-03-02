@@ -38,7 +38,6 @@
           background-color: white;
           height: 300px;
           &__tabs {
-            height: 300px;
             background-color:white;
             display: flex;
             font-weight: bold;
@@ -47,8 +46,6 @@
               width: 550px;
               background-color: white;
               font-size: 25px;
-              .a{
-                margin-top: 20px;
               }
             }
           }
@@ -56,4 +53,4 @@
       }
     }
   }
-}
+

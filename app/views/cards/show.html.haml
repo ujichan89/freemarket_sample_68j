@@ -48,8 +48,6 @@
             = link_to("電話番号の確認", root_path, class: "MypageLeft__list__var__item__link")
           %li.MypageLeft__list__var__item
             = link_to("ログアウト", root_path, class: "MypageLeft__list__var__item__link")
-
-
     .MypageRight
       .MypageRight__user
         .MypageRight__user__tabs
@@ -60,16 +58,16 @@
               #{current_user.nickname}
             .MypageRight__user__tabs__top__inf
               .MypageRight__user__tabs__top__inf__val
-                評価　0
+                評価 0
               .MypageRight__user__tabs__top__inf__num
-                出品数　0
+                出品数 0
 
         .MypageRight__user__todo
           .MypageRight__user__todo__tabs
             .MypageRight__user__todo__tabs__text
               登録クレジットカード情報
               .a
-                = "**** **** **** " + @default_card_information.last4
+              = "**** **** **** " + @default_card_information.last4
               .b
               - exp_month = @default_card_information.exp_month.to_s
               - exp_year = @default_card_information.exp_year.to_s.slice(2,3)

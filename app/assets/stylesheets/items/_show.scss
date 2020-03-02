@@ -17,27 +17,19 @@
       margin-bottom: 15px;
     }
 
-    // &--images{
-    //   &__mainImage{
-    //     width: 560px;
-    //     height: 346px;
-    //     object-fit: cover;
-    //     margin-top: 15px;
-    //   }
-
-    //   &__subImage{
-    //     width: 140px;
-    //     height: 87px;
-    //     object-fit: cover;
-    //     margin: 5px 5px;
-    //   }
-    // }
+    &--subImage{
+      img{
+        margin: 10px 10px 0 0;
+        height: 87px;
+        object-fit: cover;
+      }
+    }
 
     &--priceingInformation{
       &__price{
         font-size: 46px;
         font-weight: bold;
-        margin: 45px 10px 0 0;
+        margin: 10px 0 0 0;
       }
     }
 
@@ -217,3 +209,9 @@ a{
     font-size: xx-large;
   }
 } 
+
+// #slider{
+//   height: 346px;
+//   object-fit: cover;
+//   margin-top: 15px;
+// }
