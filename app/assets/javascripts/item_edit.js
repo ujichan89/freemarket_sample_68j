@@ -113,9 +113,13 @@ function input_check(){
     e.preventDefault();                      //エラー文消さない
     if(input_check()){                      //この中にsubmitアクションを作る
 
-      $('.form').attr('action', '/items/:id').submit();
-
+      $('.form').submit();
+      // console.log($('.form').attr('action', '/items'));
       return false;                           //親要素のイベントを発生させない
     }
   });
 });
+
+
+// ②[:id]の代わりに今編集しているitemのidを入れる
+//  $('.form').attr('action', '/items/<今編集しているitemのid>').submit();
