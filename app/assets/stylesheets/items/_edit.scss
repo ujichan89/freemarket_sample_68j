@@ -2,7 +2,6 @@
 .WrapperEdit {
     height: 400vh;
     width: 100%;
-    // background-color: rgb(246, 246, 250);
     background-color: #efefef;
     position: relative;
   
@@ -42,10 +41,8 @@
       &__image {
         height: 300px;
         width: 100%;
-        // border-bottom: 0.2px solid lightgrey;
   
         &__title {
-            // display: flex;
             padding-top: 20px;
             margin-left: 30px;
   
@@ -101,10 +98,8 @@
       &__name {
         height: 300px;
         width: 100%;
-        // border-bottom: 0.2px solid lightgrey;
   
         &__form {
-          // display: flex;
           padding-top: 20px;
           margin-left: 30px;
   
@@ -137,7 +132,6 @@
         }
         
         &__description {
-          // display: flex;
           padding-top: 20px;
           margin-left: 30px;
   
@@ -171,7 +165,6 @@
       &__detail {
         height: 500px;
         width: 100%;
-        // border-bottom: 0.2px solid lightgrey;
         display: flex;
         
       
@@ -196,7 +189,6 @@
         
           
           &__category {
-            // display: flex;
             padding-top: 20px;
             margin-left: 30px;
   
@@ -213,19 +205,8 @@
               padding: 3px;
               margin-left: 10px;
             }
-            .relative{
-             .editRemove{
-              .edit_m_category{
-
-              }
-              .edit_s_category{
-               
-              }
-             }
-            }
           }
           &__brand {
-            // display: flex;
             padding-top: 20px;
             margin-left: 30px;
           
@@ -257,7 +238,6 @@
     
   
           &__status {
-            // display: flex;
             padding-top: 20px;
             margin-left: 30px;
   
@@ -289,7 +269,6 @@
       &__delivery {
         height: 350px;
         width: 100%;
-        // border-bottom: 0.2px solid lightgrey;
         display: flex;
   
         &__title {
@@ -315,7 +294,6 @@
           width: 70%;
   
           &__burden {
-            // display: flex;
             padding-top: 20px;
   
             &--text {
@@ -334,7 +312,6 @@
           }
   
           &__area {
-            // display: flex;
             padding-top: 20px;
   
             &--text {
@@ -352,7 +329,6 @@
             }
           }
           &__date {
-            // display: flex;
             padding-top: 20px;
   
             &--text {
@@ -429,9 +405,6 @@
                 padding: 3px;
                 margin-left: 10px;
               }
-              // &--select {
-              //   height: 100px;
-              // }
             }
             &__form {
               display:flex;
@@ -446,7 +419,6 @@
               }
               &--field {
                 height: 40px;
-                // border-radius: 2px;
                 text-align: right;
                 padding-right: 20px;
               }
@@ -602,7 +574,6 @@
       height: 50px;
       padding: 10px 16px 8px;
       border-radius: 4px;
-      // border: 1px solid #ccc;
       background: #fff;
       cursor: pointer;
       
@@ -616,7 +587,6 @@
       height: 50px;
       padding: 10px 16px 8px;
       border-radius: 4px;
-      // border: 1px solid #ccc;
       background: #fff;
       cursor: pointer;
       
@@ -632,7 +602,6 @@
       top: 38%;
       right: 11%;
       z-index: 2;
-      // color: #888;
       color: deeppink;
       cursor: pointer;
       font-size: 20px;
