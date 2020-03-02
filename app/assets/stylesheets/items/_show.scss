@@ -17,19 +17,12 @@
       margin-bottom: 15px;
     }
 
-    // #slider{
-    //   width: 560px;
-    //   height: 346px;
-    //   object-fit: cover;
-    //   margin-top: 15px;
-    // }
-
-    //   &subImage{
-    //     width: 140px;
-    //     height: 87px;
-    //     object-fit: cover;
-    //     margin: 5px 5px;
-    //   }
+    &--subImage{
+      width: 140px;
+      height: 87px;
+      object-fit: cover;
+      margin: 10px 10px;
+    }
 
     &--priceingInformation{
       &__price{
@@ -215,3 +208,10 @@ a{
     font-size: xx-large;
   }
 } 
+
+// #slider{
+//   width: 560px;
+//   height: 346px;
+//   object-fit: cover;
+//   margin-top: 15px;
+// }
