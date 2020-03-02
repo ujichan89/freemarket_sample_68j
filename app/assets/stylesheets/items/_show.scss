@@ -18,8 +18,11 @@
     }
 
     &--subImage{
-      height: 87px;
-      object-fit: cover;
+      img{
+        margin-top: 10px;
+        height: 87px;
+        object-fit: cover;  
+      }
     }
 
     &--priceingInformation{
@@ -207,8 +210,8 @@ a{
   }
 } 
 
-#slider{
-  // height: 346px;
-  object-fit: cover;
-  margin-top: 15px;
-}
+// #slider{
+//   height: 346px;
+//   object-fit: cover;
+//   margin-top: 15px;
+// }
