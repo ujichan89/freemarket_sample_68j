@@ -1,8 +1,5 @@
 .WrapperEdit
-  = link_to "戻る", root_path
-
-  .EditLogo
-    = image_tag "logo.png", class: :"EditLogo__png"
+  = render partial: 'shared/headerB'
   .EditContents 
     .EditContents__title
       商品の情報を入力

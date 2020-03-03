@@ -1,11 +1,7 @@
 .WrapperNew
-  = render 'layouts/notifications'
-  = link_to "戻る", root_path
+  = render partial: 'shared/headerB'
 
-  .Logo
-    = image_tag "logo.png", class: :"Logo__png"
   .Contents 
-    -# = form_with model: @item, class: :form, local: true do |f|
     .Contents__title
       商品の情報を入力
     = form_with model: @item, class: :form, local: true do |f|
@@ -197,8 +193,4 @@
         
           = link_to "もどる", "#", class: "Contents__Exhibition__btn--return"
     
-  = render "/shared/footerB"
-
- 
-
-
+  = render partial: 'shared/footerB'
