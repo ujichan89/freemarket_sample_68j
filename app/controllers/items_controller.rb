@@ -6,11 +6,13 @@ class ItemsController < ApplicationController
     lac    = Item.group(:category_id).order('count_category_id DESC').count(:category_id).first
     category = lac[0]
     @cates = Item.order(created_at: :desc).where(sale: 0).where(category_id: category).first(3)
-
+    # @cates = Item.order(created_at: :desc).where(sale: 0).first(3)
 
     lab    = Item.group(:brand_id).order('count_brand_id DESC').count(:brand_id).first
     brand  = lab[0]
     @bras  = Item.order(created_at: :desc).where(sale: 0).where(brand_id: brand).first(3)
+    # @bras  = Item.order(created_at: :desc).where(sale: 0).first(3)
+
 
   end
 
