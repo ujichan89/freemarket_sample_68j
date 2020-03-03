@@ -62,9 +62,13 @@ class ItemsController < ApplicationController
   end
 
   def update
-    item = Item.find(params[:id])
-    item.update(item_params)
-    redirect_to root_path
+    @item.update(update_params)
+    if @item.save
+      redirect_to root_path, notice: '編集できました'
+    else
+      flash.now[:alert] = 'ちゃんと書いてください'
+      render :edit
+    end
   end
 
   def destroy
@@ -78,7 +82,7 @@ class ItemsController < ApplicationController
   end
 
   def update_params
-    params.require(:item).permit(:name, :price, :status, :description, :charge, :area, :day, :category_id, brand_attributes: [:id, :name], images_attributes: [:picture, :id]).mrege(user_id: current_user.id)
+    params.require(:item).permit(:name, :price, :status, :description, :charge, :area, :day, :category_id, brand_attributes: [:id, :name], images_attributes: [:picture, :id]).merge(user_id: current_user.id)
   end
   
   def item_params
