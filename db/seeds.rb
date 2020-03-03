@@ -469,43 +469,43 @@ other_.children.create([{genre: "オフィス用品一般"},{genre: "オフィ�
 other_ = other.children.create(genre: "その他")
 
 
-Item.create!(
-  [
-    {
-      name: '炊飯器',
-      price: '10000',
-      status: '未使用',
-      description: '良いものです',
-      charge: '自己負担',
-      area: '北海道',
-      day: '１〜２日',
-      sale: '0',
-      user_id: 1,
-      category_id: 1,
-    },
-    {
-      name: '冷蔵庫',
-      price: '10000',
-      status: '未使用',
-      description: '良いものです',
-      charge: '自己負担',
-      area: '東京都',
-      day: '１〜２日',
-      sale: '0',
-      user_id: 2,
-      category_id: 1,
-    },
-    {
-      name: '電子レンジ',
-      price: '19800',
-      status: '未使用',
-      description: '良いものです',
-      charge: '自己負担',
-      area: '東京都',
-      day: '１〜２日',
-      sale: '0',
-      user_id: 2,
-      category_id: 1,
-    }
-  ]
-)
+# Item.create!(
+#   [
+#     {
+#       name: '炊飯器',
+#       price: '10000',
+#       status: '未使用',
+#       description: '良いものです',
+#       charge: '自己負担',
+#       area: '北海道',
+#       day: '１〜２日',
+#       sale: '0',
+#       user_id: 1,
+#       category_id: 1,
+#     },
+#     {
+#       name: '冷蔵庫',
+#       price: '10000',
+#       status: '未使用',
+#       description: '良いものです',
+#       charge: '自己負担',
+#       area: '東京都',
+#       day: '１〜２日',
+#       sale: '0',
+#       user_id: 2,
+#       category_id: 1,
+#     },
+#     {
+#       name: '電子レンジ',
+#       price: '19800',
+#       status: '未使用',
+#       description: '良いものです',
+#       charge: '自己負担',
+#       area: '東京都',
+#       day: '１〜２日',
+#       sale: '0',
+#       user_id: 2,
+#       category_id: 1,
+#     }
+#   ]
+# )
