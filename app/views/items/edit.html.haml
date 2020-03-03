@@ -15,8 +15,8 @@
           最大10枚までアップロードできます
           %br 枠線の中をクリックしてください
 
-          #image-box-1
-            .item-num-0#image-box__container       
+          #image-box-1__edit
+            .item-num-0#image-box__container__edit    
               = f.fields_for :images do |i|
                 %label.upload-label
                   .EditContents__image__upload
@@ -27,39 +27,39 @@
 
                       = i.label :picture, for: "item_images_attributes_1_picture", class: "items__Contents__image__upload--cameraBtnUpper" do
                         = icon('fa', 'camera', class: :"hidden")
-                      = i.file_field :picture, id: "item_images_attributes_1_picture", style: "display: none;", name: "item[images_attributes][1][picture]"
+                      = i.file_field :picture, id: "item_images_attributes_1_picture__edit", style: "display: none;", name: "item[images_attributes][1][picture]"
 
                       = i.label :picture, for: "item_images_attributes_2_picture", class: "items__Contents__image__upload--cameraBtnUpper" do
                         = icon('fa', 'camera', class: :"hidden")
-                      = i.file_field :picture, id: "item_images_attributes_2_picture", style: "display: none;", name: "item[images_attributes][2][picture]"
+                      = i.file_field :picture, id: "item_images_attributes_2_picture__edit", style: "display: none;", name: "item[images_attributes][2][picture]"
 
                       = i.label :picture, for: "item_images_attributes_3_picture", class: "items__Contents__image__upload--cameraBtnUpper" do
                         = icon('fa', 'camera', class: :"hidden")
-                      = i.file_field :picture, id: "item_images_attributes_3_picture", style: "display: none;", name: "item[images_attributes][3][picture]"
+                      = i.file_field :picture, id: "item_images_attributes_3_picture__edit", style: "display: none;", name: "item[images_attributes][3][picture]"
 
                       = i.label :picture, for: "item_images_attributes_4_picture", class: "items__Contents__image__upload--cameraBtnUpper" do
                         = icon('fa', 'camera', class: :"hidden")
-                      = i.file_field :picture, id: "item_images_attributes_4_picture", style: "display: none;", name: "item[images_attributes][4][picture]"
+                      = i.file_field :picture, id: "item_images_attributes_4_picture__edit", style: "display: none;", name: "item[images_attributes][4][picture]"
 
                       = i.label :picture, for: "item_images_attributes_5_picture", class: "items__Contents__image__upload--cameraBtnDowner" do
                         = icon('fa', 'camera', class: :"hidden")
-                      = i.file_field :picture, id: "item_images_attributes_5_picture", style: "display: none;", name: "item[images_attributes][5][picture]"
+                      = i.file_field :picture, id: "item_images_attributes_5_picture__edit", style: "display: none;", name: "item[images_attributes][5][picture]"
 
                       = i.label :picture, for: "item_images_attributes_6_picture", class: "items__Contents__image__upload--cameraBtnDowner" do
                         = icon('fa', 'camera', class: :"hidden")
-                      = i.file_field :picture, id: "item_images_attributes_6_picture", style: "display: none;", name: "item[images_attributes][6][picture]"
+                      = i.file_field :picture, id: "item_images_attributes_6_picture__edit", style: "display: none;", name: "item[images_attributes][6][picture]"
 
                       = i.label :picture, for: "item_images_attributes_7_picture", class: "items__Contents__image__upload--cameraBtnDowner" do
                         = icon('fa', 'camera', class: :"hidden")
-                      = i.file_field :picture, id: "item_images_attributes_7_picture", style: "display: none;", name: "item[images_attributes][7][picture]"
+                      = i.file_field :picture, id: "item_images_attributes_7_picture__edit", style: "display: none;", name: "item[images_attributes][7][picture]"
 
                       = i.label :picture, for: "item_images_attributes_8_picture", class: "items__Contents__image__upload--cameraBtnDowner" do
                         = icon('fa', 'camera', class: :"hidden")
-                      = i.file_field :picture, id: "item_images_attributes_8_picture", style: "display: none;", name: "item[images_attributes][8][picture]"
+                      = i.file_field :picture, id: "item_images_attributes_8_picture__edit", style: "display: none;", name: "item[images_attributes][8][picture]"
 
                       = i.label :picture, for: "item_images_attributes_9_picture", class: "items__Contents__image__upload--cameraBtnDowner" do
                         = icon('fa', 'camera', class: :"hidden")
-                      = i.file_field :picture, id: "item_images_attributes_9_picture", style: "display: none;", name: "item[images_attributes][9][picture]"
+                      = i.file_field :picture, id: "item_images_attributes_9_picture__edit", style: "display: none;", name: "item[images_attributes][9][picture]"
                       %label{for: "img-file"}
                         %i.fas.fa-camera
                       - if @item.errors.any?
