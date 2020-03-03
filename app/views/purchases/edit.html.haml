@@ -47,9 +47,10 @@
         .note
           %Pこの商品はゆうゆうメルカリ便をしようしているため、   
           %Pアプリのみ購入できます。
-        .buyBtn
-          = form_tag(pay_purchases_path(item_id: @item.id), method: :post) do
-            %button 購入する
+        - if @item.sale == 0
+          .buyBtn 
+            = form_tag(pay_purchases_path(item_id: @item.id), method: :post) do
+              %button 購入する
 
         .instoreVav
           %Pアプリをお持ちでに方は以下よりインストールして   
