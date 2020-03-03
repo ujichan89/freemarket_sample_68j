@@ -5,13 +5,13 @@ class ItemsController < ApplicationController
     @items = Item.all
     lac    = Item.group(:category_id).order('count_category_id DESC').count(:category_id).first
     category = lac[0]
-    @cates = Item.where(sale: 0).where(category_id: category).first(3)
-    @piccs = Image.where(item_id: @cates).distinct
+    @cates = Item.order(created_at: :desc).where(sale: 0).where(category_id: category).first(3)
+
 
     lab    = Item.group(:brand_id).order('count_brand_id DESC').count(:brand_id).first
     brand  = lab[0]
-    @bras  = Item.where(sale: 0).where(brand_id: brand).first(3)
-    @picbs = Image.where(item_id: @bras).distinct
+    @bras  = Item.order(created_at: :desc).where(sale: 0).where(brand_id: brand).first(3)
+
   end
 
   def new

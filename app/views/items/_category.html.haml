@@ -1,9 +1,9 @@
--cates.zip(piccs) do |cate, picc|
+-cates.each do |cate|
   .ProductList
     %a
     = link_to item_path(cate.id) do
       %figure.ProductList--img
-        = image_tag("#{picc.picture}")
+        = image_tag cate.images[0].picture.url
       .ProductList--body
         %h3.Name #{cate.name}
         .Details
@@ -13,3 +13,4 @@
               %i.fa.fa-star.likeIcon
                 0
           %p (税込)
+
