@@ -65,9 +65,11 @@
         .MypageRight__user__todo
           .MypageRight__user__todo__tabs
             .MypageRight__user__todo__tabs__text
-              登録クレジットカード情報
+              【登録クレジットカード情報】
+              %p
+              =image_tag "visa.svg", class: "Contents__card__picture__phot"
               .a
-              = "**** **** **** " + @default_card_information.last4
+                = "**** **** **** " + @default_card_information.last4
               .b
               - exp_month = @default_card_information.exp_month.to_s
               - exp_year = @default_card_information.exp_year.to_s.slice(2,3)

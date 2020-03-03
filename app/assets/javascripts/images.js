@@ -61,7 +61,7 @@ $(function(){
   // }
   
   $('.img').change(function(){
-　　
+
     var file = $('input[type="file"]').prop('files')[0];
  
     $.each(this.files, function(i, file){
