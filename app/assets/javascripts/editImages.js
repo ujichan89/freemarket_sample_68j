@@ -1,18 +1,20 @@
 $(function() {
- var append_input = $(`<label class="upload-label"><div class="Contents__image__upload"><input class="hidden image_upload" type="file"></div></div></div></label>`)
+ var append_input = $(`<li class="input"><label class="upload-label"><div class="upload-label__text"><div class="input-area"><input class="hidden image_upload" type="file"></div></div></label></li>`)
  $ul = $('#previews')
  $lis = $ul.find('.image-preview');
  $input = $ul.find('.input');
  if($input.length == 0){
    if($lis.length <= 4 ){
+     
      $ul.append(append_input)
-     $('#previews .input').css({
+     $lis.before(append_input)
+     $('.input-area').css({
        'width': `calc(100% - (20% * ${$lis.length}))`
      })
    }
    else if($lis.length == 5 ){
      $ul.append(append_input)
-     $('#previews .input').css({
+     $('#previews .input').css({   
        'width': `100%`
        
      })
@@ -26,7 +28,7 @@ $(function() {
  }
 
  $(document).on('click','.image-preview_btn_delete',function(){
-   var append_input = $(`<li class="input"><label class="upload-label"><div class="upload-label__text">ドラッグアンドドロップ<br>またはクリックしてファイルをアップロード<div class="input-area"><input class="hidden image_upload" type="file"></div></div></label></li>`)
+   var append_input = $(`<li class="input"><label class="upload-label"><div class="upload-label__text"><div class="input-area"><input class="hidden image_upload" type="file"></div></div></label></li>`)
    $ul = $('#previews')
    $lis = $ul.find('.image-preview');
    $input = $ul.find('.input');
@@ -67,4 +69,6 @@ $(function() {
    }
  });
 })
+
+
 
