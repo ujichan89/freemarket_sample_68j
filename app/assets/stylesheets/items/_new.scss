@@ -293,39 +293,28 @@
       }
     }
   }
+
+//_______________________________________________________
+
   &__price {
-    height: 300px;
     width: 100%;
     border-bottom: 0.2px solid lightgrey;
+    padding: 40px;
     display: flex;
-    padding-top: 50px;
     
     &__title {
-      height: 100%;
-      width: 33%;
-      display: flex;
-
       &--text {
         font-weight: bold;
-        font-size: 13px;
+        font-size: 14px;
         color: #888888;
-        margin-top: 30px;
-        margin-left: 33px;
       }
       &--icon {
-        margin-top: 30px;
         color: deepskyblue;
       }
     }
 
     &__right {
-      height: 100%;
-      width: 67%;
-    
-
       &__category {
-        height: 40%;
-        width: 100%;
         display: flex;
         justify-content: space-between;
         
@@ -333,14 +322,10 @@
           display: flex;
           height: 20px;
           margin-top: 50px;
-      
-          
-          
 
           &--text {
-            font-size: 13px;
+            font-size: 14px;
             font-weight: bold;
-            padding-top: 2px;
           }
 
           &--must {
@@ -355,18 +340,15 @@
         }
         &__form {
           display:flex;
-          margin-top: 40px;
-          margin-right: 30px;
           
         
           &--text {
-            font-size: 10px;
-            margin-right: 20px;
-            margin-top: 16px;
+            font-size: 14px;
+
           }
           &--field {
+            border-radius: 2px;
             border: 1px solid #ccc;
-
             height: 40px;
             text-align: right;
             padding-right: 20px;
@@ -382,7 +364,6 @@
       
 
         &--text {
-         margin-top: 20px;
          font-size: 13px;
         }
         &--rod {
@@ -410,16 +391,13 @@
   }
   
   &__Exhibition {
-    height: 350px;
     width: 100%;
 
     &__text {
-      padding-top: 50px;
-      padding-left: 40px;
     
       &--link {
         text-decoration: none;
-        color: deepskyblue;
+        color: #3CCACE;
         position: relative;
 
         &::after {
@@ -463,16 +441,13 @@
       border-radius: 4px;
       border: 1px solid transparent;
       height: 50px;
-      width: 300px;
       font-size: 14px;
       text-decoration: none;
       color: white;
       background-color: rgb(148, 145, 145);
       text-align: center;
       line-height: 50px;
-      margin-left: 250px;
-      margin-top: 30px;
-      margin: 30px auto 0;
+
       transition: all 0.3s ease 0s;
 
       &:hover {
@@ -578,7 +553,6 @@ h1 {
   border-radius: 4px;
   border: 1px solid transparent;
   text-decoration: none;
-  width: 80%;
   padding: 15px 50px;
   background-color: #3CCACE;
   color: white;
