@@ -7,7 +7,7 @@ $(function() {
   var insert = '';
   for (var i = 0; i < $('#purchase_image li').length; i++) {
       insert += '<a data-slide-index="' + i + '" href="#"><img src="' + $('#purchase_image li').eq(i).children('img').attr('src') + '" width="' + thumbWidth + '" height="' + thumbHeight + '" /></a>';
-  };
+  }
   $('.purchases__Main__content__subImage').append(insert);
 
   $('#purchase_image').bxSlider({
