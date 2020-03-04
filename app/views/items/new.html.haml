@@ -2,17 +2,13 @@
   = render partial: 'shared/headerB'
 
   .Contents 
-    .Contents__title
-      商品の情報を入力
     = form_with model: @item, class: :form, local: true do |f|
       .Contents__image
         .Contents__image__title
           %span.Contents__image__title--text 出品画像
           %span.Contents__image__title--must 必須  
         .Contents__image__capture
-          最大10枚までアップロードできます
-          %br 枠線の中をクリックしてください
-
+          最大5枚までアップロードできます
           
           #image-box-1
             .item-num-0#image-box__container
@@ -22,15 +18,10 @@
                     %li.input
                       %label.upload-label
                         .Contents__image__upload
-                          .input-area
-                            = i.file_field :picture, class: "hidden image_upload"
-                            = icon('fa', 'camera')
-                      
-                  -#       %i.fas.fa-camera
-                  -#     - if @item.errors.any?
-                  -#       %p.red 画像がありません
-                  -# #Input_error__image
-
+                          = i.file_field :picture, class: "hidden image_upload"
+                          = icon('fa', 'camera', class: "Contents__image__upload--icon")
+                          .Contents__image__upload--text
+                            クリックしてファイルをアップロード
       .Contents__name
         .Contents__name__form
           %span.Contents__name__form--text 商品名
@@ -157,7 +148,6 @@
         .Contents__Exhibition__btn
           = f.submit "出品する", class: "post", id: "ItemInput__btn"
 
-        
           = link_to "もどる", "#", class: "Contents__Exhibition__btn--return"
     
   = render partial: 'shared/footerB'
