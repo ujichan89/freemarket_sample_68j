@@ -4,16 +4,19 @@
   .purchases__Main__header
     商品内容の確認
   .purchases__Main__content
-    .purchases__Main__content__date
-      .item
-      .value
-        .itemName
-          = @item.name
-        .itemDate
-          .itemValue
-            = "¥ " + (@item.price).to_s(:delimited) + "円"
-          .itemTax
-            (税込み) 送料込み
+    .purchases__Main__content__name
+      = @item.name
+    .purchases__Main__content__image
+      %ul#purchase_image
+        - @item.images.each do |image|
+          %li
+            = image_tag image.picture.to_s
+    .purchases__Main__content__subImage
+    .purchases__Main__content__price
+      .priceDate
+        = "¥ " + (@item.price).to_s(:delimited)
+      .priceText
+        (税込み) 送料込み
   .purchases__Main__buy
     .purchases__Main__buy__content
       .purchases__Main__buy__content__value
@@ -34,14 +37,14 @@
             - exp_year = @default_card_information.exp_year.to_s.slice(2,3)
             = exp_month + " / " + exp_year
           %br
-        .logIn
-          = link_to "#", class: "logIn" do
+        .LogIn
+          = link_to "#", class: "LogIn" do
             登録してください
       .purchases__Main__buy__content__address
         .address
           配送先
-        .logIn
-          = link_to "#", class: "logIn" do
+        .LogIn
+          = link_to "#", class: "LogIn" do
             登録してください
       .purchases__Main__buy__content__btn
         .note
