@@ -565,38 +565,39 @@
     margin: 0 auto;
   }
   
-  .form {
-    margin: 8px 0 0;
-    font-family: 'Source Sans Pro', Helvetica , Arial, '游ゴシック体', 'YuGothic', 'メイリオ', 'Meiryo', sans-serif;
-    font-size: 16px;
-    font-weight: 100;
-    .select-default {
-      box-sizing: border-box;
-      width: 90%;
-      height: 50px;
-      padding: 10px 16px 8px;
-      border-radius: 4px;
-      background: #fff;
-      cursor: pointer;
+  // .form {
+    // margin: 8px 0 0;
+    // font-family: 'Source Sans Pro', Helvetica , Arial, '游ゴシック体', 'YuGothic', 'メイリオ', 'Meiryo', sans-serif;
+    // font-size: 16px;
+    // font-weight: 100;
+    // .upload-label__text {
+    //   box-sizing: border-box;
+    //   width: 90%;
+    //   height: 50px;
+    //   padding: 10px 16px 8px;
+    //   border-radius: 4px;
+    //   background: #fff;
+    //   cursor: pointer;
       
-      &:hover {
-        opacity: 0.7;
-      }
-    }
-    #item_area{
-      box-sizing: border-box;
-      width: 90%;
-      height: 50px;
-      padding: 10px 16px 8px;
-      border-radius: 4px;
-      background: #fff;
-      cursor: pointer;
+    //   &:hover {
+    //     opacity: 0.7;
+    //   }
+    // }
+  //   #input_area{
+  //     box-sizing: border-box;
+  //     width: 90%;
+  //     height: 50px;
+  //     padding: 10px 16px 8px;
+  //     border-radius: 4px;
+  //     background: #fff;
+  //     cursor: pointer;
       
-      &:hover {
-        opacity: 0.7;
-      }
-    }
-  }
+  //     &:hover {
+  //       opacity: 0.7;
+  //     }
+  //   }
+  // }
+
   .relative {
     position: relative;
     .icon {
@@ -730,9 +731,30 @@
 
     .image-preview {
      list-style: none;
-     margin-left: 30px;
+     margin-left: 25px;
+    }
+
+    #previews {
+      display: flex;
     }
 
     .flex {
      display: flex;
+     height: 200px;
+     width: 80%;
+     margin: 0 auto;
+     background-color: rgb(246, 246, 250);
+     border:  dashed 1px rgb(182, 182, 182);
+     cursor: pointer;
+     text-align: center;
+     line-height: 200px;
+    }
+
+    .image_upload {
+      height: 100px;
+      width: 10px;
+    }
+    .input-area {
+      height: 100px;
+      width: 100px;
     }

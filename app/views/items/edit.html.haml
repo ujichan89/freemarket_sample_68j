@@ -1,174 +1,180 @@
 .WrapperEdit
-	= render partial: 'shared/headerB'
-	.EditContents 
-		.EditContents__title
-			商品の情報を入力
-		= form_with model: @item, class: :form, local: true do |f|
-			.EditContents__image
-				.EditContents__image__title
-					%span.EditContents__image__title--text 出品画像
-					%span.EditContents__image__title--must 必須  
-				.EditContents__image__capture
-					最大10枚までアップロードできます
-					%br 枠線の中をクリックしてください
+  = render partial: 'shared/headerB'
+  .EditContents 
+    .EditContents__title
+      商品の情報を入力
+    = form_with model: @item, class: :form, local: true do |f|
+      .EditContents__image
+        .EditContents__image__title
+          %span.EditContents__image__title--text 出品画像
+          %span.EditContents__image__title--must 必須  
+        .EditContents__image__capture
+          最大10枚までアップロードできます
+          %br 枠線の中をクリックしてください
+        .flex  
+          %ul#previews
+            -# %label{for: "dansei"}
+            -#   男性
+            -# %input{type: "file", name: "sex", id: "dansei"}
+            
+            = f.fields_for :image do |image|
+              - @item.images.each_with_index do |img, i|
+                %li.image-preview
+                  %label.upload-label
+                    .input-area
+                      = image.file_field :picture, class: "hidden image_upload"
+                      = icon('fa', 'camera')
+                      
+                 
+                      -# = image.file_field :picture, value: img.picture ,class: "hidden image_upload"
+                      -# = image.hidden_field :id, value: img.id, picture:"item[image][#{i}]"
+                      -# = f.file_field :picture, class: "image_upload"
+                                           
+                .image-preview__wapper
+                  = image_tag img.picture.to_s,size: "114x114", alt: "test", class:"preview"
+                .image-preview_btn
+                  .image-preview_btn_edit 編集
+                  .image-preview_btn_delete 削除          
+                #Input_error__edit__image
+                
 
-				.flex
+      .EditContents__name
+        .EditContents__name__form
+          %span.EditContents__name__form--text 商品名
+          %span.EditContents__name__form--must 必須
+        = f.text_field :name, placeholder: :"商品名(40文字まで)", class: :"EditContents__name--input", id: "item_name__edit"
+        #Input_error__edit__itemname
+        .EditContents__name__description
+          %span.EditContents__name__description--text 商品の説明
+          %span.EditContents__name__description--must 必須
+        = f.text_area :description, placeholder: :"商品の説明(1000文字以内)", class: :"EditContents__name--input-big", id: "item_description__edit"
+        #Input_error__edit__description
 
-					= f.fields_for :image do |image|
-						- @item.images.each_with_index do |img, i|						
-							%li.image-preview
-								%label.upload-label{style:"display: none;"}
-									.upload-label__text
-										.input-area
-											= image.file_field :picture, value: img.picture ,class: "hidden image_upload"
-											= image.hidden_field :id, value: img.id, picture:"item[image][#{i}]"
-											= f.file_field :picture, class: " image_upload"
-												
-								.image-preview__wapper
-									= image_tag img.picture.to_s,size: "114x114", alt: "test", class:"preview"
-								.image-preview_btn
-									.image-preview_btn_edit 編集
-									.image-preview_btn_delete 削除          
-								#Input_error__edit__image
-								
-
-			.EditContents__name
-				.EditContents__name__form
-					%span.EditContents__name__form--text 商品名
-					%span.EditContents__name__form--must 必須
-				= f.text_field :name, placeholder: :"商品名(40文字まで)", class: :"EditContents__name--input", id: "item_name__edit"
-				#Input_error__edit__itemname
-				.EditContents__name__description
-					%span.EditContents__name__description--text 商品の説明
-					%span.EditContents__name__description--must 必須
-				= f.text_area :description, placeholder: :"商品の説明(1000文字以内)", class: :"EditContents__name--input-big", id: "item_description__edit"
-				#Input_error__edit__description
-
-			.EditContents__detail
-				.EditContents__detail__title
-					.EditContents__detail__title--text
-						商品の詳細
-				.EditContents__detail__list
-					.EditContents__detail__list__category
-						%span.EditContents__detail__list__category--text カテゴリー
-						%span.EditContents__detail__list__category--must 必須
-						.form.relative#editSelect
-							= f.collection_select :category_id, @parents, :id, :genre,{include_blank: "選択してください", selected: @item.category.parent.parent.id}, class: "select-default", id: "editParent_form", genre: 'item[category_ids][]'
-							= icon('fa', 'chevron-down', class: 'icon')
-						.editRemove.relative
-							= f.collection_select :category_id, @ctgrChild, :id, :genre,{selected: @item.category.parent.id}, class: "select-default", id: "rm_m_editParent_form", genre: 'item[category_ids][]'
-							= icon('fa', 'chevron-down', class: 'icon')
-						.editRemove.relative
-							= f.collection_select :category_id, @ctgrGrandchild, :id, :genre,{selected: @item.category.id}, class: "select-default", id: "rm_s_editParent_form", genre: 'item[category_ids][]'
-							= icon('fa', 'chevron-down', class: 'icon')
-							#Input_error__edit__category
-
-
-					.EditContents__detail__list__brand
-						= f.fields_for :brand do |b|
-							%span.EditContents__detail__list__brand--text ブランド
-							%span.EditContents__detail__list__brand--any 任意  
-							= b.text_field :name, placeholder: "シャネル", value:  @item.brand.name, class: 'EditContents__detail__list__brand--input'
-					.EditContents__detail__list__status
-						%span.EditContents__detail__list__status--text 商品の状態   
-						%span.EditContents__detail__list__status--must 必須
-
-						.form.relative  
-							= f.select :status, [['新品、未使用', '新品、未使用'], ['未使用に近い', '未使用に近い'], ['目立った傷や汚れなし', '目立った傷や汚れなし']], {include_blank: "選択してください", selected: @item.status}, { id: "item_id__edit", class: "select-default"}
-							= icon('fa', 'chevron-down', class: 'icon')
-							#Input_error__edit__status
+      .EditContents__detail
+        .EditContents__detail__title
+          .EditContents__detail__title--text
+            商品の詳細
+        .EditContents__detail__list
+          .EditContents__detail__list__category
+            %span.EditContents__detail__list__category--text カテゴリー
+            %span.EditContents__detail__list__category--must 必須
+            .form.relative#editSelect
+              = f.collection_select :category_id, @parents, :id, :genre,{include_blank: "選択してください", selected: @item.category.parent.parent.id}, class: "select-default", id: "editParent_form", genre: 'item[category_ids][]'
+              = icon('fa', 'chevron-down', class: 'icon')
+            .editRemove.relative
+              = f.collection_select :category_id, @ctgrChild, :id, :genre,{selected: @item.category.parent.id}, class: "select-default", id: "rm_m_editParent_form", genre: 'item[category_ids][]'
+              = icon('fa', 'chevron-down', class: 'icon')
+            .editRemove.relative
+              = f.collection_select :category_id, @ctgrGrandchild, :id, :genre,{selected: @item.category.id}, class: "select-default", id: "rm_s_editParent_form", genre: 'item[category_ids][]'
+              = icon('fa', 'chevron-down', class: 'icon')
+              #Input_error__edit__category
 
 
-			.EditContents__delivery
-				.EditContents__delivery__title
-					.EditContents__delivery__title--text
-						配送について
-					= link_to "#" do
-						= icon('fa', 'question-circle', class: 'EditContents__delivery__title--icon')
-				
-				.EditContents__delivery__category 
+          .EditContents__detail__list__brand
+            = f.fields_for :brand do |b|
+              %span.EditContents__detail__list__brand--text ブランド
+              %span.EditContents__detail__list__brand--any 任意  
+              = b.text_field :name, placeholder: "シャネル", value:  @item.brand.name, class: 'EditContents__detail__list__brand--input'
+          .EditContents__detail__list__status
+            %span.EditContents__detail__list__status--text 商品の状態   
+            %span.EditContents__detail__list__status--must 必須
 
-					.EditContents__delivery__category__burden 
-						%span.EditContents__delivery__category__burden--text 配送料の負担
-						%span.EditContents__delivery__category__burden--must 必須
-						.form.relative
-							= f.select :charge, [['送料込み(出品者負担)', '送料込み(出品者負担)'], ['着払い(購入者負担)', '着払い(購入者負担)']], {include_blank: "選択してください", selected: @item.charge}, { id: "item_charge__edit", class: "select-default"}
-							= icon('fa', 'chevron-down', class: 'icon')
-							#Input_error__edit__charge
-
-					.EditContents__delivery__category__area
-						%span.EditContents__delivery__category__area--text 配送元の地域
-						%span.EditContents__delivery__category__area--must 必須
-						.form.relative
-							= f.collection_select :area, Prefecture.all, :id, :name, prompt: "選択してください", id: "item_area__edit"
-							= icon('fa', 'chevron-down', class: 'icon')
-							#Input_error__edit__area
-
-					.EditContents__delivery__category__date
-						%span.EditContents__delivery__category__date--text 配送までの日数
-						%span.EditContents__delivery__category__date--must 必須 
-						.form.relative
-							= f.select :day, [['1~2日で発送', '1~2日で発送'], ['2~3日で発送', '2~3日で発送'], ['4~7日で発送', '4~7日で発送']], {include_blank: "選択してください", selected: @item.day}, { id: "item_day__edit", class: "select-default"}
-							= icon('fa', 'chevron-down', class: 'icon')
-							#Input_error__edit__day
+            .form.relative  
+              = f.select :status, [['新品、未使用', '新品、未使用'], ['未使用に近い', '未使用に近い'], ['目立った傷や汚れなし', '目立った傷や汚れなし']], {include_blank: "選択してください", selected: @item.status}, { id: "item_id__edit", class: "select-default"}
+              = icon('fa', 'chevron-down', class: 'icon')
+              #Input_error__edit__status
 
 
-			.EditContents__price
-				.EditContents__price__title
-					.EditContents__price__title--text
-						販売価格(300〜9,999,999)
-					= link_to "#" do
-						= icon('fa', 'question-circle', class: 'EditContents__price__title--icon') 
+      .EditContents__delivery
+        .EditContents__delivery__title
+          .EditContents__delivery__title--text
+            配送について
+          = link_to "#" do
+            = icon('fa', 'question-circle', class: 'EditContents__delivery__title--icon')
+        
+        .EditContents__delivery__category 
 
-				.EditContents__price__right
-					.EditContents__price__right__category
-						.EditContents__price__right__category__list
-							.EditContents__price___right__category__list--text
-								価格
-							.EditContents__price__right__category__list--must
-								必須
-						.EditContents__price__right__category__form
-							.EditContents__price__right__category__form--text
-								¥ 
-							= f.text_field :price, placeholder: :"例) 300", class: :"EditContents__price__right__category__form--field", id: "price_calc__edit"
-							#Input_error__edit__price
+          .EditContents__delivery__category__burden 
+            %span.EditContents__delivery__category__burden--text 配送料の負担
+            %span.EditContents__delivery__category__burden--must 必須
+            .form.relative
+              = f.select :charge, [['送料込み(出品者負担)', '送料込み(出品者負担)'], ['着払い(購入者負担)', '着払い(購入者負担)']], {include_blank: "選択してください", selected: @item.charge}, { id: "item_charge__edit", class: "select-default"}
+              = icon('fa', 'chevron-down', class: 'icon')
+              #Input_error__edit__charge
+
+          .EditContents__delivery__category__area
+            %span.EditContents__delivery__category__area--text 配送元の地域
+            %span.EditContents__delivery__category__area--must 必須
+            .form.relative
+              = f.collection_select :area, Prefecture.all, :id, :name, prompt: "選択してください", id: "item_area__edit"
+              = icon('fa', 'chevron-down', class: 'icon')
+              #Input_error__edit__area
+
+          .EditContents__delivery__category__date
+            %span.EditContents__delivery__category__date--text 配送までの日数
+            %span.EditContents__delivery__category__date--must 必須 
+            .form.relative
+              = f.select :day, [['1~2日で発送', '1~2日で発送'], ['2~3日で発送', '2~3日で発送'], ['4~7日で発送', '4~7日で発送']], {include_blank: "選択してください", selected: @item.day}, { id: "item_day__edit", class: "select-default"}
+              = icon('fa', 'chevron-down', class: 'icon')
+              #Input_error__edit__day
 
 
-					.EditContents__price__right__commission
-						.EditContents__price__right__commission--text
-							販売手数料 (10%)
-						.EditContents__price__right__commission--rod   
-							➖
+      .EditContents__price
+        .EditContents__price__title
+          .EditContents__price__title--text
+            販売価格(300〜9,999,999)
+          = link_to "#" do
+            = icon('fa', 'question-circle', class: 'EditContents__price__title--icon') 
 
-					.EditContents__price__right__profit
-						.EditContents__price__right__profit--text
-							販売利益
-							= f.number_field "#", style: "display: none", id: "price__edit"
-						.EditContents__price__right__profit--rod    
-							➖
+        .EditContents__price__right
+          .EditContents__price__right__category
+            .EditContents__price__right__category__list
+              .EditContents__price___right__category__list--text
+                価格
+              .EditContents__price__right__category__list--must
+                必須
+            .EditContents__price__right__category__form
+              .EditContents__price__right__category__form--text
+                ¥ 
+              = f.text_field :price, placeholder: :"例) 300", class: :"EditContents__price__right__category__form--field", id: "price_calc__edit"
+              #Input_error__edit__price
 
 
-			.EditContents__Exhibition
-				.EditContents__Exhibition__text
-					%p
-						= link_to "禁止されている出品", "#", class: "EditContents__Exhibition__text--link"
-						,
-						= link_to "行為", "#", class: "EditContents__Exhibition__text--link"
-						を必ずご確認ください。
-					%pまたブランド品でシリアルナンバー等がある場合はご記載ください。
-					%p
-						= link_to "偽ブランドの販売", "#", class: "EditContents__Exhibition__text--link"
-						は犯罪であり処罰される可能性があります。
-					%p
-						また、出品をもちまして
-						= link_to "加盟店規約", "#", class: "EditContents__Exhibition__text--link"
-						に同意したことになります。
-				
-				.Contents__Exhibition__btn
+          .EditContents__price__right__commission
+            .EditContents__price__right__commission--text
+              販売手数料 (10%)
+            .EditContents__price__right__commission--rod   
+              ➖
 
-					= f.submit "この内容で編集する", class: "EditContents__Exhibition__btn", id: "ItemInput__edit__btn"
+          .EditContents__price__right__profit
+            .EditContents__price__right__profit--text
+              販売利益
+              = f.number_field "#", style: "display: none", id: "price__edit"
+            .EditContents__price__right__profit--rod    
+              ➖
 
-				
-					= link_to "もどる", "#", class: "EditContents__Exhibition__btn--return"
-		
-	= render "/shared/footerB"
+
+      .EditContents__Exhibition
+        .EditContents__Exhibition__text
+          %p
+            = link_to "禁止されている出品", "#", class: "EditContents__Exhibition__text--link"
+            ,
+            = link_to "行為", "#", class: "EditContents__Exhibition__text--link"
+            を必ずご確認ください。
+          %pまたブランド品でシリアルナンバー等がある場合はご記載ください。
+          %p
+            = link_to "偽ブランドの販売", "#", class: "EditContents__Exhibition__text--link"
+            は犯罪であり処罰される可能性があります。
+          %p
+            また、出品をもちまして
+            = link_to "加盟店規約", "#", class: "EditContents__Exhibition__text--link"
+            に同意したことになります。
+        
+        .Contents__Exhibition__btn
+
+          = f.submit "この内容で編集する", class: "EditContents__Exhibition__btn", id: "ItemInput__edit__btn"
+
+        
+          = link_to "もどる", "#", class: "EditContents__Exhibition__btn--return"
+    
+  = render "/shared/footerB"

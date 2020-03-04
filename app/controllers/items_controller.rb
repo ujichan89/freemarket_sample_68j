@@ -61,6 +61,7 @@ class ItemsController < ApplicationController
     @ctgrChild = @item.category.parent.siblings
     @ctgrGrandchild = @item.category.siblings
     @item.build_brand
+    
   end
 
   def update

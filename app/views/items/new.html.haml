@@ -1,6 +1,5 @@
 .WrapperNew
   = render partial: 'shared/headerB'
-
   .Contents 
     .Contents__title
       商品の情報を入力
@@ -11,9 +10,7 @@
           %span.Contents__image__title--must 必須  
         .Contents__image__capture
           最大10枚までアップロードできます
-          %br 枠線の中をクリックしてください
-
-          
+          %br 枠線の中をクリックしてください  
           #image-box-1
             .item-num-0#image-box__container
               = f.fields_for :images do |i|
