@@ -43,7 +43,7 @@
       border:  dashed 1px rgb(204, 204, 204);
       margin-top: 15px;
       &--icon {
-        margin-top: 45px;
+        margin-top: 50px;
         width: 100%;
         text-align: center;
         color: #333;
@@ -62,6 +62,8 @@
       color: red;
     }
   }
+
+//_______________________________________________________
 
   &__name {
     width: 100%;
@@ -125,38 +127,29 @@
       vertical-align: middle;
     }
   }
-  &__detail {
-    height: 500px;
-    width: 100%;
-    display: flex;
-    
-   
-    &__title {
-      height: 200px;
-      width: 30%;
-      
 
+//_______________________________________________________
+
+  &__detail {
+    width: 100%;
+    padding: 40px;
+    border-bottom: 2px solid #f5f5f5;
+
+    &__title {
+      
       &--text {
         font-weight: bold;
-        font-size: 13px;
-        color: rgba(70, 66, 66, 0.356);
-        margin-top: 30px;
-        margin-left: 33px;
-        
-        
+        font-size: 14px;
+        color: #888888;
       }
     }
     &__list {
-      height: 200px;
-      width: 70%;
+      margin-top: 16px;
+      width: 100%;
      
-      
       &__category {
-        padding-top: 20px;
-        margin-left: 30px;
-
         &--text {
-          font-size: 13px;
+          font-size: 14px;
           font-weight: bold;
         }
         &--must {
@@ -169,13 +162,11 @@
           margin-left: 4px;
         }
       }
-      &__brand {
-        padding-top: 20px;
-        margin-left: 30px;
-       
 
+      &__brand {
+        margin-top: 30px;
         &--text {
-          font-size: 13px;
+          font-size: 14px;
           font-weight: bold;
         }
         &--any {
@@ -188,24 +179,23 @@
           margin-left: 4px;
         }
         &--input {
+          margin-top: 16px;
           height: 50px;
-          width: 90%; 
+          width: 100%; 
           line-height: 50px;
-          padding-left: 30px;
-          margin-top: 15px;
           border: 1px solid lightgrey;
           border-radius: 3px;
           font-size: 15px;
+          padding: 13px 16px;
+
         }
       }
  
-
       &__status {
-        padding-top: 20px;
-        margin-left: 30px;
+        margin-top: 30px;
 
         &--text {
-          font-size: 13px;
+          font-size: 14px;
           font-weight: bold;
         }
         &--must {
@@ -220,14 +210,14 @@
       }
       &--input {
         margin-top: 10px;
-        height: 40px;
-        width: 315px;
-       
         display: block;
-        padding-right: 140px;
         border-radius: 2px;
+
       }
     }
+
+//_______________________________________________________
+
   }
   &__delivery {
     height: 350px;
@@ -242,7 +232,7 @@
       &--text {
         font-weight: bold;
         font-size: 13px;
-        color: rgba(70, 66, 66, 0.356);
+        color: #888888;
         margin-top: 30px;
         margin-left: 33px;
       }
@@ -325,7 +315,7 @@
       &--text {
         font-weight: bold;
         font-size: 13px;
-        color: rgba(70, 66, 66, 0.356);
+        color: #888888;
         margin-top: 30px;
         margin-left: 33px;
       }
@@ -545,8 +535,9 @@ h1 {
   font-weight: 100;
   .select-default {
     box-sizing: border-box;
-    width: 90%;
+    width: 100%;
     height: 50px;
+    margin-top: 10px;
     padding: 10px 16px 8px;
     border-radius: 4px;
     background: #fff;
@@ -577,7 +568,7 @@ h1 {
     top: 38%;
     right: 11%;
     z-index: 2;
-    color: deeppink;
+    color: #3CCACE;
     cursor: pointer;
     font-size: 20px;
     -webkit-transform: translate(0, -50%);
