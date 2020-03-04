@@ -1,111 +1,70 @@
-$(function(){
- var dataBox = new DataTransfer();
- var dropArea = document.getElementById("#image-box-1__edit");
- var file_field = document.querySelector('input[type=file]')
+$(function() {
+ var append_input = $(`<label class="upload-label"><div class="Contents__image__upload"><input class="hidden image_upload" type="file"></div></div></div></label>`)
+ $ul = $('#previews')
+ $lis = $ul.find('.image-preview');
+ $input = $ul.find('.input');
+ if($input.length == 0){
+   if($lis.length <= 4 ){
+     $ul.append(append_input)
+     $('#previews .input').css({
+       'width': `calc(100% - (20% * ${$lis.length}))`
+     })
+   }
+   else if($lis.length == 5 ){
+     $ul.append(append_input)
+     $('#previews .input').css({
+       'width': `100%`
+       
+     })
+   }
+   else if($lis.length <= 9 ){
+     $ul.append(append_input)
+     $('#previews .input').css({
+       'width': `calc(100% - (20% * (${$lis.length} - 5 )))`
+     })
+   }
+ }
 
- // window.onload = function(e){
- //   //ドラッグした要素がドロップターゲットの上にある時にイベントが発火
- //   dropArea.addEventListener("dragover", function(e){
- //     e.preventDefault();
- //     //ドロップエリアに影がつく
- //     $(this).children('#image-box__container').css({'border': '1px solid rgb(204, 204, 204)','box-shadow': '0px 0px 4px'})
- //   },false);
- //   //ドラッグした要素がドロップターゲットから離れた時に発火するイベント
- //   dropArea.addEventListener("dragleave", function(e){
- //     e.preventDefault();
- //   //ドロップエリアの影が消える
- //     $(this).children('#image-box__container').css({'border': '1px dashed rgb(204, 204, 204)','box-shadow': '0px 0px 0px'})      
- //   },false);
- //   //ドラッグした要素をドロップした時に発火するイベント
- //   dropArea.addEventListener("drop", function(e) {
- //     e.preventDefault();
- //     $(this).children('#image-box__container').css({'border': '1px dashed rgb(204, 204, 204)','box-shadow': '0px 0px 0px'});
- //     var files = e.dataTransfer.files;
- //     //ドラッグアンドドロップで取得したデータについて、プレビューを表示
- //     $.each(files, function(i,file){
- //       //アップロードされた画像を元に新しくfilereaderオブジェクトを生成
- //       var fileReader = new FileReader();
- //       //dataTransferオブジェクトに値を追加
- //       dataBox.items.add(file)
- //       file_field.files = dataBox.files
- //       //lengthで要素の数を取得
- //       var num = $('.item-image').length + i + 1
- //       //指定されたファイルを読み込む
- //       fileReader.readAsDataURL(file);
- //       // 10枚プレビューを出したらドロップボックスが消える
- //       if (num==10){
- //         $('#image-box__container').css('display', 'none')   
- //       }
- //       //image fileがロードされた時に発火するイベント
- //       fileReader.onload = function() {
- //         //変数srcにresultで取得したfileの内容を代入
- //         var src = fileReader.result
- //         var html =
- //         `<div class='item-image' data-image='${file.name}'>
- //           <div class=' item-image__content'>
- //             <div class='item-image__content--icon'>
- //               <img src=${src} width="80" height="80" >
- //             </div>
- //           </div>
- //           <div class='item-image__operetion'>
- //             <div class='item-image__operetion--delete'>削除</div>
- //           </div>
- //         </div>`
- //       //image-box__containerの前にhtmlオブジェクトを追加　
- //       $('#image-box__container').before(html);
- //       };
- //       //image-box__containerにitem-num-(変数)という名前のクラスを追加する
- //       $('#image-box__container').attr('class', `item-num-${num}`)
- //     })
- //   })
- // }
+ $(document).on('click','.image-preview_btn_delete',function(){
+   var append_input = $(`<li class="input"><label class="upload-label"><div class="upload-label__text">ドラッグアンドドロップ<br>またはクリックしてファイルをアップロード<div class="input-area"><input class="hidden image_upload" type="file"></div></div></label></li>`)
+   $ul = $('#previews')
+   $lis = $ul.find('.image-preview');
+   $input = $ul.find('.input');
+   $ul = $('#previews')
+   $li = $(this).parents('.image-preview');
  
- $('.img').change(function(){
-
-   var file = $('input[type="file"]').prop('files')[0];
-
-   $.each(this.files, function(i, file){
-     var fileReader = new FileReader();
-     var num = $('.item-image').length + 1 + i
-
-     dataBox.items.add(file)
-     file_field.files = dataBox.files
-
-     fileReader.readAsDataURL(file);
-
-     if (num == 10){
-       $('#image-box__container__edit').css('display', 'none')
-     }
-     fileReader.onloadend = function() {
-       var src = fileReader.result
-       var html= 
-       `<div class=' item-image' data-image='${file.name}'>
-         <div class=' item-image__content'>
-           <div class='item-image__content--icon'>
-             <img src="${src}" width="80" height="80">
-           </div>
-         </div>
-         <div class='item-image__operetion'>
-           <div class='item-image__operetion--delete'>削除</div>
-         </div>
-       </div>`
-   
-       $('#image-box__container__edit').before(html);
-     };
-
-     $('#image-box__container__edit').attr('class', `item-num-${num}`)
-    
-   
-   });
+ 
+   //"li"ごと削除して、previewとinputを削除させる。
+   $li.remove();
+ 
+   // inputボタンのサイズを更新する、または追加させる
+   // まずはプレビューの数を数える。
+   $lis = $ul.find('.image-preview');
+   $label = $ul.find('.input');
+   if($lis.length <= 4 ){
+     // inputのサイズを変更
+     $('#previews li:last-child').css({
+       'width': `calc(100% - (20% * ${$lis.length}))`
+     })
+   }
+   else if($lis.length == 5 ){
+     // inputのサイズを変更
+     $('#previews li:last-child').css({
+       'width': `100%`
+     })
+   }
+   else if($lis.length < 9 ){
+     // inputのサイズを変更
+     $('#previews li:last-child').css({
+       'width': `calc(100% - (20% * (${$lis.length} - 5 )))`
+     })
+   }
+   else if($lis.length == 9 ){
+     $ul.append(append_input) // 9個の時だけ、新しいinputを追加してやる
+     $('#previews li:last-child').css({
+       'width': `calc(100% - (20% * (${$lis.length} - 5 )))`
+     })
+   }
  });
-    
- $(document).on("click", '.item-image__operetion--delete', function(){
-
-   var target_image = $(this).parent().parent()
-
-   target_image.remove();
-
-   file_field.val("")
- })
-});
+})
 
