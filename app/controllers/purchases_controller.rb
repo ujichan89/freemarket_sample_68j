@@ -8,6 +8,8 @@ class PurchasesController < ApplicationController
     # ②売り切れているならエルスでリダイレクトとかで別のページに飛ばす。
     # Item.find(params[:id])
     # if Item.sale == 0
+      @user = current_user
+      @address = @user.address
       @item = set_item
       card = set_card
       if card.blank?
@@ -31,9 +33,9 @@ class PurchasesController < ApplicationController
     :amount => @item.price,
     :customer => card.customer_id,
     :currency => 'jpy',
-  )
-  @item.update(sale: 1)
-  redirect_to items_path(current_user.id)
+    )
+    @item.update(sale: 1)
+    redirect_to items_path(current_user.id)
   end
 
   private
