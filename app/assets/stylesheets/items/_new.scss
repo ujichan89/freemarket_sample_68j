@@ -727,9 +727,7 @@ h1 {
   margin-left: 210px;
 }
 
-.image_upload {
- display: none;
-}
+
 
 .preview {
  height: 114px;
@@ -738,6 +736,7 @@ h1 {
 
 .image-preview_btn {
  display: flex;
+ width: 114px;
  justify-content: space-around;
  margin-top: 6px;
  color: deepskyblue;
