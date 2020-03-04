@@ -44,7 +44,7 @@
             %span.Contents__detail__list__category--must 必須
             .form.relative#select
               = f.collection_select :category_id, @parents, :id, :genre,{prompt: "選択してください"}, class: "select-default", id: "parent_form", genre: 'item[category_ids][]'
-              = icon('fa', 'chevron-down', class: 'icon')
+              -# = icon('fa', 'chevron-down', class: 'icon')
               #Input_error__category
       
           .Contents__detail__list__brand
@@ -60,7 +60,7 @@
 
             .form.relative  
               = f.select :status, [['新品、未使用', '新品、未使用'], ['未使用に近い', '未使用に近い'], ['目立った傷や汚れなし', '目立った傷や汚れなし']], {include_blank: "選択してください", selected: 1}, { id: "item_id", class: "select-default"}
-              = icon('fa', 'chevron-down', class: 'icon')
+              -# = icon('fa', 'chevron-down', class: 'icon')
               #Input_error__status
       
       .Contents__delivery
@@ -77,7 +77,7 @@
             %span.Contents__delivery__category__burden--must 必須
             .form.relative
               = f.select :charge, [['送料込み(出品者負担)', '送料込み(出品者負担)'], ['着払い(購入者負担)', '着払い(購入者負担)']], {include_blank: "選択してください", selected: 1}, { id: "item_charge", class: "select-default"}
-              = icon('fa', 'chevron-down', class: 'icon')
+              -# = icon('fa', 'chevron-down', class: 'icon')
               #Input_error__charge
 
           .Contents__delivery__category__area
@@ -85,7 +85,7 @@
             %span.Contents__delivery__category__area--must 必須
             .form.relative
               = f.collection_select :area, Prefecture.all, :id, :name, prompt: "選択してください", id: "item_area"
-              = icon('fa', 'chevron-down', class: 'icon')
+              -# = icon('fa', 'chevron-down', class: 'icon')
               #Input_error__area
 
           .Contents__delivery__category__date
@@ -93,7 +93,7 @@
             %span.Contents__delivery__category__date--must 必須 
             .form.relative
               = f.select :day, [['1~2日で発送', '1~2日で発送'], ['2~3日で発送', '2~3日で発送'], ['4~7日で発送', '4~7日で発送']], {include_blank: "選択してください", selected: 1}, { id: "item_day", class: "select-default"}
-              = icon('fa', 'chevron-down', class: 'icon')
+              -# = icon('fa', 'chevron-down', class: 'icon')
               #Input_error__day
       
       .Contents__price
