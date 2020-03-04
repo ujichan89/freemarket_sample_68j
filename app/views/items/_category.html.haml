@@ -6,7 +6,7 @@
         = image_tag cate.images[0].picture.url
       .ProductList--body
         %h3.Name
-          = truncate(cate.name, length:15)
+          = truncate(cate.name, length:13)
         .Details
           %ul
             %li #{cate.price}円
