@@ -1,8 +1,9 @@
 .WrapperEdit
   = render partial: 'shared/headerB'
+  = render 'layouts/notifications'
   .EditContents 
     .EditContents__title
-      商品の情報を入力
+      商品の情報を編集
     = form_with model: @item, class: :form, local: true do |f|
       .EditContents__image
         .EditContents__image__title
@@ -12,31 +13,30 @@
           最大10枚までアップロードできます
           %br 枠線の中をクリックしてください
         .flex  
-          %ul#previews
-            -# %label{for: "dansei"}
-            -#   男性
-            -# %input{type: "file", name: "sex", id: "dansei"}
-            
-            = f.fields_for :image do |image|
-              - @item.images.each_with_index do |img, i|
-                %li.image-preview
-                  %label.upload-label
-                    .input-area
-                      = image.file_field :picture, class: "hidden image_upload"
-                      = icon('fa', 'camera')
-                      
-                 
-                      -# = image.file_field :picture, value: img.picture ,class: "hidden image_upload"
-                      -# = image.hidden_field :id, value: img.id, picture:"item[image][#{i}]"
-                      -# = f.file_field :picture, class: "image_upload"
-                                           
-                .image-preview__wapper
-                  = image_tag img.picture.to_s,size: "114x114", alt: "test", class:"preview"
-                .image-preview_btn
-                  .image-preview_btn_edit 編集
-                  .image-preview_btn_delete 削除          
-                #Input_error__edit__image
-                
+          %ul#previews   
+
+            = f.fields_for :images do |image|
+              %li.image-preview
+                %label.upload-label{for: "already-image"}
+                  .input-area
+                    = image.file_field :picture, class: "hidden image_upload", id: 'already-image'
+                    -# = image.hidden_field :id, value: img.id, name:"item[image][#{i}]"
+              .image-preview__wapper
+              
+              .image-preview_btn
+                -# %label{for: "image", class: :"image-preview_btn_edit"}
+                -#   編集
+                -# %input{type: "file", name: "picture", id: "image", class: :"hidden"} 
+                .image-preview_btn_delete 削除 
+
+              #Input_error__edit__image
+              
+              -#  = image.label for: image, : "編集", class: :"image-preview_btn_edit" do
+                -#   = icon('fa', 'camera')
+                -# = image.file_field :picture
+              -# .input-area
+                -#   = image.file_field :picture, class: "hidden image_upload"
+                -#   = icon('fa', 'camera')
 
       .EditContents__name
         .EditContents__name__form
@@ -178,3 +178,12 @@
           = link_to "もどる", "#", class: "EditContents__Exhibition__btn--return"
     
   = render "/shared/footerB"
+
+  -#  = f.fields_for :images do |i|
+  -#             = i.label :picture, for: "item_images_attributes_0_picture", class: "items__Contents__image__upload--cameraBtnUpper" do
+  -#               = icon('fa', 'camera')
+  -#             = i.file_field :picture, id: "item_images_attributes_0_picture", style: "display: none;", name: "item[images_attributes][0][picture]"
+
+  -# %label{for: "dansei"}
+    -#   男性
+    -# %input{type: "file", name: "sex", id: "dansei"}
