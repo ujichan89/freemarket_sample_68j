@@ -2,17 +2,17 @@
   font-family: "Source Sans Pro", Helvetica, Arial, "游ゴシック体", "YuGothic", "メイリオ", "Meiryo", sans-serif;
   width: 100%;
   padding: 60px 0;
-  color: #fff;
   background-color: #272727;
   text-align: center;
   a{
     text-decoration: none;
     color: #fff;
+    a:hover{
+     text-decoration: underline;
+     color: #fff;
+   }
   }
-  a:hover{
-    text-decoration: underline;
-    color: #fff;
-  }
+
   
   li{
     font-size: 12px;

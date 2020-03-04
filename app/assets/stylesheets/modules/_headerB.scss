@@ -8,5 +8,9 @@
 
   &__png {
     height: 60px;
+    &:hover {
+     cursor: pointer;
+     opacity: 0.6;
+   }
   }
 }
