@@ -28,7 +28,7 @@
 
     .GoodDetealContents__main--goodDescription
       .GoodDetealContents__main--goodDescription__goodName
-        = @item.description
+        = simple_format (@item.description)
 
       %table{border: '1', class: '.GoodDetealContents__main--goodDescription__goodName__goodtable',align: 'center'}
         %tr
