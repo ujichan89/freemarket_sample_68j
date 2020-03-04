@@ -26,12 +26,12 @@
         .Contents__name__form
           %span.Contents__name__form--text 商品名
           %span.Contents__name__form--must 必須
-        = f.text_field :name, placeholder: :"商品名(40文字まで)", class: :"Contents__name--input", id: "item_name"
+        = f.text_field :name, placeholder: :"40文字まで", class: :"Contents__name--input", id: "item_name"
         #Input_error__itemname
         .Contents__name__description
           %span.Contents__name__description--text 商品の説明
           %span.Contents__name__description--must 必須
-        = f.text_area :description, placeholder: :"商品の説明(1000文字以内)", class: :"Contents__name--input-big", id: "item_description"
+        = f.text_area :description, placeholder: "商品の説明（1000文字以内）&#13;&#10;（色、素材、重さ、定価、注意点など）&#13;&#10;&#13;&#10;例）2010年頃に1万円で購入したジャケットです。ライトグレーで傷はありません。あわせやすいのでおすすめです。".html_safe , class: :"Contents__name--input-big", id: "item_description"
         #Input_error__description
 
       .Contents__detail
