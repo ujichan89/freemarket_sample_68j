@@ -397,12 +397,13 @@
               }
   
               &--must {
+                height: 30px;
                 color: white;
                 background-color: #3CCACE;
                 font-size: 5px;
                 font-weight: bold;
                 border-radius: 2px;
-                padding: 3px;
+                padding: 0 3px;
                 margin-left: 10px;
               }
             }
