@@ -273,6 +273,7 @@
           display: flex;
           justify-content: space-around;
           a{
+            max-width: 220px;
             text-decoration-line: none;
             background-color: #fff;
             display: inline-block;
@@ -375,6 +376,7 @@
             display: inline-block;
             float: left;
             a{
+              max-width: 220px;
               text-decoration-line: none;
               background-color: #fff;
               display: inline-block;
