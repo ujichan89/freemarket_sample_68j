@@ -86,13 +86,13 @@
             .form.relative#editSelect
               = f.collection_select :category_id, @parents, :id, :genre,{include_blank: "選択してください", selected: @item.category.parent.parent.id}, class: "select-default", id: "editParent_form", genre: 'item[category_ids][]'
               = icon('fa', 'chevron-down', class: 'icon')
-            .editRemove.relative
-              = f.collection_select :category_id, @ctgrChild, :id, :genre,{selected: @item.category.parent.id}, class: "select-default", id: "rm_m_editParent_form", genre: 'item[category_ids][]'
-              = icon('fa', 'chevron-down', class: 'icon')
-            .editRemove.relative
-              = f.collection_select :category_id, @ctgrGrandchild, :id, :genre,{selected: @item.category.id}, class: "select-default", id: "rm_s_editParent_form", genre: 'item[category_ids][]'
-              = icon('fa', 'chevron-down', class: 'icon')
-              #Input_error__edit__category
+              .editRemove1.relative
+                = f.collection_select :category_id, @ctgrChild, :id, :genre,{selected: @item.category.parent.id}, class: "select-default", id: "rm_m_editParent_form", genre: 'item[category_ids][]'
+                = icon('fa', 'chevron-down', class: 'icon')
+              .editRemove2.relative
+                = f.collection_select :category_id, @ctgrGrandchild, :id, :genre,{selected: @item.category.id}, class: "select-default", id: "rm_s_editParent_form", genre: 'item[category_ids][]'
+                = icon('fa', 'chevron-down', class: 'icon')
+                #Input_error__edit__category
 
 
           .EditContents__detail__list__brand
@@ -202,4 +202,17 @@
         
           = link_to "もどる", "#", class: "EditContents__Exhibition__btn--return"
     
+<<<<<<< Updated upstream
   = render "/shared/footerB"
+=======
+  = render "/shared/footerB"
+
+  -#  = f.fields_for :images do |i|
+  -#             = i.label :picture, for: "item_images_attributes_0_picture", class: "items__Contents__image__upload--cameraBtnUpper" do
+  -#               = icon('fa', 'camera')
+  -#             = i.file_field :picture, id: "item_images_attributes_0_picture", style: "display: none;", name: "item[images_attributes][0][picture]"
+
+  -# %label{for: "dansei"}
+    -#   男性
+    -# %input{type: "file", name: "sex", id: "dansei"}
+>>>>>>> Stashed changes
