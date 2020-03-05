@@ -51,7 +51,7 @@ $(function () {
     if ($('.js-file').length == 0) $('#image-box').append(buildFileField(fileIndex[0]));
   });
 });
-=======
+
 $(function() {
  var append_input = $(`<li class="input"><label class="upload-label"><div class="upload-label__text"><div class="input-area"><input class="hidden image_upload" type="file"></div></div></label></li>`)
  $ul = $('#previews')
@@ -122,5 +122,4 @@ $(function() {
      })
    }
  });
-})
-
+});
