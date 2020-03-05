@@ -656,28 +656,3 @@ h1 {
   margin: 0;
   margin-left: 210px;
 }
-
-
-
-.preview {
- height: 114px;
- width: 114px;
-}
-
-.image-preview_btn {
- display: flex;
- width: 114px;
- justify-content: space-around;
- margin-top: 6px;
- color: deepskyblue;
- font-size: large;
- background-color: #efefef;
-}
-
-.image-preview_btn_edit{
- cursor: pointer;
-}
-
-.image-preview_btn_delete{
- cursor: pointer;
-}
