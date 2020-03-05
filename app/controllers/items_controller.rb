@@ -63,46 +63,15 @@ class ItemsController < ApplicationController
     @item.build_brand 
   end
 
-  def update
-  #  item = Item.find(params[:id])
-   @item.update(update_params)
   
-   #  each do で並べた画像が image
-   # 新しくinputに追加された画像が image_attributes
-   # この二つがない時はupdateしない
-  #  binding.pry
-  #  if params[:item].keys.include?("image") || params[:item].keys.include?("images_attributes") 
-  #    if @item.valid?
-  #      if params[:item].keys.include?("image") 
-  #      # dbにある画像がedit画面で一部削除してるか確認
-  #        update_images_ids = params[:item][:image].values #投稿済み画像 
-  #        before_images_ids = @item.images.ids
-  #        #  商品に紐づく投稿済み画像が、投稿済みにない場合は削除する
-  #        # @product.images.ids.each doで、一つずつimageハッシュにあるか確認。なければdestroy
-  #        before_images_ids.each do |before_img_id|
-  #          Image.find(before_img_id).destroy unless update_images_ids.include?("#{before_img_id}") 
+  def update
+   if @item.update(update_params)
+    redirect_to item_path(@item), notice: "商品を更新しました"
+   else
+     render :edit
+   end
+ end
 
-  #        end
-  #      else
-  #        # imageハッシュがない = 投稿済みの画像をすべてedit画面で消しているので、商品に紐づく投稿済み画像を削除する。
-  #        # @product.images.destroy = nil と削除されないので、each do で一つずつ削除する
-  #        before_images_ids.each do |before_img_id|
-  #          Image.find(before_img_id).destroy 
-  #        end
-  #      end
-  #      @item.update(update_params)
-  #      # @size = @item.category[1].sizes[0]
-  #      # @item.update(size: nil) unless @size
-
-  #      redirect_to item_path(@item), notice: "商品を更新しました"
-  #    else
-  #      render 'edit'
-  #    end
-  #  else
-  #    redirect_back(fallback_location: root_path,flash: {success: '画像がありません'})
-  #  end
-  redirect_to root_path
-  end
 
   def destroy
     @item.destroy
@@ -123,3 +92,4 @@ class ItemsController < ApplicationController
     params.require(:item).permit(:name, :price, :status, :description, :charge, :area, :day, :category_id, brand_attributes: [:id, :name], images_attributes: [:picture]).merge(user_id: current_user.id)
   end
 end
+
