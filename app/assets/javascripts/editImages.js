@@ -35,54 +35,40 @@ $(function() {
    $ul = $('#previews')
    $li = $(this).parents('.image-preview');
  
- $('.img').change(function(){
-
-   var file = $('input[type="file"]').prop('files')[0];
-
-   $.each(this.files, function(i, file){
-     var fileReader = new FileReader();
-     var num = $('.item-image').length + 1 + i
-
-     dataBox.items.add(file)
-     file_field.files = dataBox.files
-
-     fileReader.readAsDataURL(file);
-
-     if (num == 10){
-       $('#image-box__container__edit').css('display', 'none')
-     }
-     fileReader.onloadend = function() {
-       var src = fileReader.result
-       var html= 
-       `<div class=' item-image' data-image='${file.name}'>
-         <div class=' item-image__content'>
-           <div class='item-image__content--icon'>
-             <img src="${src}" width="80" height="80">
-           </div>
-         </div>
-         <div class='item-image__operetion'>
-           <div class='item-image__operetion--delete'>削除</div>
-         </div>
-       </div>`
-   
-       $('#image-box__container__edit').before(html);
-     };
-
-     $('#image-box__container__edit').attr('class', `item-num-${num}`)
-    
-   
-   });
+ 
+   //"li"ごと削除して、previewとinputを削除させる。
+   $li.remove();
+ 
+   // inputボタンのサイズを更新する、または追加させる
+   // まずはプレビューの数を数える。
+   $lis = $ul.find('.image-preview');
+   $label = $ul.find('.input');
+   if($lis.length <= 4 ){
+     // inputのサイズを変更
+     $('#previews li:last-child').css({
+       'width': `calc(100% - (20% * ${$lis.length}))`
+     })
+   }
+   else if($lis.length == 5 ){
+     // inputのサイズを変更
+     $('#previews li:last-child').css({
+       'width': `100%`
+     })
+   }
+   else if($lis.length < 9 ){
+     // inputのサイズを変更
+     $('#previews li:last-child').css({
+       'width': `calc(100% - (20% * (${$lis.length} - 5 )))`
+     })
+   }
+   else if($lis.length == 9 ){
+     $ul.append(append_input) // 9個の時だけ、新しいinputを追加してやる
+     $('#previews li:last-child').css({
+       'width': `calc(100% - (20% * (${$lis.length} - 5 )))`
+     })
+   }
  });
-    
- $(document).on("click", '.item-image__operetion--delete', function(){
-
-   var target_image = $(this).parent().parent()
-
-   target_image.remove();
-
-   file_field.val("")
- })
-});
+})
 
 
 
