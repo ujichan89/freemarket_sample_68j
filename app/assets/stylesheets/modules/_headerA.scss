@@ -21,10 +21,11 @@
       width: 100%;
       margin-top: 5px;
 
-      .__inputbox{
+      .__inputSeachBox{
         width: calc(100% - 26px);
         height: 32px;
         padding: 0 0 0 5px;
+        pointer-events: none;
       }
 
       .__btn{

@@ -1,8 +1,6 @@
 .WrapperNew
   = render partial: 'shared/headerB'
   .Contents 
-    .Contents__title
-      商品の情報を入力
     = form_with model: @item, class: :form, local: true do |f|
       .Contents__image
         .Contents__image__title
@@ -54,12 +52,12 @@
         .Contents__name__form
           %span.Contents__name__form--text 商品名
           %span.Contents__name__form--must 必須
-        = f.text_field :name, placeholder: :"商品名(40文字まで)", class: :"Contents__name--input", id: "item_name"
+        = f.text_field :name, placeholder: :"40文字まで", class: :"Contents__name--input", id: "item_name"
         #Input_error__itemname
         .Contents__name__description
           %span.Contents__name__description--text 商品の説明
           %span.Contents__name__description--must 必須
-        = f.text_area :description, placeholder: :"商品の説明(1000文字以内)", class: :"Contents__name--input-big", id: "item_description"
+        = f.text_area :description, placeholder: "商品の説明（1000文字以内）&#13;&#10;（色、素材、重さ、定価、注意点など）&#13;&#10;&#13;&#10;例）2010年頃に1万円で購入したジャケットです。ライトグレーで傷はありません。あわせやすいのでおすすめです。".html_safe , class: :"Contents__name--input-big", id: "item_description"
         #Input_error__description
 
       .Contents__detail
@@ -72,7 +70,7 @@
             %span.Contents__detail__list__category--must 必須
             .form.relative#select
               = f.collection_select :category_id, @parents, :id, :genre,{prompt: "選択してください"}, class: "select-default", id: "parent_form", genre: 'item[category_ids][]'
-              = icon('fa', 'chevron-down', class: 'icon')
+              -# = icon('fa', 'chevron-down', class: 'icon')
               #Input_error__category
       
           .Contents__detail__list__brand
@@ -88,7 +86,7 @@
 
             .form.relative  
               = f.select :status, [['新品、未使用', '新品、未使用'], ['未使用に近い', '未使用に近い'], ['目立った傷や汚れなし', '目立った傷や汚れなし']], {include_blank: "選択してください", selected: 1}, { id: "item_id", class: "select-default"}
-              = icon('fa', 'chevron-down', class: 'icon')
+              -# = icon('fa', 'chevron-down', class: 'icon')
               #Input_error__status
       
       .Contents__delivery
@@ -105,7 +103,7 @@
             %span.Contents__delivery__category__burden--must 必須
             .form.relative
               = f.select :charge, [['送料込み(出品者負担)', '送料込み(出品者負担)'], ['着払い(購入者負担)', '着払い(購入者負担)']], {include_blank: "選択してください", selected: 1}, { id: "item_charge", class: "select-default"}
-              = icon('fa', 'chevron-down', class: 'icon')
+              -# = icon('fa', 'chevron-down', class: 'icon')
               #Input_error__charge
 
           .Contents__delivery__category__area
@@ -113,7 +111,7 @@
             %span.Contents__delivery__category__area--must 必須
             .form.relative
               = f.collection_select :area, Prefecture.all, :id, :name, prompt: "選択してください", id: "item_area"
-              = icon('fa', 'chevron-down', class: 'icon')
+              -# = icon('fa', 'chevron-down', class: 'icon')
               #Input_error__area
 
           .Contents__delivery__category__date
@@ -121,13 +119,13 @@
             %span.Contents__delivery__category__date--must 必須 
             .form.relative
               = f.select :day, [['1~2日で発送', '1~2日で発送'], ['2~3日で発送', '2~3日で発送'], ['4~7日で発送', '4~7日で発送']], {include_blank: "選択してください", selected: 1}, { id: "item_day", class: "select-default"}
-              = icon('fa', 'chevron-down', class: 'icon')
+              -# = icon('fa', 'chevron-down', class: 'icon')
               #Input_error__day
       
       .Contents__price
         .Contents__price__title
           .Contents__price__title--text
-            販売価格(300〜9,999,999)
+            販売価格(300〜9,999,999) 
           = link_to "#" do
             = icon('fa', 'question-circle', class: 'Contents__price__title--icon') 
 
@@ -176,7 +174,6 @@
         .Contents__Exhibition__btn
           = f.submit "出品する", class: "post", id: "ItemInput__btn"
 
-        
           = link_to "もどる", "#", class: "Contents__Exhibition__btn--return"
     
   = render partial: 'shared/footerB'

@@ -80,20 +80,20 @@
                   - for i in 1..100 do array[i] = 2011-i end
                   = options_for_select(array)
                 %span
-                  年　
+                  年
               .Input__birthday__select__month
                 = f.select :birthday_month, [[1], [2], [3], [4], [5], [6], [7], [8], [9], [10], [11], [12]], class: "birthday_month", id: "Input_error__birthday_month", prompt: ""
                 %span
-                  月　
+                  月
               .Input__birthday__select__day
                 = f.select :birthday_day, [[1], [2], [3], [4], [5], [6], [7], [8], [9], [10], [11], [12], [13], [15], [16],[17, ][18], [19], [20], [21], [22], [23], [24], [25], [26], [27], [28], [29], [30], [31]], class: "birthday_day", id: "Input_error__birthday_day", prompt: ""
                 %span
-                  日　
+                  日
           #Input_error__birthday__select
 
           .Input__submit
             .Input__submit__text.Note
-              ※本人情報は正しく入力してください。会員登録後、修正するにはお時間をいただく場合があります。
+            ※本人情報は正しく入力してください。会員登録後、修正するにはお時間をいただく場合があります。
             .Input__submit__description
               「登録する」のボタンを押すことにより、
               = link_to "root_path" do
