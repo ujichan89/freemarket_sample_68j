@@ -13,6 +13,7 @@
 
 
 
+
 #previews {
   display: flex;
 }
@@ -27,6 +28,16 @@
  cursor: pointer;
  text-align: center;
  line-height: 200px;
+
+.item-num-0{
+  width: 100%;
+}
+.item-num-1{
+  width: 491px;
+}
+.item-num-2{
+  width: 363px;
+
 }
 
 .image_upload {
