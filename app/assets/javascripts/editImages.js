@@ -11,6 +11,7 @@ $(function () {
                     // <label id="camera">
                     // <i class="fa fa-camera"></i>
 
+
   const buildImg = (index, url)=> {
     const html = `<img data-index="${index}" src="${url}" width="100px" height="100px">`;
     return html;

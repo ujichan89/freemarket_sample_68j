@@ -14,3 +14,4 @@ $(function() {
       pagerCustom: '.purchases__Main__content__subImage',
   });
 });
+

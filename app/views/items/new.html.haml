@@ -85,7 +85,7 @@
             %span.Contents__detail__list__status--must 必須
 
             .form.relative  
-              = f.select :status, [['新品、未使用', '新品、未使用'], ['未使用に近い', '未使用に近い'], ['目立った傷や汚れなし', '目立った傷や汚れなし']], {include_blank: "選択してください", selected: 1}, { id: "item_id", class: "select-default"}
+              = f.select :status, [['新品、未使用', '新品、未使用'], ['未使用に近い', '未使用に近い'], ['目立った傷や汚れなし', '目立った傷や汚れなし'], ['やや傷や汚れあり', 'やや傷や汚れあり'], ['傷や汚れあり', '傷や汚れあり'], ['全体的に状態が悪い', '全体的に状態が悪い']], {include_blank: "選択してください", selected: 1}, { id: "item_id", class: "select-default"}
               -# = icon('fa', 'chevron-down', class: 'icon')
               #Input_error__status
       
@@ -125,7 +125,7 @@
       .Contents__price
         .Contents__price__title
           .Contents__price__title--text
-            販売価格(300〜9,999,999) 
+            価格（¥300〜9,999,999） 
           = link_to "#" do
             = icon('fa', 'question-circle', class: 'Contents__price__title--icon') 
 
@@ -133,7 +133,7 @@
           .Contents__price__right__category
             .Contents__price__right__category__list
               .Contents__price___right__category__list--text
-                価格
+                販売価格
               .Contents__price__right__category__list--must
                 必須
             .Contents__price__right__category__form
@@ -156,25 +156,23 @@
               ➖
         
       .Contents__Exhibition
-        .Contents__Exhibition__text
-          %p
-            = link_to "禁止されている出品", "#", class: "Contents__Exhibition__text--link"
-            ,
-            = link_to "行為", "#", class: "Contents__Exhibition__text--link"
-            を必ずご確認ください。
-          %pまたブランド品でシリアルナンバー等がある場合はご記載ください。
-          %p
-            = link_to "偽ブランドの販売", "#", class: "Contents__Exhibition__text--link"
-            は犯罪であり処罰される可能性があります。
-          %p
-            また、出品をもちまして
-            = link_to "加盟店規約", "#", class: "Contents__Exhibition__text--link"
-            に同意したことになります。
-        
         .Contents__Exhibition__btn
           = f.submit "出品する", class: "post", id: "ItemInput__btn"
 
           = link_to "もどる", "#", class: "Contents__Exhibition__btn--return"
+        .Contents__Exhibition__text
+          禁止されている
+          = link_to "行為", "#", class: "Contents__Exhibition__text--link"
+          および
+          = link_to "出品物", "#", class: "Contents__Exhibition__text--link"
+          を必ずご確認ください。
+          = link_to "偽ブランド", "#", class: "Contents__Exhibition__text--link"
+          や
+          = link_to "盗品物", "#", class: "Contents__Exhibition__text--link"
+          などの販売は犯罪であり、法律により処罰される可能性があります。 
+          また、出品をもちまして
+          = link_to "加盟店規約", "#", class: "Contents__Exhibition__text--link"
+          に同意したことになります。
     
   = render partial: 'shared/footerB'
 
