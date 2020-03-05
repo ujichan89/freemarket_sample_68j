@@ -1,12 +1,16 @@
 .HeaderBLogo {
-  height: 150px;
+  height: 128px;
   width: 100%;
   text-align: center;
-  line-height: 200px;
+  line-height: 170px;
   font-size: xx-large;
-  background-color: #efefef;
+  background-color:#f5f5f5;
 
   &__png {
     height: 60px;
+    &:hover {
+     cursor: pointer;
+     opacity: 0.6;
+   }
   }
 }

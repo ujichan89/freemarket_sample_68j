@@ -2,383 +2,319 @@
 .WrapperNew {
   height: calc(100% - 350px);
   width: 100%;
-  background-color: #efefef;
+  background-color: #f5f5f5;
   position: relative;
-
-
-//_______________________________________________________
-
-.Logo {
-  height: 200px;
-  width: 100%;
-  text-align: center;
-  line-height: 200px;
-  font-size: xx-large;
-
-  &__png {
-    height: 60px;
-  }
-}
 
 //_______________________________________________________
 
 .Contents {
-  height: 2350px;
-  width: 50%;
+  color: #333333;
+  width: 700px;
   background-color: white;
   margin: 0 auto;
-  
-  &__title {
-    height: 150px;
-    width: 100%;
-    text-align: center;
-    border-bottom: 0.2px solid lightgrey;
-    line-height: 150px;
-    font-size: x-large;
-    font-weight: bold;
-  }
 
   &__image {
-    height: 300px;
+    padding: 40px;
     width: 100%;
+    border-bottom: 2px solid #f5f5f5;
 
     &__title {
-        padding-top: 20px;
-        margin-left: 30px;
-
       &--text {
-          font-size: 15px;
+          font-size: 14px;
           font-weight: bold;
       }
       &--must {
           color: white;
           background-color: #3CCACE;
-          font-size: 5px;
+          font-size: 12px;
           font-weight: bold;
-          border-radius: 2px;
-          padding: 4px;
-          margin-left: 10px;
+          border-radius: 1px;
+          padding: 2px 4px;
+          margin-left: 4px;
       }
     }
     &__capture {
-      font-size: 10px;
-      margin-left: 30px;
-      margin-top: 5px;
+      margin-top: 16px;
+      font-size: 14px;
     }
     &__upload {
-      height: 200px;
-      width: 80%;
-      margin: 0 auto;
-      background-color: rgb(246, 246, 250);
-      border:  dashed 1px rgb(182, 182, 182);
-      cursor: pointer;
-      text-align: center;
-      line-height: 200px;
-      
-      i {
-        cursor: pointer;
-        color: gray;
-        font-size: 20px;
+      height: 150px;
+      background-color: #f5f5f5;
+      border:  dashed 1px rgb(204, 204, 204);
+      margin-top: 15px;
+      &--icon {
+        margin-top: 50px;
+        width: 100%;
+        text-align: center;
+        color: #333;
+        font-size: 22px;
       }
-      &--cameraBtnUpper {
-        font-size: 80px;
-        color: gray;
-        margin: 0 auto;
+      &--text {
+        margin-top: 8px;
+        font-size: 12px;
+        line-height: 1.4em;
+        text-align: center;
+        width: 100%;
       }
-      &--cameraBtnDowner {
-        font-size: 80px;
-        color: gray;
-        margin: 0 auto;
-      }
+
     }
     #error_explanation {
       color: red;
     }
   }
+
+//_______________________________________________________
+
   &__name {
-    height: 300px;
     width: 100%;
-
+    padding: 40px;
+    border-bottom: 2px solid #f5f5f5;
     &__form {
-      padding-top: 20px;
-      margin-left: 30px;
-
       &--text {
-        font-size: 15px;
+        font-size: 14px;
         font-weight: bold;
       }
       &--must {
         color: white;
         background-color: #3CCACE;
-        font-size: 5px;
+        font-size: 12px;
         font-weight: bold;
-        border-radius: 2px;
-        padding: 4px;
-        margin-left: 10px;
-        width: 30px;
+        border-radius: 1px;
+        padding: 2px 4px;
+        margin-left: 4px;
       }     
     }
     &--input {
-        height: 50px;
-        width: 85%; 
-        line-height: 50px;
-        padding-left: 30px;
-        margin-top: 15px;
-        margin-left: 30px;
-        border-radius: 3px;
-        font-size: 15px;
-        
+      margin-top: 16px;
+      border: 1px solid #ccc;
+      height: 50px;
+      width: 100%; 
+      line-height: 50px;
+      padding-left: 16px;
+      border-radius: 3px;
+      font-size: 16px;
     }
     
     &__description {
-      padding-top: 20px;
-      margin-left: 30px;
+      margin-top: 30px;
 
       &--text {
-        font-size: 15px;
+        font-size: 14px;
         font-weight: bold;
       }
       &--must {
         color: white;
         background-color: #3CCACE;
-        font-size: 5px;
+        font-size: 12px;
         font-weight: bold;
-        border-radius: 2px;
-        padding: 4px;
-        margin-left: 10px;
-        width: 30px;
+        border-radius: 1px;
+        padding: 2px 4px;
+        margin-left: 4px;
       }
     }
     &--input-big{
-      height: 120px;
-      width: 88.5%; 
-      padding-left: 5px;
-      margin-top: 15px;
-      margin-left: 30px;
-      border: 1px solid lightgrey;
-      border-radius: 3px;
-      font-size: 10px;
-      position: relative;
+      width: 100%;
+      height: 154px;
+      margin-top: 16px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+      color: #222;
+      font-size: 16px;
+      outline: none;
+      padding: 13px 16px;
+      resize: vertical;
+      vertical-align: middle;
     }
   }
-  &__detail {
-    height: 500px;
-    width: 100%;
-    display: flex;
-    
-   
-    &__title {
-      height: 200px;
-      width: 30%;
-      
 
+//_______________________________________________________
+
+  &__detail {
+    width: 100%;
+    padding: 40px;
+    border-bottom: 2px solid #f5f5f5;
+
+    &__title {
       &--text {
         font-weight: bold;
-        font-size: 13px;
-        color: rgba(70, 66, 66, 0.356);
-        margin-top: 30px;
-        margin-left: 33px;
-        
-        
+        font-size: 14px;
+        color: #888888;
+        margin-bottom: 27px;
       }
     }
     &__list {
-      height: 200px;
-      width: 70%;
+      margin-top: 16px;
+      width: 100%;
      
-      
       &__category {
-        padding-top: 20px;
-        margin-left: 30px;
-
         &--text {
-          font-size: 13px;
+          font-size: 14px;
           font-weight: bold;
         }
         &--must {
           color: white;
           background-color: #3CCACE;
-          font-size: 5px;
+          font-size: 12px;
           font-weight: bold;
-          border-radius: 2px;
-          padding: 3px;
-          margin-left: 10px;
+          border-radius: 1px;
+          padding: 2px 4px;
+          margin-left: 4px;
         }
       }
-      &__brand {
-        padding-top: 20px;
-        margin-left: 30px;
-       
 
+      &__brand {
+        margin-top: 30px;
         &--text {
-          font-size: 13px;
+          font-size: 14px;
           font-weight: bold;
         }
         &--any {
           color: white;
-          background-color:lightgray;
-          font-size: 5px;
+          background-color: #bfbfbf;
+          font-size: 12px;
           font-weight: bold;
-          border-radius: 2px;
-          padding: 3px;
-          margin-left: 10px;
+          border-radius: 1px;
+          padding: 2px 4px;
+          margin-left: 4px;
         }
         &--input {
+          margin-top: 16px;
           height: 50px;
-          width: 90%; 
+          width: 100%; 
           line-height: 50px;
-          padding-left: 30px;
-          margin-top: 15px;
           border: 1px solid lightgrey;
           border-radius: 3px;
           font-size: 15px;
+          padding: 13px 16px;
+
         }
       }
  
-
       &__status {
-        padding-top: 20px;
-        margin-left: 30px;
+        margin-top: 30px;
 
         &--text {
-          font-size: 13px;
+          font-size: 14px;
           font-weight: bold;
         }
         &--must {
           color: white;
           background-color: #3CCACE;
-          font-size: 5px;
+          font-size: 12px;
           font-weight: bold;
-          border-radius: 2px;
-          padding: 3px;
-          margin-left: 15px;
+          border-radius: 1px;
+          padding: 2px 4px;
+          margin-left: 4px;
         }
       }
       &--input {
         margin-top: 10px;
-        height: 40px;
-        width: 315px;
-       
         display: block;
-        padding-right: 140px;
         border-radius: 2px;
+
       }
     }
   }
+
+//_______________________________________________________
+
   &__delivery {
-    height: 350px;
     width: 100%;
-    display: flex;
+    padding: 40px;
+    border-bottom: 2px solid #f5f5f5;
 
     &__title {
-      height: 100%;
-      width: 30%;
       display: flex;
 
       &--text {
         font-weight: bold;
-        font-size: 13px;
-        color: rgba(70, 66, 66, 0.356);
-        margin-top: 30px;
-        margin-left: 33px;
+        font-size: 14px;
+        color: #888888;
       }
       &--icon {
-        margin-top: 30px;
+        margin-left: 5px;
         color: deepskyblue;
       }
     }
 
     &__category {
-      height: 100%;
-      width: 70%;
-
       &__burden {
-        padding-top: 20px;
+        padding-top: 30px;
 
         &--text {
-          font-size: 13px;
+          font-size: 14px;
           font-weight: bold;
         }
         &--must {
           color: white;
           background-color: #3CCACE;
-          font-size: 5px;
+          font-size: 12px;
           font-weight: bold;
-          border-radius: 2px;
-          padding: 3px;
-          margin-left: 10px;
+          border-radius: 1px;
+          padding: 2px 4px;
+          margin-left: 4px;
         }
       }
 
       &__area {
-        padding-top: 20px;
+        padding-top: 30px;
 
         &--text {
-          font-size: 13px;
+          font-size: 14px;
           font-weight: bold;
         }
         &--must {
           color: white;
           background-color: #3CCACE;
-          font-size: 5px;
+          font-size: 12px;
           font-weight: bold;
-          border-radius: 2px;
-          padding: 3px;
-          margin-left: 10px;
+          border-radius: 1px;
+          padding: 2px 4px;
+          margin-left: 4px;
         }
       }
       &__date {
-        padding-top: 20px;
+        padding-top: 30px;
 
         &--text {
-          font-size: 13px;
+          font-size: 14px;
           font-weight: bold;
         }
         &--must {
           color: white;
           background-color: #3CCACE;
-          font-size: 5px;
+          font-size: 12px;
           font-weight: bold;
-          border-radius: 2px;
-          padding: 3px;
-          margin-left: 10px;
+          border-radius: 1px;
+          padding: 2px 4px;
+          margin-left: 4px;
         }
       }
     }
   }
+
+//_______________________________________________________
+
   &__price {
-    height: 300px;
     width: 100%;
     border-bottom: 0.2px solid lightgrey;
+    padding: 40px;
     display: flex;
-    padding-top: 50px;
     
     &__title {
-      height: 100%;
-      width: 33%;
-      display: flex;
-
       &--text {
         font-weight: bold;
-        font-size: 13px;
-        color: rgba(70, 66, 66, 0.356);
-        margin-top: 30px;
-        margin-left: 33px;
+        font-size: 14px;
+        color: #888888;
       }
       &--icon {
-        margin-top: 30px;
         color: deepskyblue;
       }
     }
 
     &__right {
-      height: 100%;
-      width: 67%;
-    
-
       &__category {
-        height: 40%;
-        width: 100%;
         display: flex;
         justify-content: space-between;
         
@@ -386,38 +322,33 @@
           display: flex;
           height: 20px;
           margin-top: 50px;
-      
-          
-          
 
           &--text {
-            font-size: 13px;
+            font-size: 14px;
             font-weight: bold;
-            padding-top: 2px;
           }
 
           &--must {
             color: white;
             background-color: #3CCACE;
-            font-size: 5px;
+            font-size: 12px;
             font-weight: bold;
-            border-radius: 2px;
-            padding: 3px;
-            margin-left: 10px;
+            border-radius: 1px;
+            padding: 2px 4px;
+            margin-left: 4px;
           }
         }
         &__form {
           display:flex;
-          margin-top: 40px;
-          margin-right: 30px;
           
         
           &--text {
-            font-size: 10px;
-            margin-right: 20px;
-            margin-top: 16px;
+            font-size: 14px;
+
           }
           &--field {
+            border-radius: 2px;
+            border: 1px solid #ccc;
             height: 40px;
             text-align: right;
             padding-right: 20px;
@@ -427,14 +358,12 @@
       &__commission {
         height: 20%;
         width: 100%;
-        border-bottom: 0.2px solid lightgrey;
-        border-top: 0.2px solid lightgrey;
+        border-bottom: 2px solid #f5f5f5;
         display: flex;
         justify-content: space-between;
       
 
         &--text {
-         margin-top: 20px;
          font-size: 13px;
         }
         &--rod {
@@ -462,16 +391,13 @@
   }
   
   &__Exhibition {
-    height: 350px;
     width: 100%;
 
     &__text {
-      padding-top: 50px;
-      padding-left: 40px;
     
       &--link {
         text-decoration: none;
-        color: deepskyblue;
+        color: #3CCACE;
         position: relative;
 
         &::after {
@@ -500,29 +426,28 @@
       margin-top: 30px;
   
     &--btn {
+
       height: 50px;
-      width: 550px;
       font-size: 14px;
       text-decoration: none;
       color: white;
-      background-color: red;
+      background-color: #3CCACE;
       text-align: center;
       line-height: 50px;
       margin: 0 auto;
       cursor: pointer;
     }
     &--return {
+      border-radius: 4px;
+      border: 1px solid transparent;
       height: 50px;
-      width: 300px;
       font-size: 14px;
       text-decoration: none;
       color: white;
       background-color: rgb(148, 145, 145);
       text-align: center;
       line-height: 50px;
-      margin-left: 250px;
-      margin-top: 30px;
-      margin: 30px auto 0;
+
       transition: all 0.3s ease 0s;
 
       &:hover {
@@ -573,14 +498,16 @@ h1 {
 }
 
 .form {
-  margin: 8px 0 0;
   font-family: 'Source Sans Pro', Helvetica , Arial, '游ゴシック体', 'YuGothic', 'メイリオ', 'Meiryo', sans-serif;
   font-size: 16px;
   font-weight: 100;
+  width: 100%;
+
   .select-default {
     box-sizing: border-box;
-    width: 90%;
+    width: 100%;
     height: 50px;
+    margin-top: 16px;
     padding: 10px 16px 8px;
     border-radius: 4px;
     background: #fff;
@@ -591,8 +518,9 @@ h1 {
     }
   }
   #item_area{
+    margin-top: 10px;
     box-sizing: border-box;
-    width: 90%;
+    width: 100%;
     height: 50px;
     padding: 10px 16px 8px;
     border-radius: 4px;
@@ -611,7 +539,7 @@ h1 {
     top: 38%;
     right: 11%;
     z-index: 2;
-    color: deeppink;
+    color: #3CCACE;
     cursor: pointer;
     font-size: 20px;
     -webkit-transform: translate(0, -50%);
@@ -622,11 +550,11 @@ h1 {
 
 
 .post {
+  border-radius: 4px;
+  border: 1px solid transparent;
   text-decoration: none;
-  width: 80%;
-  margin-left: 80px;
   padding: 15px 50px;
-  background-color: red;
+  background-color: #3CCACE;
   color: white;
 
 }
@@ -636,11 +564,11 @@ h1 {
   text-align: center;  
 
   .notice {
-    background-color: deeppink;
+    background-color: #3CCACE;
   }
 
   .alert {
-    background-color: deepskyblue;
+    background-color: #3CCACE;
     font-size: xx-large;
   }
 }

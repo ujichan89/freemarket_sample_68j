@@ -1,4 +1,5 @@
 = render partial: 'shared/headerA'
+= render 'layouts/notifications'
 
 .GoodDetealContents
   .GoodDetealContents__main
@@ -28,7 +29,7 @@
 
     .GoodDetealContents__main--goodDescription
       .GoodDetealContents__main--goodDescription__goodName
-        = @item.description
+        = safe_join(@item.description.split("\n"), tag(:br))
 
       %table{border: '1', class: '.GoodDetealContents__main--goodDescription__goodName__goodtable',align: 'center'}
         %tr
