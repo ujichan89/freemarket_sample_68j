@@ -10,8 +10,8 @@ class ItemsController < ApplicationController
 
     lab    = Item.group(:brand_id).order('count_brand_id DESC').count(:brand_id).first
     brand  = lab[0]
-    # @bras  = Item.order(created_at: :desc).where(sale: 0).where(brand_id: brand).first(3)
-    @bras  = Item.order(created_at: :desc).where(sale: 0).first(3)
+    @bras  = Item.order(created_at: :desc).where(sale: 0).where(brand_id: brand).first(3)
+    # @bras  = Item.order(created_at: :desc).where(sale: 0).first(3)
 
 
   end
