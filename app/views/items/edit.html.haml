@@ -13,24 +13,35 @@
           最大10枚までアップロードできます
           %br 枠線の中をクリックしてください
         .flex  
-          %ul#previews   
+          %ul#previews  
+            - if @item.persisted?
+              - @item.images.each_with_index do |image, i|
+                = image_tag image.picture.url, data: { index: i }, width: "100", height: '100'
+          = f.fields_for :images do |image|
+            .js-file_group{"data-index" => "#{image.index}"}
+              = image.file_field :picture, class: 'js-file'
+              .js-remove 削除
+            - if @item.persisted?
+              = image.check_box :_destroy, data:{ index: image.index }, class: 'hidden-destroy'
+          - if @item.persisted?
+            .js-file_group{"data-index" => "#{@item.images.count}"}
+              = file_field_tag :picture, name: "item[images_attributes][#{@item.images.count}][picture]", class: 'js-file'
+              .js-remove 削除
+          #Input_error__edit__image
 
-            = f.fields_for :images do |image|
-              %li.image-preview
-                %label.upload-label{for: "already-image"}
-                  .input-area
-                    = image.file_field :picture, class: "hidden image_upload", id: 'already-image'
-                    -# = image.hidden_field :id, value: img.id, name:"item[image][#{i}]"
-              .image-preview__wapper
+            -# = f.fields_for :images do |image|
+            -#   %li.image-preview
+            -#     %label.upload-label{for: "already-image"}
+            -#       .input-area
+            -#         = image.file_field :picture, class: "hidden image_upload", id: 'already-image'
+            -#         -# = image.hidden_field :id, value: img.id, name:"item[image][#{i}]"
+            -#   .image-preview__wapper
               
-              .image-preview_btn
-                -# %label{for: "image", class: :"image-preview_btn_edit"}
-                -#   編集
-                -# %input{type: "file", name: "picture", id: "image", class: :"hidden"} 
-                .image-preview_btn_delete 削除 
+            -#   .image-preview_btn
+            -#     .image-preview_btn_delete 削除 
 
-              #Input_error__edit__image
               
+
               -#  = image.label for: image, : "編集", class: :"image-preview_btn_edit" do
                 -#   = icon('fa', 'camera')
                 -# = image.file_field :picture
@@ -179,11 +190,3 @@
     
   = render "/shared/footerB"
 
-  -#  = f.fields_for :images do |i|
-  -#             = i.label :picture, for: "item_images_attributes_0_picture", class: "items__Contents__image__upload--cameraBtnUpper" do
-  -#               = icon('fa', 'camera')
-  -#             = i.file_field :picture, id: "item_images_attributes_0_picture", style: "display: none;", name: "item[images_attributes][0][picture]"
-
-  -# %label{for: "dansei"}
-    -#   男性
-    -# %input{type: "file", name: "sex", id: "dansei"}

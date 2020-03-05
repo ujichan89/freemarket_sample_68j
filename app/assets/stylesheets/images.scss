@@ -1,6 +1,3 @@
-.hidden {
-  display: none;
-}
 
 .fas {
   display: none;
@@ -13,6 +10,25 @@
   display: flex;
 }
 
+
+
+
+
+#previews {
+  display: flex;
+}
+
+#image-box {
+ display: flex;
+ height: 200px;
+ width: 80%;
+ margin: 0 auto;
+ background-color: rgb(246, 246, 250);
+ border:  dashed 1px rgb(182, 182, 182);
+ cursor: pointer;
+ text-align: center;
+ line-height: 200px;
+
 .item-num-0{
   width: 100%;
 }
@@ -21,32 +37,61 @@
 }
 .item-num-2{
   width: 363px;
-}
-.item-num-3{
-  width: 234px;
-}
-.item-num-4{
-  width: 106px;
-}
-//下段のfile_field
-.item-num-5{
-  width: 100%;
-}
-.item-num-6{
-  width: 491px;
-}
-.item-num-7{
-  width: 363px;
-}
-.item-num-8{
-  width: 234px;
-}
-.item-num-9{
-  width: 106px;
+
 }
 
-.item-image__operetion--delete {
-  color: red;
-  font-size: 12px;
-  cursor: pointer;
+.image_upload {
+  height: 100px;
+  width: 10px;
+}
+.input-area {
+  height: 100px;
+  width: 100px;
+}
+
+
+.preview {
+ height: 114px;
+ width: 114px;
+}
+
+.image-preview_btn {
+ display: flex;
+ width: 114px;
+ justify-content: space-around;
+ margin-top: 6px;
+ color: deepskyblue;
+ // font-size: large;
+ background-color: #efefef;
+}
+
+// .image-preview_btn_edit{
+//  cursor: pointer;
+// }
+
+.image-preview_btn_delete{
+ cursor: pointer;
+}
+
+// .imageNew {
+//  display: none;
+// }
+
+// input {
+//  display: none;
+// }
+
+#camera {
+ font-size: 20px;
+}
+
+// .js-file_group{
+//  height: 2px;
+//  width: 5px;
+// }
+.js-remove {
+ 
+ color: deepskyblue;
+ background-color: #efefef;
+
 }
